@@ -1,0 +1,40 @@
+{
+  "app": {
+    // Cloud jobs inject signing material from protected secrets.
+    // The repository profile stays unsigned and portable.
+    "signingConfigs": [],
+    "products": [
+      {
+        "name": "default",
+        "compatibleSdkVersion": "5.1.0(18)",
+        "runtimeOS": "HarmonyOS",
+        "targetSdkVersion": "6.1.1(24)"
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "profile"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
