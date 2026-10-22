@@ -1,0 +1,4 @@
+{"file": ".trellis/spec/json-offline.md", "reason": "Review offline, diagnostics and full content verification"}
+{"file": ".trellis/tasks/10-22-offline-json-ide/prd.md", "reason": "Full original scope acceptance audit"}
+{"file": ".trellis/tasks/10-22-offline-json-ide/research/contracts.md", "reason": "Official JSON contracts and supported offline subset"}
+{"file": ".trellis/tasks/10-22-offline-json-ide/evidence.md", "reason": "Requirement audit and separate desktop/build/device gates"}

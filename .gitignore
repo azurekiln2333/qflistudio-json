@@ -93,6 +93,7 @@ app.*.map.json
 /.trellis/tasks/00-bootstrap-guidelines/
 /.trellis/workflow.md
 /.trellis/workspace/
+/.trellis/.runtime/
 
 # Local diagnostic exports and shell inspection fragments
 /_*.txt

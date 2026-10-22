@@ -10,6 +10,13 @@ import 'package:qfli_studio_core/store/auth_store.dart';
 import 'package:qfli_studio_core/store/project_store.dart';
 import 'package:qfli_studio_core/store/settings_store.dart';
 
+import 'content/json_content_repository.dart';
+import 'json/json_analyzer.dart';
+import 'json/json_document_page.dart';
+import 'json/json_runner.dart';
+import 'json/json_tools.dart';
+import 'json/json_verification_page.dart';
+
 /// 本 App 的产品名。窗口标题、任务切换器和应用内顶栏都读它。
 const String _appTitle = StudioProductCatalog.json;
 
@@ -26,18 +33,29 @@ const StudioProfile jsonProfile = StudioProfile(
   runtimeKind: 'json-preview',
   runtimeStatus: 'available',
   supportedFileExtensions: ['.json'],
-  // 本版不注入运行后端：`.html` 交给内核已有的分流逻辑——它会起一个本地静态
-  // 服务器、注入调试桥，并把 console 输出回传到编辑器。也就是说 Web 版的
-  // 「运行」能力内核已经具备，这里少写一行反而是完整的。
+  runner: JsonRunner(),
+  codeAnalyzer: JsonCodeAnalyzer(),
+  toolsTabBuilder: jsonToolsTab,
+  documentToolBuilder: buildJsonDocument,
+  terminalCommandDelegate: jsonTerminalCommand,
+  contentRepositoryFactory: JsonContentRepository.new,
   // data.json 排在默认入口表前面，保证本版一定先命中它。
   entryFileNames: ['data.json', 'src/data.json'],
 );
+
+Widget buildJsonDocument(DocumentToolRequest request) =>
+    JsonDocumentPage(request: request);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // 在 runApp 之前定档。
   StudioProfile.current = jsonProfile;
+
+  if (const bool.fromEnvironment('QFLI_VERIFY_CATALOG')) {
+    runApp(const JsonVerificationPage());
+    return;
+  }
 
   final store = ProjectStore();
   final auth = AuthStore();

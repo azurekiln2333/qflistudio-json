@@ -36,20 +36,31 @@ void main() {
 
   group('档位收窄', () {
     test('新建项目只放行「空项目」和 JSON', () {
-      expect(
-        jsonProfile.filterTemplates(ProjectTemplate.values),
-        [ProjectTemplate.empty, ProjectTemplate.json],
-      );
+      expect(jsonProfile.filterTemplates(ProjectTemplate.values), [
+        ProjectTemplate.empty,
+        ProjectTemplate.json,
+      ]);
     });
 
     test('默认模板是 JSON 而不是空项目', () {
-      expect(jsonProfile.defaultTemplate,
-          ProjectTemplate.json);
+      expect(jsonProfile.defaultTemplate, ProjectTemplate.json);
     });
 
     test('语言筛选芯片只剩 JSON', () {
       // 首页传给档位的候选本来就不含「空项目」——它不是一门语言。
-      const all = ['Rust', 'Go', 'SQL', 'JSON', 'Markdown', 'C++', 'Lua', 'Web', 'Python', 'Java', 'Dart'];
+      const all = [
+        'Rust',
+        'Go',
+        'SQL',
+        'JSON',
+        'Markdown',
+        'C++',
+        'Lua',
+        'Web',
+        'Python',
+        'Java',
+        'Dart',
+      ];
       expect(jsonProfile.filterLanguages(all), ['JSON']);
     });
 
@@ -91,20 +102,27 @@ void main() {
   });
 
   group('运行能力', () {
-    test('JSON 版不注入程序运行后端', () {
-      expect(jsonProfile.runner, isNull);
+    test('JSON 版注入本地 JSON 校验与预览后端', () {
+      expect(jsonProfile.runner, isNotNull);
+      expect(jsonProfile.codeAnalyzer, isNotNull);
+      expect(jsonProfile.toolsTabBuilder, isNotNull);
+      expect(jsonProfile.documentToolBuilder, isNotNull);
+      expect(jsonProfile.terminalCommandDelegate, isNotNull);
+      expect(jsonProfile.contentRepositoryFactory, isNotNull);
     });
   });
 
   group('运行按钮分流', () {
-    test('JSON 文件显示不可运行说明，编辑与结构化工具保持独立', () async {
-      write('data.json', '// 示例');
+    test('JSON 运行返回实际校验与预览结果', () async {
+      write('data.json', '{"ready":true}');
       final result = await RunnerService.runProject(
         projectPath: project.path,
         entryFile: p.join(project.path, 'data.json'),
       );
       expect(result, isNotNull);
-      expect(result!.hint, contains('无法识别'));
+      expect(result!.hint, isNull);
+      expect(await result.exitCode, 0);
+      expect(await result.stdout!.join('\n'), '{\n  "ready": true\n}');
     });
   });
 }

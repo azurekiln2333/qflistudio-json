@@ -1,0 +1,3546 @@
+{
+  "schemaVersion": 1,
+  "baseline": "qfli_studio_core/assets/content at curriculum migration",
+  "inheritedExampleCount": 100,
+  "inheritedTutorialCount": 100,
+  "inheritedCodeSha256": {
+    "json-example-001": "70739cda8c82069b2d496ac68ecff4f2c40ee67705e5c9e6a69aeba4e9a6b0ac",
+    "json-example-002": "82db3a6602b9d8065082c3702c72a2698ab91e85e89bd1c638b8729bfa574440",
+    "json-example-003": "b255fae76b6f65d3e3dda2b2c905c03800c1dd7116815b209bf58dd25c8e1bb1",
+    "json-example-004": "bc18de452b1fcf44717b21a94e9902bd92e1a663e021ac41196b0c7243af8663",
+    "json-example-005": "57c38b8fe82ad304cafebfe8e643ecc980318f8c4ce465114b3c3f94565e42cf",
+    "json-example-006": "c33d839eefdd2ee584ae7f4eb3ed5a36f32c6c4d4b8d15ea22e52fdb08b54f4b",
+    "json-example-007": "2864e00d0640ea533230fff69024e4d938065483523d539a11d9631e121c49f3",
+    "json-example-008": "f8083c441b8d45eda133f9512ea43f00aebd425e922ce3b77a17a4fd9b77a513",
+    "json-example-009": "3f15f52198cc8735910deb5ef494f8066285ea609aacf155aa2088f11a0993bc",
+    "json-example-010": "3a95a46b11a63c854803db8ec62e8194116df7ffc5168a3251e418aff03123b7",
+    "json-example-011": "c5196c3573648b569664ede45162ed20fe44723a6b47435d9478e81415627805",
+    "json-example-012": "b9c96ec92447a189daeede338ee1ae50423907ffde7ec1abef99702c4c61cec3",
+    "json-example-013": "3f64e390c6037a60b05c19acf55e48527fd7b0f0ddb6ef3b04729729c8d536f7",
+    "json-example-014": "b761301b8d432df8d28c2b3a1da18efdf4fd64d7674f384e0a799a15d55154b4",
+    "json-example-015": "3b3472334869b4f75e52f6d028b3dd727623fe237ffe744b6711f713ac00f577",
+    "json-example-016": "c8976562787879b6b0a184c5aca0342d935693334c95fd8a94d05c0796092a5d",
+    "json-example-017": "29168c51edfb3dcb3d7eedfdf224d85c0acc6434e74011a3a6ad57afdee3bce9",
+    "json-example-018": "1f15323935ab9ced97c9714e7e10fed4b088992890d7f95ee21bb5827f57d3d0",
+    "json-example-019": "87cfab538f9e86f7a8de37421556c65156691e5bdc2f641ce552d8e5eb5e9e54",
+    "json-example-020": "2b8fcaeab383f3030a14290481ba449efc47b6dbe3e3cb25d449251a1def1b1a",
+    "json-example-021": "494bc8082cf7d34a716b2b5c4629193195641a17c01b446ad4f17ce1a7df1a01",
+    "json-example-022": "7a9518f2178429a37670967c5a6512c467794ee5657fa1c5a411b23fdb9e2247",
+    "json-example-023": "ba4c58136e791ed9f5f23a81dfefa4991585311c07e2f42bd3924a3541a8c1b6",
+    "json-example-024": "55e14a4b9af0872598dbfeb7f26d6bc694521f09ba825d974cec84722630e290",
+    "json-example-025": "15294889859d434ca364529c5947d7f71097fd7cd643c42a0370c42570bcb93b",
+    "json-example-026": "8a65343978e110cdf5e465e791b9f19d1b86fe94cb4a29c3d5cbe7573573897a",
+    "json-example-027": "762fb82b1344dbe991456c109d0d2a8c7b3b5446a9d59f3a292f6f5c774da212",
+    "json-example-028": "893db8b01ec181a75f5f4480ef9e9753de2c0675f513837fc1d780ea23143097",
+    "json-example-029": "4b139c894a4ffdc3fb0e12a2dc86881cd72d086b487a763674945b5b51b67ca6",
+    "json-example-030": "bbabdc2197d095c2b754bb822580f6a7265f7c2d317db2ac5d7fb20b2b53ea8a",
+    "json-example-031": "4586a8b1bac54e0af4df00913992d2b210c744f1202608e5752f675ff600b148",
+    "json-example-032": "25a4518106a51323ad66d199b9583f87d0abdf36cf25aefcc7c8cf40c0245848",
+    "json-example-033": "cf1f2a41f6079647fe4a3228cff6da5b8f65fe1d7f7bff1fb85e94985a9867a5",
+    "json-example-034": "3c4a24659c1fd3fa83781bdb6b03d5c1e677f8d1645f7895073dc5ca5f0cf0e8",
+    "json-example-035": "dd01239ce1a0d0862f42a39a7a7687dcebc8633e8bff8863ea2a77ea54ab4017",
+    "json-example-036": "dbeaabb64177879f63171a076495b4a0380ee239aeeabbfbac64c2437ec5886c",
+    "json-example-037": "6ff95931ba2db0be9d876af60cee715a2f012fc96c6d2d90dba8bbbce0ea966a",
+    "json-example-038": "aba39d0fd93590ffdf2c9a6008de408007711f2be45c1cd58499c690b5c5baf8",
+    "json-example-039": "bd95702baf1bebcce264c1e27d41c5b4361af6c92d9f2a0f8355b6a7a01b6c85",
+    "json-example-040": "717c0d31d5d3877c70d807c7cd17996fdcf4a2a93329fe8244126111430b6b8b",
+    "json-example-041": "11cd1ab202931cb8c0ba3266dfa00227d21e0aa280dfac7eca6407ceae5a25a5",
+    "json-example-042": "1a22bba130067f0c9a8e3af68bbd66ec6dcd567f30d731e05989ca5c03395d94",
+    "json-example-043": "c76fa463526eaf9790175ddde4e189fce4f70bccf09602475b3123c45c80a5c6",
+    "json-example-044": "f04ee2311fc18622e2b893b0712081b075797b6591ecb6abadf85a78f2975abc",
+    "json-example-045": "1fea79bd3b8ce4069d22366232b8390b67ab680e52e317dc3aa0ef8ad1842ea3",
+    "json-example-046": "9c0efd699c05e34e1c91c5366e3e9a83133edca52a0890fe2060e213be1b19a5",
+    "json-example-047": "ec6441bfe0ddf68cb0aff1172a7e6518d140400afb3098b17680fc22eca43cf8",
+    "json-example-048": "e2db533687092c807a33e2ce3d312354ec84ad37266d45d95d892da0165e13b1",
+    "json-example-049": "ae11bd57ac6565e8457790b5b442c11ec65a2c569021949c449a635be948aa06",
+    "json-example-050": "54df26ccf099cfdac7e857a399b774139d419782520bf0109235ee9b2621c115",
+    "json-example-051": "458be8c66bbed33fae77d34003b9dd489698f804632e3200aa678c6687a61828",
+    "json-example-052": "4bc47b27b7695260c4d514c7a3cb0a2b4717c1d2dd161c99a73d5c3ed6b68ade",
+    "json-example-053": "ca488a7b677729ed587d8ae098ecb133ab9bc2cd0e511c7f574818b24a272642",
+    "json-example-054": "4d9166b22c2f99965b9f4894c2d06bf19518b1dc5d5b7a4889b9fda3922a43f2",
+    "json-example-055": "eeba2890753eb55c6153470052c8feed4978bf8bdfe05d1378226a8c4e0b1cba",
+    "json-example-056": "2339d3508e955dd94665bdc484974a0a400230749666174b732b70c8db4bc926",
+    "json-example-057": "791eb329bd4ef5ecca482bc344fe1ba7c3d685456bdc91a1c15d0d63efc34e6c",
+    "json-example-058": "0249c2f5a4c78622318aa4b8439daf97979173d5b6c0e1c4caa7a153291d17da",
+    "json-example-059": "a2e3de8a1355348ceea2d04e326a077a5ebbc7391bb8adad2dc64bf866aaff87",
+    "json-example-060": "1705a85b1fb5678bc84f402ccd4da40df8b207b3dee8de811802e2d6b685a722",
+    "json-example-061": "0b38ce7c91d3f17c75ac2882ac0fe7787345bd888508fdeebcf361747d7cf950",
+    "json-example-062": "3512637034d72ef47f656e7095060873c40a28e772160f946c6192b5aa5d0f4e",
+    "json-example-063": "f379a256950550df758530d91cc8c791eeab07d9464108d5dfcbb4d47e113fed",
+    "json-example-064": "0e93ffaeb1e9f08357c5f3a180cdfb601d7336638661ce5083ae9d3925e9f305",
+    "json-example-065": "c267f4185a86845fda532f804c6c5ccad95c20a136bc3c657dac15f8160f2937",
+    "json-example-066": "e35ad07b81c7d5898a68913870ca1c35738982fda7c8bf21d98ecbc943d6c8ff",
+    "json-example-067": "eea1ba206c3c5f88c5349cced924ff837bd4e006034f804c1fbec39af7563163",
+    "json-example-068": "ff4970ef139dd334186f94463c2abef60833f6bbd79aa1dd459ac0ca7a6b06f9",
+    "json-example-069": "028ce7b46079230c5565ce460ba8e88c74cdc7537926f9a77cc912f45e071214",
+    "json-example-070": "4de70438103ca1792c833679b07183bded2f3648bf66821b3e5121450001e06b",
+    "json-example-071": "ab8cdf028c3795802605ee2a57e6592f7e6d8e366d44328a0df4ab1a9030a32f",
+    "json-example-072": "833f824c7dd9c826a8e289844bce64332c4a42ca8768c18dba2c295687b055b1",
+    "json-example-073": "fc304e0684a9aed1705de8b027e9228e6eeee2e41622f7108328a47afef7784e",
+    "json-example-074": "c839af36cf37d1a561cee7a390614a185ed83809dcf77f5d5a4bf6658d558ea3",
+    "json-example-075": "a6f178eb146ebc704ba71b3490b3044adc87a60e59fd0310952c5d0ee52e56d4",
+    "json-example-076": "7defeb592c7f4659126a3eb0577737912286aba929b354f37def7d1067361f7c",
+    "json-example-077": "4253e89d7b1e253bc3ceaf8a1e528402c46639ee8f2fcb6606ff88ff24b5460c",
+    "json-example-078": "a543374551019b8094bc873ebdafa95254c17b2650f4a1e74ca3139e6848e612",
+    "json-example-079": "61b1f59f969898d555d992c507565b5a1ae9535d6da7b0b179f0c371feb98f9c",
+    "json-example-080": "9320d90afced83eae8bdf932affdb6128f06baf5cea8f60ae2365ca604fb5769",
+    "json-example-081": "aa0691ebde5fbeec745d65701d424d31bfa93d4e132cb5428816e1fb6f97670a",
+    "json-example-082": "3507e84ec01b2e8325cc8164b764b8b5feb1614e3442cafd65d054747f6c35e7",
+    "json-example-083": "a0dca29121a68b0cf689dfd0f23ebbbfec8a65d23a67275e50a6a432a54f9b79",
+    "json-example-084": "299d34591eb394d4d97b65c7cc4020c307efcef757d35e1dd520b0dd684d218c",
+    "json-example-085": "92c584c1d7674133670ddfe15dbaf096d4fe93bfdbf07e298a1137c30d36f559",
+    "json-example-086": "36304d171ec5f718093bca930b65151d76d89842bfb52802a61361e7df1ed5be",
+    "json-example-087": "2fac0d0ff5f58421095de591279aa97430b2a633a8b0d6fc6b8c8fbf49374a94",
+    "json-example-088": "ba2acdbfb8be2bbadfb3dcb0c64dc2604700717864bbc80b95c50dc0b1466b56",
+    "json-example-089": "c205136f5a327bc833a94f56508e2976c0231f0dd02c78b436c2ed9fda0b08e2",
+    "json-example-090": "86f98ebecb1f0c583a561edfe2e4c00974ae758588ac0bf21a1c67d8385f65e8",
+    "json-example-091": "22ab69259247af2f646e748d701658c2f32373de89830f7de608fd0d9a42d739",
+    "json-example-092": "041b01bedb490a706c397658252faf99645a2dca8a45ce41195484da30994ba2",
+    "json-example-093": "85725004fd5fa23620312c4bb8521f85ac0ebc355c3c46173ad6f63cb39bd1a5",
+    "json-example-094": "8cbfa8cc7982b8db21e7f12e264d850523706b9d533aaedaeea0d8aefe30ab1d",
+    "json-example-095": "c0ca598e00995c0733d0670b9620c9db5b2876c732c4225bcda5f8e8b1e79521",
+    "json-example-096": "833c2863d6591dca8000566243ac9d53c70e6bb926534bf42054e424c0fff4c2",
+    "json-example-097": "6404e905a0e8e2cdd0de4c60fffc5dd2a194c330b94e1e3351c18d78bcf9f092",
+    "json-example-098": "f91be1aaaa79d92aa6107940d1eea5a5426b83c32eb5ef5ca2e5d415ea27eec1",
+    "json-example-099": "aa412762e9a98a334446162a491f7d53ceec7a3db9269f3b21b9f8eb0a24480b",
+    "json-example-100": "e52b4ab629c46a116b127a7f331d22f0c3099e36091240a24bca8640d1996c11",
+    "json-tutorial-001-lesson": "61f977429a52cfb76b3b9752836997d2ea15c1423f7e392278415aab036fdfa3",
+    "json-tutorial-002-lesson": "a6c15d94bd7cec514631e019a9c367ffc5cfec983b50c9d14c82cabd38b6ef09",
+    "json-tutorial-003-lesson": "43cd9ed153bb444c163ea9be8fd311a09c22f80440d1c949d5995927781b9629",
+    "json-tutorial-004-lesson": "ca542ff60b11cf3c555f33ebc46f888b932ac9a5658c89793c51baaddb062a27",
+    "json-tutorial-005-lesson": "1f43f749d3256c57ea192d926bab4f34f1581430c3093840016c1a9ce781c4ee",
+    "json-tutorial-006-lesson": "7c76dbf8e8af59b4f4c5e0f815246d51095b783314aa99b981f92cd982d2e423",
+    "json-tutorial-007-lesson": "b5c76280d6a98a1c015d0416e75dfc08f4854f46f053da103445e1914f22a9bb",
+    "json-tutorial-008-lesson": "851b2496a70b51167f5d248a7f6dfb941a90d7a2fd0cb802d54ad68d3f825a9c",
+    "json-tutorial-009-lesson": "74f48c5bb0573e44d720569bd49456bb0f9c435ab4291d5551abffc7ba3ee344",
+    "json-tutorial-010-lesson": "b0046202fd83a4e220aedf0afe6a60450e206d5765c30537d261ef791c8a2fb1",
+    "json-tutorial-011-lesson": "fb905a6dfe0959e3f61eaf5d811652ee906d128fb7eb090f56ddfd4368e04e38",
+    "json-tutorial-012-lesson": "c3650f60fd73a59aa27d8a46ba44bd2db8b02f90c92104004970a78d9a9cf343",
+    "json-tutorial-013-lesson": "e1efe6289b7804fc311b6713e2993da9b772e4952a4bb8d9ed21b2c3d743318c",
+    "json-tutorial-014-lesson": "67ed62b0ba1e76c2a9e65c76541381c4f37563ce7021ecce583b8691f9b79185",
+    "json-tutorial-015-lesson": "797c4ca027e33b864f537bd7071073af021f56d2c88f9efd7bf0affa63bfd7fe",
+    "json-tutorial-016-lesson": "e84376c5bbb8833fcc55b0c087ddbf7371a2df3367e93a301480aafcd0b1ca50",
+    "json-tutorial-017-lesson": "a1953c5d108f7c2f641d235d968eaf1c1271ca539773edd4aeb0233bea240c4c",
+    "json-tutorial-018-lesson": "86fefa69a94e1a011941a9cbcc4a25dc16150ba35237926f96a7a0112b8e159d",
+    "json-tutorial-019-lesson": "59cdad61244a950cb16b3de2268c398b86437dde536dbb3de04909f2e87e07ee",
+    "json-tutorial-020-lesson": "0d5950fc6b1923c87a546d68c444da129083d54be69bdf31563137e0903fe2e1",
+    "json-tutorial-021-lesson": "451e0cd10c524a8575aef7a027a60f0ad29650fa4e3dbf0bb0e65cba39ec36e6",
+    "json-tutorial-022-lesson": "4e74cfbbfd60a1141fb5a83108725897dd1dae17cdbd29093df6407a667d854d",
+    "json-tutorial-023-lesson": "fef560e5c3ca4399239a7b773fc1ea347f37401188a277a4d75a178331238346",
+    "json-tutorial-024-lesson": "82de3f15cd729abfa8ffe2b165533eec054df7b61f7beeafc9b657b153197781",
+    "json-tutorial-025-lesson": "d4862da280a90291adabfb0aee7a4311a6838b0bf7c37cd87cb393cf4e536145",
+    "json-tutorial-026-lesson": "bcc031316ee6b190d749dd8c7f03e89b8b90ca91b0d13a5d64a93807a4c6f39c",
+    "json-tutorial-027-lesson": "69837b78ce3a52908a3a0997b28bacf2a5b3f857d2e7c85eb5a53533b3852379",
+    "json-tutorial-028-lesson": "57dd16ddb5a43c3a8582f7280e347d650bf2b889ae73991833bcea86688e9be5",
+    "json-tutorial-029-lesson": "ec0b39b245f9af322c53dab73a9c97a89928c5b70b843a960fd315d1eca93910",
+    "json-tutorial-030-lesson": "5749d8eb183f961b99d055fa532b82525cad5c3f6bf5d20473d0cc7a4b1ba5fd",
+    "json-tutorial-031-lesson": "cb98c0c270d692b04ce18d5cbf0cbe0dcae4f99b03a3d5b1a3fcd37e129e8b32",
+    "json-tutorial-032-lesson": "e612dd776a7c87c6d018a5f8a0a185f209edeedfb0ff5dbf059ee0e7deaac7e7",
+    "json-tutorial-033-lesson": "34a054877a25d3011c3da48d34007a8f9e8a8f4586bc72203802e77bf968cb1b",
+    "json-tutorial-034-lesson": "4a78bc100411aa24fdbe98663b00fa9fe9ada7dd17575c5baac051dbf4217cb5",
+    "json-tutorial-035-lesson": "e616f982c7401924929b8546cdac8db2be6f3c10b32d2ad31397e8e1a9f215cd",
+    "json-tutorial-036-lesson": "9c9cc3faf47498868467cbd84cfb24724adf246fa2d8af6ae8a8cb2ffe364930",
+    "json-tutorial-037-lesson": "61eb5bea4f5dc54aab27967fc307286eb94532f0f84d377659b66803c73ce534",
+    "json-tutorial-038-lesson": "71ebd649aa4b82abca715b15c708fe62578f2432df779e7722575910e33a91b3",
+    "json-tutorial-039-lesson": "132d81c92a0361340aebefde75f1e05c7c1c59abd10b0986bb88941c4ffc16e6",
+    "json-tutorial-040-lesson": "01ff5b1397f971a44150c64aeca0f8f16e1af7878662bed7988b546ae71017b6",
+    "json-tutorial-041-lesson": "baa9886b2a9548ac795b0aaaf82fd8560e6449066305e0cbca9f4a6dca8822c2",
+    "json-tutorial-042-lesson": "fa829d59a504732e2f1034959aa7b8bf48a2c1be546dc97e889945ff340a4898",
+    "json-tutorial-043-lesson": "e08b4dd16fedb309c3fbf266cb45eeaec06d6f7e64e536ad7cc0b4d891737a1d",
+    "json-tutorial-044-lesson": "56b38dd39887d0ceeafe1a3979ff5397edd5bdfa973afbd1792a970f05b1d61e",
+    "json-tutorial-045-lesson": "0eb35e8e1dc72180e6e5fe623436074fb2406d0f46cfc8d6fe1d5436fb99e1e6",
+    "json-tutorial-046-lesson": "02aa881de2552aebfa12d6f95f816e8d4cc48d864df9420245883b808cd8a477",
+    "json-tutorial-047-lesson": "59a488d1c44cba5494c1e9c503f9f5fe009572a59ac4723cd0996499cbc4bc20",
+    "json-tutorial-048-lesson": "87a96b60a260deaba45c1594cdda4df64fa6f627260182094e89e5a7ab0787ff",
+    "json-tutorial-049-lesson": "9eb6ed5b42fc9c759e6d56a9ef8c80e6bb405be18f3d526c711b87f39d5b663c",
+    "json-tutorial-050-lesson": "cf7e3d1d685d986ac853186e29fad76f5d758217e99d780897d58f66f0628c38",
+    "json-tutorial-051-lesson": "58a88e284eee09b441e71b2221b19d94e619752a655dd9ce763971065bd0bf9b",
+    "json-tutorial-052-lesson": "96bc66553664b872b90c784a42fc003d4192d42a2dbeba09f86886504eba1682",
+    "json-tutorial-053-lesson": "f6328dce772bb6f58e49951e6a960d7eec7898b2b2feca4f1e19519ef4d97ecf",
+    "json-tutorial-054-lesson": "7a0d6a65143cd1f2dbd59183a2c6f290dd8a6aae1ff537f1ac244d7d9c105216",
+    "json-tutorial-055-lesson": "630a5ebcd3a91f2eaa2f7c10ae4807ce9d347455c9d983d1caf9501eecd49888",
+    "json-tutorial-056-lesson": "50930a0643492b38c6913c37d3a0946068cde82b6f0ff831f2bf982857640570",
+    "json-tutorial-057-lesson": "1e9cddebcc7d8fe32e5edcb8c07d4dc126cf9a3db5ae1bff491d48fd249c463a",
+    "json-tutorial-058-lesson": "d1bb6b8fff3b6ef3da67877d33cf02a66d73ef945ff12938a91e3ca988fe45fa",
+    "json-tutorial-059-lesson": "06ee485342c3d8acae604805ba255f3cca8cc28fca9e2960988003eb2286ec9e",
+    "json-tutorial-060-lesson": "6cbaba009570699add8c676f58887a835352b1179dd054fbba891db64fe544ce",
+    "json-tutorial-061-lesson": "a39817b5f46e84faa41704c3af405eaddf834566df5a8907a8e3c2181471da64",
+    "json-tutorial-062-lesson": "a0793d0e79e2138abc5aabf72d570c2c38cffa45597ca2a6b3ca17f7c689dae1",
+    "json-tutorial-063-lesson": "ed9ac71ff9f6c55b4062e4976e39a01b93dacc3b5600e8f3e723ebac816ae9c4",
+    "json-tutorial-064-lesson": "b822b75a8e8fc99ba060ae7732d29eb4a736cc4742796a71e754057074715a6a",
+    "json-tutorial-065-lesson": "17cf1e17e514b5d058780aaed620ef9995ca064c61028e035d070327ca54f546",
+    "json-tutorial-066-lesson": "390af2d04621de27b44cc803f6bea6cc68901590323c03996610b31ca70b7dac",
+    "json-tutorial-067-lesson": "5a50b1cbfa7c8fd3142401c0e3e7df466743fbfbd43ad718555f0c9a7bdd9760",
+    "json-tutorial-068-lesson": "4ee3d490fb415d9d44b27f0e5298a0f7de4e7d3625c1bc1b8e926f595bbc866b",
+    "json-tutorial-069-lesson": "8713d72fbf6bbbe8d252fc64e67bd5a29852fc1f1b3a84f5f8016fcbf9311b73",
+    "json-tutorial-070-lesson": "01bf213d29d1713ef14ecfead2bf9691be9b5b927675b3eae4e0099fdf768459",
+    "json-tutorial-071-lesson": "fb65cd867e4f4c1e66499066ae973c7ac16c03b2d50ede6d561ef7943a55ca57",
+    "json-tutorial-072-lesson": "ea46605132f111f9347451b7ffa6b04256c20ef7c9da58015e88e48520e0d37b",
+    "json-tutorial-073-lesson": "6e16cde3d9184c47759dc556b60f80ce9ada21eac782e56fd9bde737c06b205d",
+    "json-tutorial-074-lesson": "b76f15e0436d7f1d4b76c13a0f6a9b14b5b040e4f38f2c0d0fb8949273e40210",
+    "json-tutorial-075-lesson": "818375dbe3ea999bc54e783f957d71282ccdd984e344b8ac817626d4ddc49d0a",
+    "json-tutorial-076-lesson": "646829185aa70d9377ad42a817ffb0dffa322b22e5d52bccd661ebe33bfd3b60",
+    "json-tutorial-077-lesson": "e7920b566496e6c14491350465b01dfcd7b0931e2957c24527f18eb6ee1c491b",
+    "json-tutorial-078-lesson": "2710a099f023f8eed197532b7c0c2c185a6226a46bc26378e7084aaa08f4df8c",
+    "json-tutorial-079-lesson": "f74168d4beb0b4d65c9ac52d8b4d1834975b71022b5a572cb6b47a2f4ec038f5",
+    "json-tutorial-080-lesson": "e585879888a0d51a135fd0aefa78e9a5116efe798d1dab7ffede7cbabd70c038",
+    "json-tutorial-081-lesson": "08d336db5552c2d1f3474825b991d3be97487100ab073b88a2b2ad3bfdb00fff",
+    "json-tutorial-082-lesson": "db04aa22bb57df1e3be98c6a766ea0cbe190bc463532094a1d2c1e714d100ac3",
+    "json-tutorial-083-lesson": "e05dc82c722e08a24e89bbacfb7173c7155a28542123bccc6752bbe7d8a7704c",
+    "json-tutorial-084-lesson": "ca4e4af490f06880d6f3abde5fc14ee4d2148097712d2f97ab2c45e5ca7a8319",
+    "json-tutorial-085-lesson": "5f052de1b699b35112fff735f291acbf86d392d04e90fa0b25ed2966ed1e8e5c",
+    "json-tutorial-086-lesson": "ad5749e0c0cfde4079ece361986aa85df40a6f7c0cc9f28db6c2175f610945d5",
+    "json-tutorial-087-lesson": "f734a8310d131a9a3fe2b99121fb909ffacd747b09d694befeb771ffaf9e2abd",
+    "json-tutorial-088-lesson": "acfa3ec88c360bff1d0bdb0508731aeba9c6c6ad32882c9c655857ca5e2e699d",
+    "json-tutorial-089-lesson": "bbfd0402c7c330a0c3314bf0b1c857fbd4ef4c9fec912954cae9375239a0990e",
+    "json-tutorial-090-lesson": "fe337897143f0bcc10659a3a060adaab6ea3e6d9e992c3fe06bae68c940d4a64",
+    "json-tutorial-091-lesson": "f65b784a6daecebf2f50b8be2d136abce2a291b3f4bc9a2c711f194f4721153e",
+    "json-tutorial-092-lesson": "58337fba267cf1a17a1c157cd4fc8b75da8668ea9c7f3f7b48064fc2eb3e0e11",
+    "json-tutorial-093-lesson": "a7f7f3bc8da831ec3ea066fcc62ca45b0764e056d918d32a6888a4e3c9393eb8",
+    "json-tutorial-094-lesson": "58379282b05e82c4da09458b5f504df428070cbfe78790ff95507818ef972c6f",
+    "json-tutorial-095-lesson": "30d943aecdb902f481e55b5b6e707b8d43117fb83d7cd4b055bf064a735ffb66",
+    "json-tutorial-096-lesson": "09b4c1125878398855f6dd8faabce7d94c076d0b8664c2ce5b9b2f3c3c0b1654",
+    "json-tutorial-097-lesson": "e29046fd1b6e5dd8c0eee6e962e638139a03e907397abcf9934694a3ed932945",
+    "json-tutorial-098-lesson": "cb7a41ceac15e40ab0dea19e88a9efdd7f7e09e23f38a27ce0862046b148d77a",
+    "json-tutorial-099-lesson": "5ccfee82537732ced03a7d8c638d9cc3329c10feb1fda9c2c97b40afdd75cad8",
+    "json-tutorial-100-lesson": "c9af322d6adb66bda40304af9bf1fe0d981c42a75b9269d55b7a7bd111dbbbab"
+  },
+  "corrections": {
+    "exampleOutputs": 100,
+    "lessonOutputs": 100,
+    "proseExerciseAnswers": 200,
+    "exampleFixtures": 100
+  },
+  "correctionDetails": [
+    {
+      "id": "json-example-001",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=1",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-001",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-1",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-002",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=2",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-002",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-2",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-003",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=3",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-003",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-3",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-004",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=4",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-004",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-4",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-005",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=5",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-005",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-5",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-006",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=6",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-006",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-6",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-007",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=7",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-007",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-7",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-008",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=8",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-008",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-8",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-009",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=9",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-009",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-9",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-010",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=10",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-010",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-10",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-011",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=11",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-011",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-11",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-012",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=12",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-012",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-12",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-013",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=13",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-013",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-13",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-014",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=14",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-014",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-14",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-015",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=15",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-015",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-15",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-016",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=16",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-016",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-16",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-017",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=17",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-017",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-17",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-018",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=18",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-018",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-18",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-019",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=19",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-019",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-19",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-020",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=20",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-020",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-20",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-021",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=21",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-021",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-21",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-022",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=22",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-022",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-22",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-023",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=23",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-023",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-23",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-024",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=24",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-024",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-24",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-025",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=25",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-025",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-25",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-026",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=26",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-026",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-26",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-027",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=27",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-027",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-27",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-028",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=28",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-028",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-28",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-029",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=29",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-029",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-29",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-030",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=30",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-030",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-30",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-031",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=31",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-031",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-31",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-032",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=32",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-032",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-32",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-033",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=33",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-033",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-33",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-034",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=34",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-034",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-34",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-035",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=35",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-035",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-35",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-036",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=36",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-036",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-36",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-037",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=37",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-037",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-37",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-038",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=38",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-038",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-38",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-039",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=39",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-039",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-39",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-040",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=40",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-040",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-40",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-041",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=41",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-041",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-41",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-042",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=42",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-042",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-42",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-043",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=43",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-043",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-43",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-044",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=44",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-044",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-44",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-045",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=45",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-045",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-45",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-046",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=46",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-046",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-46",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-047",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=47",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-047",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-47",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-048",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=48",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-048",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-48",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-049",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=49",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-049",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-49",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-050",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=50",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-050",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-50",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-051",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=51",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-051",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-51",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-052",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=52",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-052",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-52",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-053",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=53",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-053",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-53",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-054",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=54",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-054",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-54",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-055",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=55",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-055",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-55",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-056",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=56",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-056",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-56",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-057",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=57",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-057",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-57",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-058",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=58",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-058",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-58",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-059",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=59",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-059",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-59",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-060",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=60",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-060",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-60",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-061",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=61",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-061",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-61",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-062",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=62",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-062",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-62",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-063",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=63",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-063",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-63",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-064",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=64",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-064",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-64",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-065",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=65",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-065",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-65",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-066",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=66",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-066",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-66",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-067",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=67",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-067",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-67",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-068",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=68",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-068",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-68",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-069",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=69",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-069",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-69",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-070",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=70",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-070",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-70",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-071",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=71",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-071",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-71",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-072",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=72",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-072",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-72",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-073",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=73",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-073",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-73",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-074",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=74",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-074",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-74",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-075",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=75",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-075",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-75",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-076",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=76",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-076",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-76",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-077",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=77",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-077",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-77",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-078",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=78",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-078",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-78",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-079",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=79",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-079",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-79",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-080",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=80",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-080",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-80",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-081",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=81",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-081",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-81",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-082",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=82",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-082",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-82",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-083",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=83",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-083",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-83",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-084",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=84",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-084",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-84",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-085",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=85",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-085",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-85",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-086",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=86",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-086",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-86",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-087",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=87",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-087",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-87",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-088",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=88",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-088",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-88",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-089",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=89",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-089",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-89",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-090",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=90",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-090",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-90",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-091",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=91",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-091",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-91",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-092",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=92",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-092",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-92",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-093",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=93",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-093",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-93",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-094",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=94",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-094",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-94",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-095",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=95",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-095",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-95",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-096",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=96",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-096",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-96",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-097",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=97",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-097",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-97",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-098",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=98",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-098",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-98",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-099",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=99",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-099",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-99",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-example-100",
+      "field": "expectedOutput",
+      "previousValue": "preview-ready\ncase=100",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-example-100",
+      "field": "inputFixtures",
+      "previousValue": {
+        "case": "fixture-100",
+        "mode": "deterministic"
+      },
+      "reason": "Replace fixture labels with the actual importable JSON document"
+    },
+    {
+      "id": "json-tutorial-001-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=1",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-001-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-001-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-002-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=2",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-002-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-002-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-003-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=3",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-003-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-003-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-004-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=4",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-004-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-004-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-005-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=5",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-005-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-005-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-006-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=6",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-006-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-006-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-007-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=7",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-007-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-007-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-008-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=8",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-008-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-008-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-009-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=9",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-009-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-009-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-010-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=10",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-010-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-010-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-011-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=11",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-011-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-011-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-012-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=12",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-012-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-012-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-013-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=13",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-013-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-013-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-014-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=14",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-014-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-014-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-015-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=15",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-015-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-015-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-016-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=16",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-016-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-016-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-017-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=17",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-017-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-017-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-018-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=18",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-018-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-018-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-019-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=19",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-019-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-019-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-020-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=20",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-020-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-020-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-021-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=21",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-021-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-021-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-022-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=22",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-022-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-022-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-023-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=23",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-023-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-023-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-024-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=24",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-024-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-024-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-025-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=25",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-025-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-025-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-026-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=26",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-026-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-026-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-027-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=27",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-027-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-027-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-028-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=28",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-028-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-028-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-029-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=29",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-029-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-029-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-030-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=30",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-030-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-030-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-031-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=31",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-031-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-031-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-032-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=32",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-032-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-032-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-033-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=33",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-033-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-033-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-034-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=34",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-034-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-034-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-035-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=35",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-035-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-035-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-036-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=36",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-036-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-036-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-037-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=37",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-037-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-037-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-038-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=38",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-038-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-038-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-039-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=39",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-039-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-039-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-040-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=40",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-040-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-040-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-041-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=41",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-041-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-041-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-042-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=42",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-042-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-042-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-043-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=43",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-043-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-043-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-044-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=44",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-044-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-044-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-045-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=45",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-045-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-045-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-046-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=46",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-046-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-046-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-047-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=47",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-047-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-047-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-048-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=48",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-048-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-048-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-049-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=49",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-049-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-049-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-050-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=50",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-050-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-050-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-051-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=51",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-051-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-051-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-052-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=52",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-052-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-052-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-053-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=53",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-053-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-053-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-054-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=54",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-054-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-054-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-055-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=55",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-055-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-055-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-056-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=56",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-056-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-056-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-057-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=57",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-057-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-057-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-058-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=58",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-058-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-058-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-059-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=59",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-059-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-059-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-060-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=60",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-060-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-060-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-061-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=61",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-061-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-061-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-062-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=62",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-062-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-062-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-063-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=63",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-063-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-063-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-064-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=64",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-064-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-064-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-065-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=65",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-065-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-065-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-066-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=66",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-066-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-066-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-067-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=67",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-067-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-067-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-068-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=68",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-068-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-068-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-069-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=69",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-069-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-069-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-070-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=70",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-070-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-070-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-071-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=71",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-071-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-071-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-072-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=72",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-072-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-072-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-073-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=73",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-073-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-073-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-074-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=74",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-074-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-074-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-075-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=75",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-075-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-075-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-076-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=76",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-076-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-076-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-077-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=77",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-077-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-077-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-078-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=78",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-078-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-078-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-079-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=79",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-079-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-079-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-080-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=80",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-080-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-080-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-081-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=81",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-081-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-081-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-082-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=82",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-082-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-082-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-083-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=83",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-083-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-083-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-084-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=84",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-084-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-084-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-085-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=85",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-085-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-085-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-086-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=86",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-086-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-086-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-087-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=87",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-087-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-087-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-088-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=88",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-088-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-088-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-089-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=89",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-089-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-089-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-090-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=90",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-090-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-090-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-091-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=91",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-091-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-091-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-092-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=92",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-092-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-092-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-093-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=93",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-093-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-093-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-094-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=94",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-094-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-094-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-095-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=95",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-095-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-095-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-096-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=96",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-096-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-096-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-097-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=97",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-097-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-097-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-098-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=98",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-098-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-098-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-099-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=99",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-099-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-099-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-100-lesson",
+      "field": "output",
+      "previousValue": "preview-ready\ncase=100",
+      "reason": "Replace fabricated runtime output with actual formatted JSON"
+    },
+    {
+      "id": "json-tutorial-100-lesson",
+      "field": "exercises/0/answer",
+      "previousValue": "保留显式失败分支，输出稳定错误类别，并让退出状态反映失败。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    },
+    {
+      "id": "json-tutorial-100-lesson",
+      "field": "exercises/1/answer",
+      "previousValue": "为资源建立创建与释放配对，清理临时状态，并重复运行同一夹具。",
+      "reason": "Preserve prose answer in a valid JSON explanation object"
+    }
+  ],
+  "newExampleCount": 240,
+  "newTutorialCount": 240,
+  "categories": {
+    "foundations": 10,
+    "pointers": 10,
+    "configuration": 10,
+    "records": 10,
+    "commerce": 10,
+    "money": 10,
+    "schedule": 10,
+    "documents": 10,
+    "education": 10,
+    "diagnostics": 10,
+    "storage": 10,
+    "patches": 10,
+    "forms": 10,
+    "metrics": 10,
+    "science": 10,
+    "geography": 10,
+    "household": 10,
+    "media": 10,
+    "accessibility": 10,
+    "schemas": 10,
+    "interchange": 10,
+    "tests": 10,
+    "workflows": 10,
+    "structures": 10
+  },
+  "totalTutorials": 340,
+  "totalExamples": 340
+}
