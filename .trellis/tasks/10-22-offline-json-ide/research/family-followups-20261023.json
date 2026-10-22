@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-23",
+  "scope": "read-only integration review; family goal remains active",
+  "coordination": {
+    "channel": "qfli-core-release-sync",
+    "scope": "global",
+    "sequence": 237,
+    "sender": "json-offline-1022",
+    "recipients": [
+      "c-coordinator",
+      "studio-main"
+    ]
+  },
+  "findings": [
+    {
+      "id": "java-unsupported-clean",
+      "evidence": "family-editor-audit-20261023.md",
+      "ownerThread": "01a15fa1-958f-78f3-b6b2-688ebe76bf12",
+      "status": "reported_to_owner",
+      "verification": "static control flow; regression not run by JSON"
+    },
+    {
+      "id": "cpp-header-grammar",
+      "evidence": "family-editor-audit-20261023.md",
+      "owner": "c-coordinator",
+      "status": "reported_to_owner",
+      "verification": "static language mapping; regression not run by JSON"
+    },
+    {
+      "id": "native-online-entry-boundaries",
+      "evidence": "family-offline-host-audit-20261023.md",
+      "ownerThreads": {
+        "c": "01a15fa0-d631-7563-8f31-1c14e80c7ecc",
+        "dart": "01a15fa0-eba3-7de1-b40c-6f88a3b2c1ca",
+        "go": "01a15fa0-f776-7760-90a5-755a1ad8c598",
+        "java": "01a15fa1-958f-78f3-b6b2-688ebe76bf12",
+        "note": "01a15fb2-ff62-7a50-8e01-9c757c3bf3fb",
+        "python": "01a15fa0-e2cb-7be0-b44c-56d8f9cd1496",
+        "rust": "01a15fa2-3842-7573-8244-e57c3df02bca",
+        "sql": "01a15fa2-6fa5-7433-b7b8-0707a3c1fd77",
+        "web": "01a15fa2-9b54-73d1-b0fa-6d23a3a7a44b"
+      },
+      "status": "reported_to_owners",
+      "verification": "native capabilities remain registered; normal UI automatic networking not established; preserve required local services"
+    },
+    {
+      "id": "web-content-after-artifact",
+      "evidence": "family-artifact-audit-20261023.md",
+      "ownerThread": "01a15fa2-9b54-73d1-b0fa-6d23a3a7a44b",
+      "status": "reported_to_owner",
+      "verification": "local source and archive hash comparison; no repaired-package device rerun"
+    },
+    {
+      "id": "python-ffi-after-artifact",
+      "evidence": "family-artifact-audit-20261023.md",
+      "ownerThread": "01a15fa0-e2cb-7be0-b44c-56d8f9cd1496",
+      "status": "reported_to_owner",
+      "verification": "local source and report digest comparison; no rebuilt-package device rerun"
+    },
+    {
+      "id": "json-final-core-integration",
+      "evidence": "final-handoff.md",
+      "owner": "JSON owner with C shared-core checkpoint",
+      "status": "pending_final_shared_checkpoint",
+      "verification": "archived device build is valid for captured bytes; later core changes require separate affected integration checks"
+    }
+  ],
+  "limits": [
+    "Reports queued to owners are not acknowledgements or completed fixes",
+    "No sibling source mutation or new build/test/device operation for these follow-up audits",
+    "All counts and line numbers describe the inspected point in ongoing parallel work"
+  ]
+}

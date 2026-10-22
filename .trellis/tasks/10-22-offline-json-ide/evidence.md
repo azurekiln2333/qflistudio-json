@@ -60,3 +60,9 @@ JSON implementation is `6df694e feat(json): add offline workbench and 340 verifi
 - Both device builds bind the recorded 160-file snapshots. Later shared-core edits are not covered by the installed HAP. Host compatibility passing during concurrent edits is not a frozen-source device result.
 - Release signing, physical ARM devices and sibling language runtimes are not proven by the x86_64 emulator.
 - Whole-family completion requires each runtime's own examples, modules/header behavior and device evidence. Keep the umbrella goal open.
+
+## Family follow-up review
+
+Three additional source-only reviews are recorded in `research/family-editor-audit-20261023.md`, `family-offline-host-audit-20261023.md` and `family-artifact-audit-20261023.md`. They cover all eleven product profiles/native hosts and distinguish retained native capabilities, current UI gating, loopback services, unsupported-document diagnostics and package/source identity. They do not establish new sibling runtime or device passes.
+
+The Java unsupported-document clean result and C++ `.h` grammar mismatch were reported to the Java and shared-core owners. Native offline-entry findings were sent to the relevant product owners; Web/Python artifact drift was also reported. Coordination message 237 in the global `qfli-core-release-sync` channel records JSON's durable handoff, device release and C-owned follow-ups. A queued report is not a resolved issue; `research/family-followups-20261023.json` preserves the open dispositions. No sibling/core source changes, additional builds or device operations were made for these reviews.
