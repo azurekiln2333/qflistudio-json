@@ -1,0 +1,73 @@
+{
+  "platform": "ohos",
+  "device": "127.0.0.1:5555",
+  "api": 26,
+  "abi": "x86_64",
+  "normalArtifact": "ohos-normal-artifact.json",
+  "sourceSnapshot": "ohos-normal-source-snapshot.json",
+  "checkedOn": [
+    "2026-10-22",
+    "2026-10-23"
+  ],
+  "observations": {
+    "directToolCards": true,
+    "pointer": {
+      "path": "/items/0/id",
+      "result": "1"
+    },
+    "exampleImport": "001 imported via normal UI into a new task-owned project",
+    "mainEditorHighlighting": true,
+    "diagnostic": {
+      "fixture": "{\"a\" true}\n",
+      "fixtureSetup": "task-owned file seeded through hdc; not claimed as UI typing",
+      "message": "对象键后缺少冒号 :",
+      "path": "src/data.json",
+      "line": 1,
+      "column": 6,
+      "squiggleVisible": true,
+      "clickSelectedOffendingCharacter": true
+    },
+    "unsavedCorrection": {
+      "method": "UI select all, enter {}",
+      "problemsCleared": true,
+      "diskStillMalformed": true
+    },
+    "documentOutput": "校验通过：1 个节点",
+    "structureNavigation": {
+      "path": "/values/1",
+      "value": 3,
+      "type": "integer",
+      "selectedLine": 4,
+      "selectedColumn": 17
+    },
+    "treeExpansion": {
+      "directory": "src",
+      "sidebarCloseReopen": true,
+      "appProcessRestart": true
+    },
+    "sampleRestored": {
+      "bytes": 123,
+      "sha256": "70739cda8c82069b2d496ac68ecff4f2c40ee67705e5c9e6a69aeba4e9a6b0ac",
+      "equalsOriginal": true,
+      "reopenedStatus": "本地检查未发现问题"
+    }
+  },
+  "limits": [
+    "No physical ARM64 or release-signing verification",
+    "Multi-root workspace restoration has host regressions, not device gestures",
+    "Only the recorded ordinary UI paths were exercised; all 16 tool defaults were separately checked by the harness",
+    "Device results bind the archived source snapshot, not later shared-core edits"
+  ],
+  "screenshots": {
+    "ohos-ui-editor.png": "f6d3ec529636b8542f2286d901237d470999565ec76cdd8aaba60dcc8abeec25",
+    "ohos-ui-output.png": "eeabaf076b6e1b44e5ba15193f4e3941acdb621aa5cec92e88e39ca954caf34c",
+    "ohos-ui-pointer.png": "650e334269818dd58a1ffa3947c7a52e74c68b3425f9ef3d3a8eb7b89f48ca28",
+    "ohos-ui-problems.png": "dce597dfecd81be276d0b94c16787a6049995c301b9f4b7bc3846fb012b302eb",
+    "ohos-ui-structure-navigation.png": "26be14e5038cf2c7f6c6890c256f15c2be348847ecf08abd9d6b899270f4ec02",
+    "ohos-ui-structure.png": "03d2e9d0349913d0911f01d96aa9489d15005e9b41ded80aefa80ca8641f9d9d",
+    "ohos-ui-tools.png": "30e1917e8055562760299b1a25842b14a4dfeb629cd43019e480c8fe31961c3f",
+    "ohos-ui-tree-reopened.png": "b9147c70dd9f7ab70b582a9af9b52051a10da56bfa1fa4de97655204c400f7a8",
+    "ohos-ui-tree-restarted.png": "b9923d0108071c162f236be71a4119ffc3b0eeb01958333e74030bbbda61e5f6",
+    "ohos-ui-unsaved-correction.png": "87ed081aa2d72ddbd6eee50e1e284a2eb69e1355b4349fee64741f89c028289e"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "capturedUtc": "2026-10-22T17:51:41.920318+00:00",
+  "availablePhysicalMiB": 6986.57,
+  "totalPhysicalMiB": 32505.71,
+  "availableCommitMiB": 3301.94,
+  "memoryLoadPercent": 78,
+  "meets512MiBPhysicalThreshold": true
+}

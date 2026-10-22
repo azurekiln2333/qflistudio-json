@@ -21,6 +21,12 @@
   "children": [],
   "parent": null,
   "relatedFiles": [],
-  "notes": "",
-  "meta": {}
+  "notes": "JSON implementation and fixed-snapshot OHOS x64 acceptance recorded. Keep in progress until family coordinator closes the full request; release signing/physical ARM64 and later core integration remain independent.",
+  "meta": {
+    "json_implementation_commit": "6df694e",
+    "core_backup_commit": "96e6833",
+    "acceptance_evidence": "research/ohos-ui-acceptance.json",
+    "family_coordinator": "D:/MyNewProjects/qfli_c/.trellis/tasks/10-22-offline-standalone-ide",
+    "json_owner_thread": "01a15fa1-ce8b-7263-b09b-5766783ab535"
+  }
 }

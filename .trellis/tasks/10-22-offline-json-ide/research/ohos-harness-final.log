@@ -1,0 +1,9 @@
+10-22 20:47:56.052  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 40 / 340
+10-22 20:47:56.981  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 80 / 340
+10-22 20:47:57.863  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 120 / 340
+10-22 20:47:58.768  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 160 / 340
+10-22 20:47:59.603  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 200 / 340
+10-22 20:48:00.458  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 240 / 340
+10-22 20:48:01.239  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 280 / 340
+10-22 20:48:02.044  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_PROGRESS 运行校验 320 / 340
+10-22 20:48:02.595  5271  5271 W A00000/XComFlutterOHOS_Native: flutter settings log message: QFLI_JSON_VERIFY_RESULT {"passed":true,"examples":340,"runnerPasses":340,"tutorials":340,"lessons":340,"exerciseAnswers":440,"fixtures":340,"semanticOperations":10,"tools":16,"platform":"ohos","failures":[]}

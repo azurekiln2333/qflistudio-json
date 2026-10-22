@@ -1,0 +1,5 @@
+# Keep captured reports and source-snapshot hashes stable across checkouts.
+*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Test names contain intentional trailing whitespace; retain the raw logs.
+*.log -text -diff
+*.png -text

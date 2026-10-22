@@ -1,0 +1,45 @@
+{
+  "buildExit": 0,
+  "mode": "harness",
+  "target": "127.0.0.1:5555",
+  "targetPlatform": "ohos-x64",
+  "sourceSnapshotSha256": "2c87621c71e0f53ee7abb45dc5f94a6891f90da32d421710578458fcf653f85b",
+  "sourceFiles": 160,
+  "sourceChangesAfterSnapshot": [],
+  "hapBytes": 123852051,
+  "hapSha256": "e2a945a8687ffa73e8552a5874610ef0d44420320dec5b3297f805e3f3f71268",
+  "hapModifiedLocal": "2026-10-22T20:31:52.935995+08:00",
+  "permissions": [
+    {
+      "reason": "$string:pasteboard_reason",
+      "reasonId": 16777221,
+      "usedScene": {
+        "abilities": [
+          "EntryAbility"
+        ],
+        "when": "inuse"
+      },
+      "name": "ohos.permission.READ_PASTEBOARD"
+    }
+  ],
+  "assets": {
+    "catalog_audit.json": {
+      "matchesSource": true,
+      "bytes": 142948,
+      "sha256": "6442c06e699d130ee7eec32d2fb80d1226d6810b3537ade9a1ba3972ad92bb4f"
+    },
+    "examples.json": {
+      "matchesSource": true,
+      "bytes": 508014,
+      "sha256": "20a555e3f0671dfc0cafd09adb4895ba57ace25babdca332dd6bc59e33f33675"
+    },
+    "tutorials.json": {
+      "matchesSource": true,
+      "bytes": 941971,
+      "sha256": "8cb0b9e82ba0185d6cf0c988458f7e16ac0ea3c45fea1c541ce22c50c7869ca2"
+    }
+  },
+  "kernels": {
+    "resources/rawfile/flutter_assets/kernel_blob.bin": "5b6a52a26e6130fc9c34735613558aabef9b84f70b09117bdc125a4f119bc71a"
+  }
+}

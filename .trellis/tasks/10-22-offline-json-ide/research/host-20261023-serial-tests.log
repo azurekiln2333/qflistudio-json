@@ -1,0 +1,131 @@
+00:00 +0: loading D:/MyNewProjects/qfli_json/test/json_analyzer_test.dart
+00:00 +0: D:/MyNewProjects/qfli_json/test/json_analyzer_test.dart: analyzer checks unsaved snapshots and preserves exact UTF-16/CRLF offsets
+00:00 +1: D:/MyNewProjects/qfli_json/test/json_analyzer_test.dart: unsupported extension and absent active snapshot never claim clean
+00:00 +2: D:/MyNewProjects/qfli_json/test/json_analyzer_test.dart: main editor diagnostics decorate, navigate in Problems and clear unsaved corrections
+00:02 +3: loading D:/MyNewProjects/qfli_json/test/json_app_test.dart
+00:02 +3: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 档位收窄 新建项目只放行「空项目」和 JSON
+00:02 +4: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 档位收窄 默认模板是 JSON 而不是空项目
+00:02 +5: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 档位收窄 语言筛选芯片只剩 JSON
+00:02 +6: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 档位收窄 产品名带 JSON 版后缀
+00:02 +7: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 档位收窄 档位只使用本地能力
+00:02 +8: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 入口文件识别 优先命中 data.json
+00:02 +9: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 入口文件识别 入口表覆盖了模板自带的入口文件
+00:02 +10: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 入口文件识别 模板把源码放在 src/ 下时也能找到入口
+00:02 +11: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 运行能力 JSON 版注入本地 JSON 校验与预览后端
+00:02 +12: D:/MyNewProjects/qfli_json/test/json_app_test.dart: 运行按钮分流 JSON 运行返回实际校验与预览结果
+00:02 +13: loading D:/MyNewProjects/qfli_json/test/json_catalog_verification_test.dart
+00:03 +13: D:/MyNewProjects/qfli_json/test/json_catalog_verification_test.dart: device audit harness runs every bundled example through the real profile Run route
+00:05 +14: loading D:/MyNewProjects/qfli_json/test/json_content_test.dart
+00:05 +14: D:/MyNewProjects/qfli_json/test/json_content_test.dart: (setUpAll)
+00:05 +14: D:/MyNewProjects/qfli_json/test/json_content_test.dart: catalog meets the core release contract for the JSON product
+00:05 +15: D:/MyNewProjects/qfli_json/test/json_content_test.dart: every old example and lesson retains its exact original ID and code
+00:05 +16: D:/MyNewProjects/qfli_json/test/json_content_test.dart: new scenarios have 240 distinct structural models and explanations
+00:06 +17: D:/MyNewProjects/qfli_json/test/json_content_test.dart: all 340 examples and every fixture pass the shipped JSON parser
+00:06 +18: D:/MyNewProjects/qfli_json/test/json_content_test.dart: every lesson output and exercise answer is real, valid JSON
+00:06 +19: D:/MyNewProjects/qfli_json/test/json_content_test.dart: practical patch and merge examples also pass their promised operation
+00:06 +20: D:/MyNewProjects/qfli_json/test/json_content_test.dart: repository caches local reads and applies language/product filters
+00:06 +21: D:/MyNewProjects/qfli_json/test/json_content_test.dart: product bundle contains the actual shipped JSON curriculum
+00:06 +22: D:/MyNewProjects/qfli_json/test/json_content_test.dart: (tearDownAll)
+00:06 +22: loading D:/MyNewProjects/qfli_json/test/json_editor_test.dart
+00:06 +22: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: errors underline the source, navigate and clear after correction
+00:07 +23: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: returning to validated text rejects another source check in flight
+00:08 +24: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: nested arrays expose values and navigate to exact scalar span
+00:08 +25: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: save uses current buffer and preserves newer edits during await
+00:08 +26: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: read-only document disables writes
+00:08 +27: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: background formatting preserves newer edits and can be retried
+00:09 +28: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: every JSON operation is directly reachable from the tools tab
+00:09 +29: D:/MyNewProjects/qfli_json/test/json_editor_test.dart: invalid tool input reports an error and clears old result
+00:09 +30: loading D:/MyNewProjects/qfli_json/test/json_offline_host_test.dart
+00:09 +30: D:/MyNewProjects/qfli_json/test/json_offline_host_test.dart: JSON profile keeps every shared online surface disabled
+00:09 +31: D:/MyNewProjects/qfli_json/test/json_offline_host_test.dart: offline release manifests do not request internet access
+00:09 +32: D:/MyNewProjects/qfli_json/test/json_offline_host_test.dart: JSON data and schema references never create an HTTP client
+00:09 +33: D:/MyNewProjects/qfli_json/test/json_offline_host_test.dart: active OHOS host does not register login or external URL routing
+00:09 +34: loading D:/MyNewProjects/qfli_json/test/json_runner_test.dart
+00:10 +34: D:/MyNewProjects/qfli_json/test/json_runner_test.dart: valid JSON runs through the product runner and prints real formatted output
+00:10 +35: D:/MyNewProjects/qfli_json/test/json_runner_test.dart: invalid data fails with exact diagnostic; missing file is not-run status
+00:10 +36: D:/MyNewProjects/qfli_json/test/json_runner_test.dart: terminal parses quoted paths and never overwrites the input
+00:10 +37: D:/MyNewProjects/qfli_json/test/json_runner_test.dart: valid UTF-8 with excessive formatted output reports the output limit
+00:10 +38: D:/MyNewProjects/qfli_json/test/json_runner_test.dart: oversized and non-UTF8 inputs fail without successful output
+00:10 +39: loading D:/MyNewProjects/qfli_json/test/json_tool_task_test.dart
+00:10 +39: D:/MyNewProjects/qfli_json/test/json_tool_task_test.dart: all tool defaults complete in a worker with identical results
+00:10 +40: D:/MyNewProjects/qfli_json/test/json_tool_task_test.dart: worker returns a precise validation error
+00:10 +41: D:/MyNewProjects/qfli_json/test/json_tool_task_test.dart: a pathological pattern times out without blocking the caller
+00:11 +42: D:/MyNewProjects/qfli_json/test/json_tool_task_test.dart: cancellation also works before worker creation completes
+00:11 +43: D:/MyNewProjects/qfli_json/test/json_tool_task_test.dart: raw text escaping follows the same input limit as JSON tools
+00:11 +44: loading D:/MyNewProjects/qfli_json/test/json_workbench_test.dart
+00:11 +44: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts null and agrees with Dart JSON decoder
+00:11 +45: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts false and agrees with Dart JSON decoder
+00:11 +46: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts true and agrees with Dart JSON decoder
+00:11 +47: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts 0 and agrees with Dart JSON decoder
+00:11 +48: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts -0 and agrees with Dart JSON decoder
+00:11 +49: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts 1.25e-4 and agrees with Dart JSON decoder
+00:11 +50: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts "\"\\\/\b\f\n\r\t\u4f60" and agrees with Dart JSON decoder
+00:11 +51: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts {"a":[1,true,null,{"b":"你好"}]} and agrees with Dart JSON decoder
+00:11 +52: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics accepts  
+	 {"":"","😀":[]} 
+ and agrees with Dart JSON decoder
+00:11 +53: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects 
+00:11 +54: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects  
+00:11 +55: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects [1,]
+00:11 +56: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {"a":1,}
+00:11 +57: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {a:1}
+00:11 +58: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {'a':1}
+00:11 +59: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects [01]
+00:11 +60: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects +1
+00:11 +61: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects .1
+00:11 +62: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects 1.
+00:11 +63: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects 1e
+00:11 +64: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects [NaN]
+00:11 +65: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects [Infinity]
+00:11 +66: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects 1e999
+00:11 +67: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects true false
+00:11 +68: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects nullx
+00:11 +69: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {"a" 1}
+00:11 +70: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects [1 2]
+00:11 +71: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects [
+00:11 +72: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {
+00:11 +73: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects "unterminated
+00:11 +74: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects "line
+break"
+00:11 +75: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects "\q"
+00:11 +76: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects "\uGGGG"
+00:11 +77: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {"a":1,"a":2}
+00:11 +78: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics rejects {"a":1,"\u0061":2}
+00:11 +79: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics diagnostic is at exact second-line colon omission
+00:11 +80: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics integer formatting preserves int64 and rejects lossy overflow
+00:11 +81: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: strict JSON diagnostics depth, source size and node limits are actionable
+00:11 +82: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /foo/0
+00:11 +83: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /
+00:11 +84: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /a~1b
+00:11 +85: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /c%d
+00:11 +86: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /e^f
+00:11 +87: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /g|h
+00:11 +88: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /i\j
+00:11 +89: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /k"l
+00:11 +90: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer / 
+00:11 +91: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /m~0n
+00:11 +92: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer /nil
+00:11 +93: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: RFC 6901 JSON Pointer root and null are real values; missing and invalid indexes fail
+00:11 +94: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: patch, diff, lossless paths RFC 7396 published example
+00:11 +95: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: patch, diff, lossless paths all six RFC 6902 operations and array order after move
+00:11 +96: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: patch, diff, lossless paths failed patch cannot mutate input; parents must exist
+00:11 +97: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: patch, diff, lossless paths randomized round trips cover all scalar/container shapes
+00:11 +98: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: patch, diff, lossless paths paths preserve empty roots, nulls and numeric object keys
+00:11 +99: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset nested constraints and local refs report pointer paths
+00:11 +100: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset integer accepts 1.0, Unicode length and unordered duplicate objects
+00:11 +101: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset combinators and prefixItems use declared semantics
+00:11 +102: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset multipleOf does not round large odd integers or permit near misses
+00:11 +103: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset uniqueItems does not saturate large integral doubles into int64
+00:11 +104: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset metadata types and unsupported dialect/scoping are explicit errors
+00:11 +105: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: local Schema subset unsupported/remote/malformed schemas never silently pass
+00:11 +106: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: line-oriented and CSV conversions preserve embedded escapes
+00:11 +107: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits inspection bounds repeated long JSON Pointer paths
+00:11 +108: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits CSV bounds the row-column product before expanding sparse rows
+00:11 +109: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits CSV bounds its escaped output while streaming cells
+00:11 +110: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits copy growth and excess depth fail without changing the original
+00:12 +111: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits patch charges cumulative work even for successful read-only tests
+00:12 +112: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits JSON Lines caps the entire input and converted node count
+00:12 +113: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits flatten rejects repeated long paths before allocating the full manifest
+00:12 +114: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: transformation resource limits pretty output bounds direct callers as well as parsed sources
+00:12 +115: D:/MyNewProjects/qfli_json/test/json_workbench_test.dart: every direct tool has a working initial example
+00:12 +116: All tests passed!
