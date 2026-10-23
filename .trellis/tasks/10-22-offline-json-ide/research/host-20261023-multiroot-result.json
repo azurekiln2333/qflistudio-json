@@ -1,0 +1,9 @@
+{
+  "startedUtc": "2026-10-23T03:30:59.5815317Z",
+  "scope": "new same-name multi-root EditorPage/JsonDocumentPage regression and scoped analysis only",
+  "flutter": "D:/ProgramFiles/flutter_ohos/bin/flutter.bat",
+  "formatExit": 0,
+  "testExit": 0,
+  "analyzeExit": 0,
+  "finishedUtc": "2026-10-23T03:31:15.3772285Z"
+}

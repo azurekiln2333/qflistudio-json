@@ -16,15 +16,17 @@
       "id": "java-unsupported-clean",
       "evidence": "family-editor-audit-20261023.md",
       "ownerThread": "01a15fa1-958f-78f3-b6b2-688ebe76bf12",
-      "status": "reported_to_owner",
-      "verification": "static control flow; regression not run by JSON"
+      "status": "source_fixed_pending_owner_verification",
+      "verification": "current source guard/mapping and regression source inspected; tests/device not executed by JSON",
+      "followupEvidence": "family-offline-followup-20261023.md"
     },
     {
       "id": "cpp-header-grammar",
       "evidence": "family-editor-audit-20261023.md",
       "owner": "c-coordinator",
-      "status": "reported_to_owner",
-      "verification": "static language mapping; regression not run by JSON"
+      "status": "source_fixed_pending_owner_verification",
+      "verification": "current source guard/mapping and regression source inspected; tests/device not executed by JSON",
+      "followupEvidence": "family-offline-followup-20261023.md"
     },
     {
       "id": "native-online-entry-boundaries",
@@ -40,8 +42,20 @@
         "sql": "01a15fa2-6fa5-7433-b7b8-0707a3c1fd77",
         "web": "01a15fa2-9b54-73d1-b0fa-6d23a3a7a44b"
       },
-      "status": "reported_to_owners",
-      "verification": "native capabilities remain registered; normal UI automatic networking not established; preserve required local services"
+      "status": "partially_source_fixed_target_verification_pending",
+      "verification": "targeted current source/manifest/hash review of nine products; owner-reported host results remain separately attributed; no new device result",
+      "followupEvidence": "family-offline-followup-20261023.md",
+      "productDispositions": {
+        "go": "source_refusal_confirmed_target_pending",
+        "sql": "source_refusal_confirmed_target_pending",
+        "note": "source_refusal_confirmed_target_pending",
+        "java": "source_refusal_confirmed_target_pending",
+        "dart": "source_refusal_confirmed_target_pending",
+        "python": "source_refusal_confirmed_target_pending",
+        "rust": "source_refusal_confirmed_target_pending",
+        "web": "source_literal_loopback_policy_confirmed_target_pending",
+        "c": "remote_handlers_still_present_reported_to_owner"
+      }
     },
     {
       "id": "web-content-after-artifact",
@@ -62,12 +76,37 @@
       "evidence": "final-handoff.md",
       "owner": "JSON owner with C shared-core checkpoint",
       "status": "pending_final_shared_checkpoint",
-      "verification": "archived device build is valid for captured bytes; later core changes require separate affected integration checks"
+      "verification": "focused current-composed-source cross-root case 1/1 and scoped analysis passed with 291 identical before/after hashes; final published core and new device package remain pending",
+      "hostFollowupEvidence": "host-20261023-multiroot.md"
+    },
+    {
+      "id": "shared-api-offline-boundary",
+      "evidence": "family-offline-followup-20261023.md",
+      "owner": "c-coordinator",
+      "status": "source_fixed_pending_owner_verification",
+      "verification": "dynamic offlineOnly guard before _send and terminalEvents transport setup; local test source exists but not run by JSON"
+    },
+    {
+      "id": "standalone-named-workspace-entry",
+      "evidence": "host-20261023-multiroot.md",
+      "owner": "c-coordinator with studio-main",
+      "status": "coordinator_acknowledged_open",
+      "coordination": [
+        312,
+        317,
+        320
+      ],
+      "verification": "source guard limits named workspace Home/dialog entry to main release; JSON actual-profile 1/1 proves legacy multi-root history only; shared standalone capability and migration remain pending"
     }
   ],
   "limits": [
     "Reports queued to owners are not acknowledgements or completed fixes",
     "No sibling source mutation or new build/test/device operation for these follow-up audits",
     "All counts and line numbers describe the inspected point in ongoing parallel work"
-  ]
+  ],
+  "followupReview": {
+    "evidence": "family-offline-followup-20261023.md",
+    "coordinationThrough": 289,
+    "scope": "source-confirmed fixes and separately attributed owner reports; no new build/device pass"
+  }
 }

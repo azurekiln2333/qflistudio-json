@@ -23,3 +23,12 @@
 ## Gates
 
 Do not claim all product-family runtimes passed from JSON tests. Do not claim OHOS execution from a compiled bundle. Keep missing family/device verification explicit in evidence.md and leave parent in progress.
+
+## Final shared-core integration follow-up
+
+- [x] Author a product-owned regression using the real JSON profile, shared EditorPage and JsonDocumentPage with two roots containing the same filename. Cover unsaved diagnostics, captured-owner saves, unchanged primary contents and restored tabs/active state/cursors.
+- [x] Independently review and execute the new regression against an explicitly coordinated shared-source checkpoint; run scoped analysis and record exact source fingerprints. October 23 11:31 +08:00: 1/1 passed, scoped analysis clean, all 291 captured inputs identical before/after; see research/host-20261023-multiroot.md.
+- [ ] Recheck affected JSON behavior after the final shared editor/debug/workspace checkpoint. Any new OHOS build and installed-device acceptance must name its own source/artifact hashes; the archived 160-file result remains historical evidence.
+- [ ] Track the standalone named-workspace capability acknowledged open by C320. The passing JSON case covers legacy multi-root ProjectHistory; verify a supported named save/reopen entry once the shared owner publishes it, preserving child migration and offline behavior.
+
+Coordination 286 named JSON after C211/Web219; Web304 explicitly released the slot and JSON306 accepted. Wrapper307 recorded format/test/analyze exits 0 and immediately released to Lua212. This proves the focused host case on the captured composed source; final shared publication and a new OHOS package remain separate gates.

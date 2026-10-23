@@ -1,0 +1,3 @@
+00:00 +0: loading D:/MyNewProjects/qfli_json/test/json_multi_root_editor_test.dart
+00:00 +0: JSON child editor restores same-name owners and saves document edits to the captured secondary root
+00:04 +1: All tests passed!
