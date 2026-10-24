@@ -1,0 +1,66 @@
+{
+  "scope": "C407/C411 explicitly delegated four capability paths only; no index mutation",
+  "files": [
+    {
+      "path": "lib/services/studio_profile.dart",
+      "beforeSha256": "4bfc3fac6d6ab25dc0b54ed4dd98aac80fc67a43d4580ddbd7c17f0fb754123a",
+      "afterSha256": "0368fe6860309229369814dedd656ec370f47d2db7f6f3d9e0141cd5cda9c81c",
+      "beforeBlob": "e82ca2085fa2cced314def1dcc5b4c8cff04c691",
+      "afterBlob": "d347db8ecd84c9a7c8db2f7c2ad9f6903ea54d47",
+      "beforeBytes": 13128,
+      "afterBytes": 13498
+    },
+    {
+      "path": "lib/workspace/saved_workspace.dart",
+      "beforeSha256": "1464673830eededa2c0eaf658fc7e2aed46c60caec372c69b066d1ae5369f4ef",
+      "afterSha256": "f658b3ddca9dcf8152282304428523836b4b3b93ab95a1d034b43316f3bc5720",
+      "beforeBlob": "258ce49bb1308a02447ff5ee7b49d807fbb0c822",
+      "afterBlob": "4e76272a23de4e369034596c25ef1b4db63add40",
+      "beforeBytes": 8220,
+      "afterBytes": 8524
+    },
+    {
+      "path": "lib/pages/home_page.dart",
+      "beforeSha256": "a170901b4280701089856c2988c2ba64570980dc0c1e871e4d33b76fa70f52b4",
+      "afterSha256": "84cdfc0f3e6fd16c001e2200b45447a470fe66e7eff363bbb54773f02085be3c",
+      "beforeBlob": "ea2be8a1ae7e4621baa4289b551bb72b1c109be6",
+      "afterBlob": "fd44d302a808e6aabfa2d0d74ea99eefc73c7016",
+      "beforeBytes": 50065,
+      "afterBytes": 50071
+    },
+    {
+      "path": "lib/editor/file_explorer.dart",
+      "beforeSha256": "dc3130632d2b1371421e68b46804c4ecb7382828521a26539c396493da759a36",
+      "afterSha256": "57e662d534e721284dc41b7f90374d117e6d392925d09703c6998928beadae5c",
+      "beforeBlob": "85293182db725258f0e53242b2bfd738a192f834",
+      "afterBlob": "8d64a96485d63f15c99164ba9a7f06217a4c1e5b",
+      "beforeBytes": 51318,
+      "afterBytes": 51560
+    }
+  ],
+  "authorization": {
+    "sourceThread": "01a15fa0-d631-7563-8f31-1c14e80c7ecc",
+    "channelEvents": [
+      407,
+      411
+    ],
+    "type": "narrow four-file write delegation; no core staging or commit",
+    "coordinatorFrozenTree": "0667c4ec8462d73d6735a6a5269b427ceef3f548"
+  },
+  "verification": {
+    "sourceReview": "independent exact raw diff/hashes and API/fixture review clean; reverse apply check exit0; core real index inspected empty before C publication",
+    "hostResult": "named-20261023T233005Z/result.json",
+    "hostDisposition": "Actual jsonProfile/QfliApp named Home save/reopen1/1 PASS; scoped analysis clean;294 inputs stable; no full suite or target claim",
+    "publication": "implementation/actual worktree only; main Home/saved tab publication dependencies separately coordinated by C421",
+    "firstFailureResult": "named-20261023T230801Z/result.json",
+    "firstFailureDisposition": "0/1 at first clipped-tooltip click; clean scoped analysis; original logs preserved",
+    "hostEvidence": "host-20261024-named-workspace.md",
+    "releaseEvent": 435,
+    "subsequentIntegration": "C452/455 accepted source handoff and froze14-path isolated next candidate with minimal main Home+SavedWorkspacesTab, other3 capability paths, metadata/cloud fixes and actual JSON clone; this JSON host pass does not prove that candidate"
+  },
+  "openRisks": [
+    "Core owner is composing explicit legacy opt-out fixtures and child Home scope expectations in the next coherent capability batch",
+    "Generic cloud-primary creation edge reported to C; C446/452 authored local-only creation guard, isolated candidate verification/publication remains pending",
+    "Final source-bound OHOS package/device verification still pending"
+  ]
+}

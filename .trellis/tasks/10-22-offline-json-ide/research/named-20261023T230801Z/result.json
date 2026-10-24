@@ -1,0 +1,41 @@
+{
+  "grant": 416,
+  "nextOwner": "note-offline-1022",
+  "scope": "real JSON Home named-workspace test and scoped analysis",
+  "startedUtc": "2026-10-23T23:08:01.7148959Z",
+  "phases": [
+    {
+      "name": "format",
+      "pid": 79528,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "error": null
+    },
+    {
+      "name": "test",
+      "pid": 77548,
+      "exit": 1,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "error": null
+    },
+    {
+      "name": "analyze",
+      "pid": 60544,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "error": null
+    }
+  ],
+  "error": null,
+  "terminal": true,
+  "finishedUtc": "2026-10-23T23:08:11.9374672Z",
+  "elapsedSeconds": 10.224,
+  "exit": 1,
+  "publicationExit": 0
+}

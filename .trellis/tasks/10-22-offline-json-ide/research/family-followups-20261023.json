@@ -76,7 +76,7 @@
       "evidence": "final-handoff.md",
       "owner": "JSON owner with C shared-core checkpoint",
       "status": "pending_final_shared_checkpoint",
-      "verification": "focused current-composed-source cross-root case 1/1 and scoped analysis passed with 291 identical before/after hashes; final published core and new device package remain pending",
+      "verification": "Focused cross-root1/1 and named Home workspace1/1 passed in separate coordinated windows with scoped analysis clean and stable respective source fingerprints; final published common runtime and new device package remain pending",
       "hostFollowupEvidence": "host-20261023-multiroot.md"
     },
     {
@@ -90,13 +90,19 @@
       "id": "standalone-named-workspace-entry",
       "evidence": "host-20261023-multiroot.md",
       "owner": "c-coordinator with studio-main",
-      "status": "coordinator_acknowledged_open",
+      "status": "source_implemented_actual_profile_host_passed_publication_target_pending",
       "coordination": [
         312,
         317,
-        320
+        320,
+        336,
+        407,
+        411,
+        434,
+        435
       ],
-      "verification": "source guard limits named workspace Home/dialog entry to main release; JSON actual-profile 1/1 proves legacy multi-root history only; shared standalone capability and migration remain pending"
+      "verification": "C-delegated four narrow capability hunks implemented; actual JSON Home/FileExplorer named save and whole-app reconstruction/card reopen1/1 PASS; scoped analysis clean;294 stable inputs. Coherent published Home dependencies and new OHOS package remain pending.",
+      "hostFollowupEvidence": "host-20261024-named-workspace.md"
     }
   ],
   "limits": [
@@ -108,5 +114,11 @@
     "evidence": "family-offline-followup-20261023.md",
     "coordinationThrough": 289,
     "scope": "source-confirmed fixes and separately attributed owner reports; no new build/device pass"
+  },
+  "namedWorkspaceFollowupReview": {
+    "date": "2026-10-24",
+    "evidence": "host-20261024-named-workspace.md",
+    "coordinationThrough": 435,
+    "scope": "JSON actual-profile host only; no target or shared publication claim"
   }
 }

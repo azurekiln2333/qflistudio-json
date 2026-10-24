@@ -1,6 +1,6 @@
 # JSON implementation and acceptance evidence
 
-Updated 2026-10-23. The authoritative device/build details are in `research/ohos.md` and its adjacent artifact/result JSON files. The full family request remains open in the C coordinator's umbrella task; this report covers the JSON app and attributable shared changes.
+Updated 2026-10-24. The authoritative device/build details are in `research/ohos.md` and its adjacent artifact/result JSON files. The full family request remains open in the C coordinator's umbrella task; this report covers the JSON app and attributable shared changes.
 
 ## Delivered behavior
 
@@ -18,6 +18,7 @@ Updated 2026-10-23. The authoritative device/build details are in `research/ohos
 | Complete JSON suite | 116/116 passed on October 22; October 23 serial compatibility run also 116/116; `research/host-20261023-serial-tests.log` |
 | Static analysis | `flutter --suppress-analytics analyze --no-pub`: no issues; `research/host-20261023-analyze.log` |
 | JSON same-name multi-root integration | New real-profile case 1/1 passed and scoped analysis clean at October 23 11:31 +08:00; 291 captured inputs identical before/after; `research/host-20261023-multiroot.md` |
+| JSON named Home workspace | Real jsonProfile/QfliApp save and whole-app reconstruction/reopen 1/1 passed; scoped analysis clean; 294 inputs identical; October 24 07:30 +08:00; `research/host-20261024-named-workspace.md` |
 | Reproducible content | `python tool/build_json_content.py --check`: all three assets match |
 | Trellis contexts | `python ../qfli_studio_core/.trellis/scripts/task.py validate 10-22-offline-json-ide`: both manifests valid |
 | Diff whitespace | `git diff --check`: passed |
@@ -73,3 +74,5 @@ The later targeted source review `research/family-offline-followup-20261023.md` 
 `test/json_multi_root_editor_test.dart` adds a real-profile integration case for same-name files in two roots, secondary unsaved diagnostics, captured-owner document-tool saving and reconstruction. Independent source review corrected the selection-toolbar interaction and added stale-error/wave clearing assertions. The case passed in the explicitly handed-off JSON306 window; scoped analysis found no issues and all 291 captured inputs matched before/after. Wrapper307 immediately released the host slot to Lua212. This is one new focused case alongside the earlier 116-test suite result, not a new full 117-test suite run. The composed core remains unpublished and dirty; no new target build or device action was performed.
 
 Go312 and JSON317 identified a separate workspace scope gap, acknowledged open by C320: named saved-workspace UI currently admits only the main release. The passing JSON case proves legacy child multi-root history, not that named-workspace entry. Shared owners will coordinate the standalone capability and migration; this remains an explicit family follow-up.
+
+October 24 update: C407/411 explicitly delegated four narrow capability hunks. They now enable local named saving and the Home workspace scope for the actual JSON profile while preserving identity/offline policy, legacy history and main v4 selector behavior. The new actual-profile named Home regression passed 1/1 under Web431/JSON434; analysis is clean and all 294 captured inputs match. The original clipped-toolbar fixture failure is retained separately. C owns coherent publication with the main Home/saved-tab dependencies and the generic cloud-primary creation edge. No new target package or complete suite run is claimed; see `research/host-20261024-named-workspace.md`.

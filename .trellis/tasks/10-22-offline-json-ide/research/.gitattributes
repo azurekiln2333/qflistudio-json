@@ -3,3 +3,5 @@
 # Test names contain intentional trailing whitespace; retain the raw logs.
 *.log -text -diff
 *.png -text
+# Unified-diff blank context lines intentionally contain one leading space.
+*.patch -text -diff

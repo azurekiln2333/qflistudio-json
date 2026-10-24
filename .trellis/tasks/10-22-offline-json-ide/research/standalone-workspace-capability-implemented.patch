@@ -1,0 +1,82 @@
+--- a/lib/services/studio_profile.dart
++++ b/lib/services/studio_profile.dart
+@@ -112,6 +112,7 @@
+     bool? offlineOnly,
+     this.productKey = StudioProductCatalog.qfliStudioKey,
+     this.showHomeTabs = true,
++    this.supportsSavedWorkspaces = true,
+     this.runtimeKind = 'unavailable',
+     this.runtimeStatus = 'unavailable',
+     this.supportedFileExtensions = const [],
+@@ -189,6 +190,13 @@
+ 
+   /// Whether homepage language filter chips are shown. Project scopes remain available.
+   final bool showHomeTabs;
++
++  /// Whether local named workspaces can be saved and reopened from Home.
++  ///
++  /// Independent of product identity, language chips and network policy.
++  /// Disabling this keeps the legacy member picker in language products;
++  /// existing explicit workspace sessions remain manageable.
++  final bool supportsSavedWorkspaces;
+ 
+   /// Whether this product must hide every entry that needs the network: the
+   /// login/register/account surfaces, the community and check-in sections, the
+--- a/lib/workspace/saved_workspace.dart
++++ b/lib/workspace/saved_workspace.dart
+@@ -16,6 +16,13 @@
+   return profile == null ||
+       profile.productKey == StudioProductCatalog.qfliStudioKey;
+ }
++
++/// Whether this product offers local named-workspace save and Home entries.
++///
++/// Existing profiles and the shared default enable this independently of
++/// main-product identity and offline/cloud policy.
++bool get supportsSavedWorkspaces =>
++    StudioProfile.current?.supportsSavedWorkspaces ?? true;
+ 
+ /// Comparison key for a project root path.
+ ///
+--- a/lib/pages/home_page.dart
++++ b/lib/pages/home_page.dart
+@@ -330,10 +330,8 @@
+       _ProjectScope.all,
+       _ProjectScope.history,
+       _ProjectScope.favorite,
+-      if (main)
+-        _ProjectScope.workspace
+-      else if (profile?.offlineOnly != true)
+-        _ProjectScope.cloud,
++      if (supportsSavedWorkspaces) _ProjectScope.workspace,
++      if (!main && profile?.offlineOnly != true) _ProjectScope.cloud,
+     ];
+   }
+ 
+--- a/lib/editor/file_explorer.dart
++++ b/lib/editor/file_explorer.dart
+@@ -330,8 +330,8 @@
+   /// The dialog is available for a standalone project and for a single-project
+   /// registry: a workspace can still be named and reopened from Home.
+   Future<void> _manageWorkspace() async {
+-    if (_savedWorkspace == null && !isMainStudioRelease) {
+-      await _manageLegacyWorkspace();
++    if (_savedWorkspace == null && !supportsSavedWorkspaces) {
++      if (!isMainStudioRelease) await _manageLegacyWorkspace();
+       return;
+     }
+     final result = await showWorkspaceEditorDialog(
+@@ -1296,7 +1296,12 @@
+                       minWidth: 40,
+                       minHeight: 40,
+                     ),
+-                    onPressed: _manageWorkspace,
++                    onPressed:
++                        _savedWorkspace != null ||
++                            supportsSavedWorkspaces ||
++                            !isMainStudioRelease
++                        ? _manageWorkspace
++                        : null,
+                   ),
+                 ],
+               ),
