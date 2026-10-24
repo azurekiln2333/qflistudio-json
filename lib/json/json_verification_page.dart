@@ -1,12 +1,11 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:path/path.dart' as p;
 import 'package:qfli_studio_core/services/app_paths.dart';
 
 import '../content/json_content_repository.dart';
 import 'json_catalog_verification.dart';
+import 'json_verification_report.dart';
 
 class JsonVerificationPage extends StatefulWidget {
   const JsonVerificationPage({super.key});
@@ -24,24 +23,17 @@ class _JsonVerificationPageState extends State<JsonVerificationPage> {
   }
 
   Future<void> _verify() async {
-    Map<String, Object?> result;
-    try {
-      final root = await AppPaths.storageDirectory();
-      if (root == null) throw const FileSystemException('找不到应用可写沙盒');
-      result = await verifyJsonCatalog(
+    final result = await runJsonVerificationReport(
+      storageDirectory: AppPaths.storageDirectory,
+      verify: (root) async => verifyJsonCatalog(
         await JsonContentRepository().load(),
         root,
         progress: (status) {
           debugPrint('QFLI_JSON_VERIFY_PROGRESS $status');
           if (mounted) setState(() => _status = status);
         },
-      );
-      await File(
-        p.join(root, 'json_verification_result.json'),
-      ).writeAsString(jsonEncode(result), flush: true);
-    } on Object catch (error, stack) {
-      result = {'passed': false, 'error': '$error', 'stack': '$stack'};
-    }
+      ),
+    );
     debugPrint(
       'QFLI_JSON_VERIFY_RESULT ${jsonEncode(result)}',
       wrapWidth: 100000,

@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-24",
+  "scope": "124PASS published-core full host gate raw artifact integrity",
+  "files": {
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/analyze.log": {
+      "bytes": 40,
+      "sha256": "95a28819c918db92d8f3f7dfadfc18f1248f79ab8313759391ad318fe94cf093"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/analyze.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/capture.log": {
+      "bytes": 30,
+      "sha256": "c239644b457ec489cfa9d6594b36c30ea0b53132ad7589eba37dcb1e83c4d814"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/capture.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/content.log": {
+      "bytes": 43,
+      "sha256": "a74c154d7b16e735498cb1daf6f7d371cf2018cc2449cac35f354b0abecc0482"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/content.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/format-check.log": {
+      "bytes": 48,
+      "sha256": "19f729f636b77b404e670fd4f8ee91f276ec0227b417ea6051d25f9cb8b6805b"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/format-check.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/format-owned.log": {
+      "bytes": 97,
+      "sha256": "b1bdd6e3dd1558fc27db2be5ef1ee285d58ac126825ad2df57196531851fef32"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/format-owned.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/prepare.log": {
+      "bytes": 247,
+      "sha256": "145232bbc59cd425a0d8e4bcdd3d6f8d83c6193eed225306ac98741ced2bd02b"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/prepare.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/publication.log": {
+      "bytes": 1687,
+      "sha256": "69a00571dd85d26a3b283ef8af2b4e6375fda3f81d2a7739416dac3ef75678e0"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/publication.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/release.txt": {
+      "bytes": 1468,
+      "sha256": "a3e344c3c853640158e14c7fead1a6ab4a92345c80d6ada5723f6efb4a1ef027"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/result.json": {
+      "bytes": 4016,
+      "sha256": "aa785f93473692b5225cea33f166864fa13684c3872276a4744d77a2be478044"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/scripts/.gitattributes": {
+      "bytes": 15,
+      "sha256": "50b8945a29c1090ea744b8f1b761eb4af6136f91203cf5850bc9a915270532eb"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/scripts/json-bounded-process.cs": {
+      "bytes": 13034,
+      "sha256": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/scripts/prepare_json_release_gate.py": {
+      "bytes": 6574,
+      "sha256": "3c883686779702ef309c483b544bf9fb2383f499747f484f2311a234022acb82"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/scripts/run_json_release_gate.ps1": {
+      "bytes": 9267,
+      "sha256": "a27e919f3a50fc658292c770983a4f44a4ff3c420c59d22e1f9213d01b7e6f26"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/source-after.json": {
+      "bytes": 88724,
+      "sha256": "6f65130f9e746e46fbf9d52410971d9efcd6a348ddaf4fa818089fd2cfa1948b"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/source-before.json": {
+      "bytes": 90092,
+      "sha256": "ff0e78bb7f77ae1910e86f84554c72d11128061639e5d3c9e508274e8805071d"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/test.log": {
+      "bytes": 25776,
+      "sha256": "15545ef820ce8d7a25c0b34f98bbac7c74471c7b5d263e8e3bffbde2a1718211"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/test.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    ".trellis/tasks/10-22-offline-json-ide/research/release-20261024T034923Z/tested-source-binding.json": {
+      "bytes": 1130,
+      "sha256": "91703bccbef1e7387d8eb131c4676830ab7509a12c5d939e03cbe61a2395bebd"
+    }
+  }
+}

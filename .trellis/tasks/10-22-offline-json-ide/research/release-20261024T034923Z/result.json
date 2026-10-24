@@ -1,0 +1,165 @@
+{
+  "grant": 516,
+  "publicationEvent": 493,
+  "coreCommit": "2f9039a3ba95449679b17257b0313c1ee3644a2c",
+  "nextOwner": "c-coordinator",
+  "scope": "full JSON host suite on exact published core and captured owned report fix",
+  "startedUtc": "2026-10-24T03:49:23.6850468Z",
+  "phases": [
+    {
+      "name": "format-owned",
+      "pid": 19056,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "observedProcessIds": [
+        16796,
+        19056
+      ],
+      "error": null
+    },
+    {
+      "name": "prepare",
+      "pid": 80492,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "observedProcessIds": [
+        5524,
+        5600,
+        5704,
+        51868,
+        56836,
+        72516,
+        80492,
+        82440,
+        82784,
+        83520,
+        83992,
+        84732
+      ],
+      "error": null
+    },
+    {
+      "name": "format-check",
+      "pid": 60112,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "observedProcessIds": [
+        60112,
+        84440
+      ],
+      "error": null
+    },
+    {
+      "name": "content",
+      "pid": 83000,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "observedProcessIds": [
+        83000,
+        83924
+      ],
+      "error": null
+    },
+    {
+      "name": "test",
+      "pid": 84500,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "observedProcessIds": [
+        13548,
+        21828,
+        36876,
+        55604,
+        56008,
+        56704,
+        56948,
+        59588,
+        59812,
+        63084,
+        64432,
+        65952,
+        69524,
+        70244,
+        71684,
+        77736,
+        78208,
+        80084,
+        81108,
+        81356,
+        81952,
+        82104,
+        82140,
+        82192,
+        82224,
+        82780,
+        82808,
+        83132,
+        84500,
+        84620,
+        84664,
+        84760,
+        84804,
+        84840,
+        84976
+      ],
+      "error": null
+    },
+    {
+      "name": "analyze",
+      "pid": 66448,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "observedProcessIds": [
+        66448,
+        80608,
+        81724,
+        84932
+      ],
+      "error": null
+    }
+  ],
+  "sourceDrift": [],
+  "error": null,
+  "exit": 0,
+  "terminal": true,
+  "runnerHashes": {
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_release_gate.ps1": "a27e919f3a50fc658292c770983a4f44a4ff3c420c59d22e1f9213d01b7e6f26",
+    "D:/MyNewProjects/qfli_json/.trellis/.runtime/prepare_json_release_gate.py": "3c883686779702ef309c483b544bf9fb2383f499747f484f2311a234022acb82",
+    "D:/MyNewProjects/qfli_json/.trellis/.runtime/json-bounded-process.cs": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919",
+    "D:/ProgramFiles/flutter_ohos/bin/cache/dart-sdk/bin/dart.exe": "f65cad70999405c5093de5a37899fdd03b119328964d437b933782ca41e5a259",
+    "D:/ProgramFiles/flutter_ohos/bin/cache/flutter_tools.snapshot": "aa22da15bb2243e66b05de4e7e77a3265b7e80a0e58e626dc21a47c482fe0bab"
+  },
+  "manifest": "D:\\MyNewProjects\\qfli_json\\build\\published-json-2f9039a3ba95-20261024T034925Z\\manifest.json",
+  "appCommit": "9bd21f6841583815829c94e7898e5a692ee07a10",
+  "coreTree": "d21ffcdc7ac9c834e0b788b21178e9f80768a519",
+  "capture": {
+    "timedOut": false,
+    "error": null,
+    "treeEmpty": true,
+    "exit": 0,
+    "pid": 72924,
+    "residualCleanup": true
+  },
+  "finishedUtc": "2026-10-24T03:50:02.2751382Z",
+  "elapsedSeconds": 38.591,
+  "publication": {
+    "timedOut": false,
+    "error": null,
+    "treeEmpty": true,
+    "exit": 0,
+    "pid": 82176,
+    "residualCleanup": false
+  }
+}

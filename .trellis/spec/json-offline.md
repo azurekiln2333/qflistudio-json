@@ -25,6 +25,7 @@ These contracts cover the product repository, editor/runner injection, local dat
 - Document saves use DocumentToolRequest.save. Core backups use `open.ownerProjectName`, regardless of the active tab. Diagnostic navigation never writes the file.
 - No HTTP resolver, remote schema fetch, online login, web agreement or browser launch belongs to this product. URL values are inert data. OHOS requests only the existing clipboard permission.
 - Catalog generation preserves the original 100 example identities and adds 240 structurally distinct examples. Run `python tool/build_json_content.py --check` before claiming reproducibility.
+- The installed audit invalidates any previous success before verification and persists exceptions as failed reports. Every invocation has a fresh `runId`, start and finish UTC timestamps. The final result is flushed to a sibling temporary file before replacing the running/false marker, so a flush failure cannot expose a successful final report. A report write failure forces the returned/logged result to fail; device evidence must compare the fresh process result marker with the exported report, including its identity and contents.
 
 ## 4. Validation and error matrix
 
@@ -53,6 +54,7 @@ These contracts cover the product repository, editor/runner injection, local dat
 - Named workspaces use the actual JSON profile and Home/FileExplorer entries. Save a named document with two local roots, preserve standalone history and source bytes, destroy QfliApp, then reopen the Home workspace card and verify owners, tab order, active file, cursors and both expanded trees. Never substitute a main-product key. Pump once to start a sidebar animation before advancing its duration; seeing a root's center does not prove its right-hand toolbar is interactive.
 - Tool workers: all defaults, errors, timeout, cancellation before spawn completes; document transform/save races.
 - Host profile/permissions/routing plus HttpOverrides proving URL data and local schema operations create no HTTP client.
+- Audit report regressions cover an old success followed by a throwing verifier, in-progress invalidation, repeated run identities, unavailable storage and initial/final export failures. A report from an earlier invocation is never accepted as current evidence.
 - OHOS: installed x86_64 harness must log `QFLI_JSON_VERIFY_RESULT` with platform=ohos and 340 runner passes, then ordinary UI is checked separately. Record source/package hashes and versions. Desktop tests and HAP compilation are separate evidence.
 
 ## 7. Wrong vs correct

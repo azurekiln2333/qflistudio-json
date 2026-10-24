@@ -1,0 +1,28 @@
+{
+  "scope": "current owned source equals the124PASS tested overlay bytes and canonical Git blobs",
+  "appBaseline": "9bd21f6841583815829c94e7898e5a692ee07a10",
+  "coreCommit": "2f9039a3ba95449679b17257b0313c1ee3644a2c",
+  "coreTree": "d21ffcdc7ac9c834e0b788b21178e9f80768a519",
+  "inputCount": 513,
+  "sourceDrift": [],
+  "ownedSources": {
+    "lib/json/json_verification_report.dart": {
+      "bytes": 2332,
+      "sha256": "08a5f06482ba0acc59d816d42f4fdd4d696de491e5c179071c91ffe329f11427",
+      "gitBlob": "1cb6f4b5a4073c386a05f94a336595cb26b38fbb"
+    },
+    "lib/json/json_verification_page.dart": {
+      "bytes": 1949,
+      "sha256": "7edbdbef4181007f8603f7848bfbcc0b5aac0fd108067b98d7746e8eb987a166",
+      "gitBlob": "a5e33229fbcb7ad9154f697c41e472c0afd9836d"
+    },
+    "test/json_verification_report_test.dart": {
+      "bytes": 4606,
+      "sha256": "25bab0db1679543128965e14d4ff2d3d8786f4bf744bcae7ffdb6fcfd30b910d",
+      "gitBlob": "f25a8ba42e2f10db0a8636c317784bc9135b868d"
+    }
+  },
+  "automaticReleaseEvent": 522,
+  "acceptanceEvent": 519,
+  "subsequentOwnerAcceptedEvent": 523
+}
