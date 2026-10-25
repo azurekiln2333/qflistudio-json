@@ -1,0 +1,83 @@
+{
+  "recordedUtc": "2026-10-25T17:26:53.078558+00:00",
+  "scope": "README documentation only; no new runtime/device proof",
+  "files": {
+    "README.md": {
+      "sha256": "4b533d6d5bec271e8b174d5d8be93525505eb80b3511462c13a49e18eb452ca1",
+      "bytes": 5908,
+      "localLinks": 6,
+      "missingLinks": [],
+      "fencesBalanced": true,
+      "sixTerminalCommandsPresent": true,
+      "threeLanguageLinksPresent": true
+    },
+    "README.zh-TW.md": {
+      "sha256": "2ffca688ed423159d569018436da1c6a5a90788f3251542da379a56e52564662",
+      "bytes": 6039,
+      "localLinks": 6,
+      "missingLinks": [],
+      "fencesBalanced": true,
+      "sixTerminalCommandsPresent": true,
+      "threeLanguageLinksPresent": true
+    },
+    "README.en.md": {
+      "sha256": "d752b6ff40e46faec1fd33a35954d738ed8494ed7a22088d9abb8f253b411cf9",
+      "bytes": 12622,
+      "localLinks": 5,
+      "missingLinks": [],
+      "fencesBalanced": true,
+      "sixTerminalCommandsPresent": true,
+      "threeLanguageLinksPresent": true
+    }
+  },
+  "mechanicalChecks": [
+    {
+      "command": [
+        "python",
+        "scripts/ste-lint-zh.py",
+        "--json",
+        "README.md",
+        "README.zh-TW.md"
+      ],
+      "exit": 0,
+      "findings": []
+    },
+    {
+      "command": [
+        "python",
+        "scripts/ste-lint-zh.py",
+        "--json",
+        "--max-chars",
+        "25",
+        "README.md",
+        "README.zh-TW.md"
+      ],
+      "exit": 0,
+      "findings": []
+    }
+  ],
+  "traditionalBannedWordsFound": [],
+  "remoteOutput": "",
+  "push": "not attempted: no configured authoritative product remote",
+  "independentPiReview": ".trellis/.runtime/readme-review-pi.md",
+  "resolvedReviewItems": [
+    "Simplified validation terminology",
+    "English UI labels",
+    "Android release versus development manifest scope"
+  ],
+  "manualReview": [
+    "Split multiple-action Chinese instructions",
+    "Retained possible/maybe confidence",
+    "Separated current host evidence and historical device evidence",
+    "OHOS toolchain and sibling-core prerequisite stated",
+    "Removed dependence on an untracked LICENSE file"
+  ],
+  "productFacts": {
+    "examples": 340,
+    "tutorials": 340,
+    "newExamples": 240,
+    "newTutorials": 240,
+    "tools": 16,
+    "testFiles": 12
+  }
+}

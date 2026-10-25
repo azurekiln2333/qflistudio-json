@@ -39,3 +39,25 @@ JSON is a data format; its runnable outcome is parsing, validation, formatting a
 - The initial missing-device gate was resolved on 2026-10-22: an API 26 x86_64 emulator is attached. The installed harness passes every JSON catalog runner; final-package and ordinary-UI evidence is recorded separately in `research/ohos.md`.
 - Three configured signing files do not exist. Hvigor's `properties.enableSignTask=false` builds an unsigned HAP successfully, and the attached emulator accepts it. Signed release distribution remains unverified.
 - Product repository has no remote, so a push cannot be performed without an authoritative destination.
+
+## README addition (October 26, 2026)
+
+The user added complete Simplified Chinese, Traditional Chinese and English
+README rewrites. The existing four Pi agents in Herdr workspace `w29` own
+`README.md`, `README.zh-TW.md`, `README.en.md` and an independent factual review,
+respectively. The coordinator owns final reconciliation, validation and commits.
+Monitor actual Pi lifecycle state. Retry confirmed failed requests. Never submit
+duplicate work to an agent that is still working.
+
+Chinese requirements: one action per sentence, active voice, one term per
+concept, no semicolons, instructions at most 25 characters, explanations at
+most 40 characters. Remove empty nominalizations, stock phrases, marketing
+adjectives and vague words. Preserve modal confidence such as 可能 and 也许.
+Run `python scripts/ste-lint-zh.py README.md README.zh-TW.md` as the first
+mechanical check. Also check facts, terminology, language links, commands and
+manual instruction lengths. Do not describe host evidence as device evidence.
+
+Use the local `AGENTS.md` and available applicable writing instructions.
+Commit reviewed task-owned documentation with a conventional message. Push
+only to an existing authoritative product remote. An absent remote remains
+an explicit unmet publication prerequisite; it never licenses guessing one.
