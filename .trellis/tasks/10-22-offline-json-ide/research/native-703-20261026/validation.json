@@ -1,0 +1,70 @@
+{
+  "grantEvent": 703,
+  "parentToolSession": 17396,
+  "actualOuterExit": 1,
+  "ownershipTerminal": true,
+  "handoffReady": true,
+  "finalGatePassed": false,
+  "elapsedSeconds": 39.72,
+  "budgetExceeded": false,
+  "phases": [
+    {
+      "name": "capture-before",
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true
+    },
+    {
+      "name": "harness-build",
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": false
+    },
+    {
+      "name": "harness-inspect",
+      "exit": 1,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true
+    }
+  ],
+  "acceptedArtifacts": 0,
+  "sourceDrift": [
+    "files/added/nativePlugins/path_provider_ohos/ohos/BuildProfile.ets",
+    "files/changed/app/ohos/entry/oh-package-lock.json5",
+    "files/changed/app/ohos/oh-package-lock.json5",
+    "files/changed/nativeCache/oh_modules/.ohpm/lock.json5",
+    "files/changed/nativePlugins/path_provider_ohos/ohos/oh-package-lock.json5",
+    "cacheReferences/added/nativePlugins/path_provider_ohos/ohos/oh_modules/@ohos/flutter_ohos"
+  ],
+  "identityDrift": [],
+  "normalBuildExecuted": false,
+  "deviceExecuted": false,
+  "grantConsumed": true,
+  "terminalReceiptChannelEvent": 713,
+  "rawBuildLogs": {
+    "harness-build.log": {
+      "localPath": "D:\\MyNewProjects\\qfli_json\\build\\native-release-artifacts\\20261025T215530Z-c940500b\\evidence\\harness-build.log",
+      "sha256": "44bc3aeddf6ad064086bb2bfe5a35ae9df452e38191029f08fbe332abb321152"
+    },
+    "harness-build.stderr.log": {
+      "localPath": "D:\\MyNewProjects\\qfli_json\\build\\native-release-artifacts\\20261025T215530Z-c940500b\\evidence\\harness-build.stderr.log",
+      "sha256": "12c452ce222908507aee7a089985527995a04d019c42b313c7216c6f423ace9b"
+    }
+  },
+  "files": {
+    "child-harness-artifact.json": "75f7d3985187dcefa7fb2ce03d9e2bdb85cd394bff0cbe2b088d3d012dcd6ef6",
+    "child-harness-command.json": "692621aaedad138138e5305d7a57db21b110f34c7f6844a5e362bf665ab46fd2",
+    "child-harness-inspect.log": "b277aa5a711db081f860a3d19a8be0c9d6d35b0661ac6829ba403e1e73963dbb",
+    "child-normal-command.json": "8b79313fecca251c508a2e8e692857dd448f5b0d6d0bbfeef514c40676f9c01c",
+    "child-result.json": "5b4cd3d2a2b2af5645d02522510b815b7cc23bf977212222c24d48da4c651567",
+    "child-source-after.json": "1ee516bf941d1590a6845141a9dc355ade09a93b5054e32e33004a7e0788f4ab",
+    "child-source-before.json": "6814b76710ccf8fece71a2d350638eeaffa417c92d742900b921d5b2c80c998b",
+    "parent-final-relay.log": "7c56dcc00c656a5c018283e0ed8c5bbfc9aa4beb5569de0c8f8b82e0889b19ea",
+    "parent-result.json": "01e2c601b04e2893c8d3f4317b25654ecc88669b238f07a86bbc7296224fbbb8",
+    "parent-validation.log": "5852239c54324a008fca6a2de111780a8e48f90a4303918ff737b57a2ef32bcc",
+    "parent-validation.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

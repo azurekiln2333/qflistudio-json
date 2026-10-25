@@ -1,0 +1,29 @@
+{
+  "executable": "D:/ProgramFiles/Huawei/DevEco Studio/tools/hvigor/bin/hvigorw.bat",
+  "cwd": "D:\\MyNewProjects\\qfli_json\\build\\o6e60792d\\qfli_json\\ohos",
+  "arguments": [
+    "--mode",
+    "module",
+    "-p",
+    "module=entry@default",
+    "-p",
+    "product=default",
+    "-p",
+    "buildMode=debug",
+    "-p",
+    "FLUTTER_TARGET=lib/main.dart",
+    "-p",
+    "TARGET_PLATFORM=ohos-x64",
+    "-p",
+    "DART_DEFINES=UUZMSV9WRVJJRllfQ0FUQUxPRz10cnVl",
+    "-p",
+    "TRACK_WIDGET_CREATION=true",
+    "-p",
+    "TREE_SHAKE_ICONS=false",
+    "-c",
+    "properties.enableSignTask=false",
+    "--no-daemon",
+    "--no-parallel",
+    "assembleHap"
+  ]
+}

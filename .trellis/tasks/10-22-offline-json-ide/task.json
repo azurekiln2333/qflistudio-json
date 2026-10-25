@@ -21,7 +21,7 @@
   "children": [],
   "parent": null,
   "relatedFiles": [],
-  "notes": "JSON runtime host124 and historical OHOS x64 evidence retained. Three-language READMEs committed af14400. Readiness611 retired by622 before execution; same-invocation observer and offline evidence checker now prepared. Current-source HAP/device, signing/physical ARM64 and full-family gates remain unfinished; keep in_progress.",
+  "notes": "Three-language READMEs aligned in cca9ad8. Native703 ran once: harness build exit0, inspection and source comparison failed, normal/device unrun. Parent39.72s, outer terminal/owned Jobs empty, finalGatePassed=false. Grant consumed; source-only diagnosis active. Full family/signing/current device acceptance remains unfinished.",
   "meta": {
     "json_implementation_commit": "6df694e",
     "core_backup_commit": "96e6833",
@@ -36,6 +36,8 @@
     "synthetic_evidence_tests": 79,
     "synthetic_process_control_cases": 5,
     "native_window_evidence_commit": "7ef6a3d",
-    "current_readiness_event": 686
+    "current_readiness_event": 686,
+    "consumed_native_grant_event": 703,
+    "native_703_evidence": "research/native-703-20261026"
   }
 }
