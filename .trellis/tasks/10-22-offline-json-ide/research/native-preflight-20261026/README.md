@@ -1,5 +1,9 @@
 # Isolated OHOS native preflight
 
+Historical preparation only. Readiness611 was retired by channel622 before
+execution. Use `../native-window-20261026/command-template.json` for the
+superseding observer preparation.
+
 October 26, 2026: source-only preparation is ready for a new named execution
 window. No SDK, Hvigor, Flutter build, package installation or device command
 ran in this preflight. The family task remains in progress.

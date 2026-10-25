@@ -1,0 +1,21 @@
+{
+  "executionAuthorized": false,
+  "executable": "D:/ProgramFiles/PowerShell/7/pwsh.exe",
+  "cwd": "D:\\MyNewProjects\\qfli_json",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_ohos_window.ps1",
+    "-GrantEvent",
+    "<NEW-named-grant-event>",
+    "-PreparedManifest",
+    "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json",
+    "-NextOwner",
+    "c-coordinator",
+    "-MaxSeconds",
+    "240"
+  ],
+  "scope": "unsigned isolated x64 harness + normal package builds and inspection; no device",
+  "childBudget": "Derived from remaining total window after acceptance; current cleanup/final-relay reserve is30s; child has its own50s cleanup reserve"
+}

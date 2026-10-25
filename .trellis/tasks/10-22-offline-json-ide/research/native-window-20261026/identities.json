@@ -1,0 +1,38 @@
+{
+  "recordedUtc": "2026-10-25T20:21:50.465846+00:00",
+  "scope": "Synthetic process controls and source-only readiness; no SDK/device acceptance",
+  "runners": {
+    "run_json_ohos_window.ps1": {
+      "sha256": "aa0af8de601453cb089fc6dcc8cca2a160dac667f08dfafe8221833310fe3df3",
+      "bytes": 10107
+    },
+    "run_json_ohos_release.ps1": {
+      "sha256": "8ee89a4450090b418387f68760a7347df301e98bee24bfbb7fd855331a470f27",
+      "bytes": 14578
+    },
+    "json_hvigor_phase.ps1": {
+      "sha256": "85477722f652ae60203f69aa1842c3aa2bb718c6a73a94a8c1060f722a02c3c0",
+      "bytes": 294
+    },
+    "prepare_json_ohos_inputs.py": {
+      "sha256": "8ef4f2f4e355fe97aa4ba36029b84f75c62c7db4a97763284cf1cf3caac38ce1",
+      "bytes": 26442
+    },
+    "inspect_json_release_hap.py": {
+      "sha256": "9417170308902ab48c1669a6178ba66ff80b0e74ca1e5924f763a33592705b98",
+      "bytes": 14684
+    },
+    "json-bounded-process.cs": {
+      "sha256": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919",
+      "bytes": 13034
+    },
+    "run_json_window_controls.py": {
+      "sha256": "6f93671a1f24bfa3d46cd431f553ca77b7a4460e30c39252b184b4b4dc2d98f6",
+      "bytes": 5597
+    }
+  },
+  "controlsSource": "D:\\MyNewProjects\\qfli_json\\build\\native-window-controls-074820a3\\controls.json",
+  "formerReadiness611": "retired by global622; do not execute the old command",
+  "ownershipReleaseMeaning": "All owned validation processes have exited; independent of validation pass/fail",
+  "remaining": "Fresh named SDK grant and separate assigned device grant required"
+}

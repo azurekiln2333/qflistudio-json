@@ -21,12 +21,19 @@
   "children": [],
   "parent": null,
   "relatedFiles": [],
-  "notes": "JSON implementation and fixed-snapshot OHOS x64 acceptance recorded. Keep in progress until family coordinator closes the full request; release signing/physical ARM64 and later core integration remain independent.",
+  "notes": "JSON runtime host124 and historical OHOS x64 evidence retained. Three-language READMEs committed af14400. Readiness611 retired by622 before execution; same-invocation observer and offline evidence checker now prepared. Current-source HAP/device, signing/physical ARM64 and full-family gates remain unfinished; keep in_progress.",
   "meta": {
     "json_implementation_commit": "6df694e",
     "core_backup_commit": "96e6833",
     "acceptance_evidence": "research/ohos-ui-acceptance.json",
     "family_coordinator": "D:/MyNewProjects/qfli_c/.trellis/tasks/10-22-offline-standalone-ide",
-    "json_owner_thread": "01a15fa1-ce8b-7263-b09b-5766783ab535"
+    "json_owner_thread": "01a15fa1-ce8b-7263-b09b-5766783ab535",
+    "readme_commit": "af1440053411eaea9eeee4eca0cae8269f28baff",
+    "native_observer_preflight": "research/native-window-20261026",
+    "retired_readiness_event": 611,
+    "retired_by_event": 622,
+    "device_evidence_checker": "research/device-evidence-20261026",
+    "synthetic_evidence_tests": 79,
+    "synthetic_process_control_cases": 5
   }
 }

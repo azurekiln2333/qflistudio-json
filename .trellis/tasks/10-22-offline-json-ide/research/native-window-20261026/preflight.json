@@ -1,0 +1,97 @@
+{
+  "recordedUtc": "2026-10-25T20:48:55.592716+00:00",
+  "scope": "Source-only capture plus synthetic process controls; no SDK/device execution",
+  "appCommitBeforeEvidenceCommit": "02229b72229ce0a1adb225b9afc988194bd71b90",
+  "coreCommit": "2f9039a3ba95449679b17257b0313c1ee3644a2c",
+  "runtimeLastChangedAt": "d7fddf392fb19f075d4b719e32ac72e45cbd3c83",
+  "preparedManifest": "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json",
+  "preparedManifestSha256": "af6361444e9b4a4949c8f7df817a847ac6d5e76d2b22522d066b04a29586ceb7",
+  "captureDirectory": "D:\\MyNewProjects\\qfli_json\\build\\native-window-source-check-42bde7f5",
+  "checks": [
+    {
+      "name": "before",
+      "exit": 0,
+      "files": 804,
+      "cacheReferences": 6,
+      "pluginSources": 8,
+      "sha256": "5fd170a3f8e25b3a6645467b90d0996a7a8db55a3d0e4ecbe7747d266fc1e44b"
+    },
+    {
+      "name": "after",
+      "exit": 0,
+      "files": 804,
+      "cacheReferences": 6,
+      "pluginSources": 8,
+      "sha256": "9615c22981c507ee1b194060e0b9aeb8ff680c4e81650ab3387f706c4d100179"
+    },
+    {
+      "name": "changed-tool",
+      "exit": 1,
+      "files": 804,
+      "cacheReferences": 6,
+      "pluginSources": 8,
+      "sha256": "56a4d62aa6450a12e39991545c4c766a4c96b3364dc90e2fc2a37eb96dfc9dd9"
+    }
+  ],
+  "processControlCases": 5,
+  "processControls": [
+    {
+      "case": "normal",
+      "outerExit": 0,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": true,
+      "elapsedSeconds": 3.109,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203237Z-22ae545f\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "orphan",
+      "outerExit": 0,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": true,
+      "elapsedSeconds": 1.63,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203240Z-02562872\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "failed-child",
+      "outerExit": 1,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": false,
+      "elapsedSeconds": 1.608,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203242Z-0079ea8b\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "insufficient-budget",
+      "outerExit": 1,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": false,
+      "elapsedSeconds": 1.131,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203244Z-816408b8\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "failed-acceptance",
+      "outerExit": 1,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": false,
+      "elapsedSeconds": 1.119,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203246Z-19221bff\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    }
+  ],
+  "powerShellAstErrors": 0,
+  "readiness611RetiredBy": 622,
+  "newExecutionGrantReceived": false
+}

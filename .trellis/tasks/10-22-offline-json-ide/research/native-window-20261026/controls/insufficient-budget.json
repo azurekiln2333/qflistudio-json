@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "grant": 777,
+  "nextOwner": "synthetic-no-real-successor",
+  "startedUtc": "2026-10-25T20:32:44.6918001Z",
+  "scope": "isolated unsigned x64 package validation; no device",
+  "maxSeconds": 90,
+  "exit": 1,
+  "terminal": true,
+  "handoffReady": true,
+  "handoffMeaning": "ownership only; not runtime acceptance",
+  "finalGatePassed": false,
+  "error": "System.Management.Automation.RuntimeException: Too little budget remains to start validation.",
+  "rows": [
+    {
+      "name": "acceptance",
+      "started": true,
+      "pid": 60012,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": false,
+      "error": null,
+      "allowedWaitMilliseconds": 5000,
+      "elapsedMilliseconds": 270,
+      "observedProcessIds": [
+        32,
+        60012
+      ]
+    },
+    {
+      "name": "final-relay",
+      "started": true,
+      "pid": 72736,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": false,
+      "error": null,
+      "allowedWaitMilliseconds": 5000,
+      "elapsedMilliseconds": 382,
+      "observedProcessIds": [
+        65092,
+        72736
+      ]
+    }
+  ],
+  "childResult": null,
+  "childExit": null,
+  "childGatePassed": false,
+  "identityDrift": [],
+  "budgetExceeded": false,
+  "identities": {
+    "D:\\MyNewProjects\\qfli_json\\build\\native-window-controls-074820a3\\insufficient-budget\\observer-copy.ps1": "c9d2b6dd886f8ecf01407b45e8227a79eb1bd15b5bb883f9cfbfc8fdf5a824a6",
+    "D:\\MyNewProjects\\qfli_json\\build\\native-window-controls-074820a3\\insufficient-budget\\fake-child.ps1": "18b7b641556ec17faf903ab736b6aa47f030e799dbc23c587e4a633cf7c0a483",
+    "D:/MyNewProjects/qfli_json/.trellis/.runtime/json-bounded-process.cs": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919",
+    "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json": "af6361444e9b4a4949c8f7df817a847ac6d5e76d2b22522d066b04a29586ceb7",
+    "D:\\ProgramFiles\\PowerShell\\7\\pwsh.exe": "8737aa78bdbe2941083c2c3674da3a9c3ab4cabd2cac040d39d1d0c19f9fc20d"
+  },
+  "finishedUtc": "2026-10-25T20:32:45.7021538Z",
+  "elapsedSeconds": 1.131
+}

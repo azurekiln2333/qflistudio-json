@@ -1,0 +1,40 @@
+{
+  "recordedUtc": "2026-10-25T20:21:52.548159+00:00",
+  "scope": "Offline evidence consistency; synthetic fixtures are not device execution",
+  "tests": 79,
+  "passed": true,
+  "unittestLog": "D:\\MyNewProjects\\qfli_json\\build\\device-evidence-final-check\\unittest.log",
+  "unittestLogSha256": "582de54a2ec885c8ca1ddbbd8f3ce7c83364a1e3ac242913d6bc0da0f0d28652",
+  "currentCatalogMetrics": {
+    "examples": 340,
+    "runnerPasses": 340,
+    "tutorials": 340,
+    "lessons": 340,
+    "exerciseAnswers": 440,
+    "fixtures": 340,
+    "semanticOperations": 10,
+    "tools": 16
+  },
+  "historicalReportRejected": "report.status must be passed",
+  "devicePassIndependentlyProven": false,
+  "resolvedReviewFindings": [
+    "Malformed/encrypted ZIP errors map to ValueError",
+    "Producer status is exact lowercase passed",
+    "Actual compiled module/bundle/permissions/engine checked",
+    "Content schema follows actual entries/lessons/exercises fields",
+    "Log marker literal inside JSON is not a second result",
+    "Capture must follow the recorded HAP inspection",
+    "HAP bytes rehashed after inspection",
+    "Log-only cleanupError remains rejected"
+  ],
+  "files": {
+    "verify_json_device_evidence.py": {
+      "sha256": "b6a39af51155e529d193ba4fe27306cab6aa7a9c00cbca151c1a988066663014",
+      "bytes": 31909
+    },
+    "test_json_device_evidence.py": {
+      "sha256": "8699d794be166e99168cb5d78806676823b7455ff3b8bde42906c83bae7be412",
+      "bytes": 42031
+    }
+  }
+}

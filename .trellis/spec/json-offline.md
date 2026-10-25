@@ -63,3 +63,31 @@ These contracts cover the product repository, editor/runner injection, local dat
 - Wrong: runner status says available while Run falls through to a web server. Correct: return real parse output, diagnostics and exit codes via the injected runner.
 - Wrong: claim all standalone runtimes pass because JSON parses on OHOS. Correct: retain independent family/runtime gates and link their evidence.
 - Wrong: change active signing paths to hide missing credentials. Correct: use Hvigor's unsigned configuration for emulator testing and preserve the user's profile.
+
+## 7. Offline device-evidence and host-window boundaries
+
+- A successful supplied-evidence check is not proof of actual installation,
+  hardware origin, grant authority or present target availability. Preserve
+  real install/start/export observations separately. Synthetic checks never
+  satisfy the OHOS acceptance requirement.
+- Require the current report identity and exact lowercase `passed` status.
+  Compare the full exported report with exactly one fresh process result
+  marker. Do not drop log-only `cleanupError` to force equality.
+- Bind report PID and integer epoch microseconds to its run ID. Accept Dart
+  millisecond and microsecond UTC forms. Require HAP inspection before the
+  capture window and require that window to enclose the report run.
+- Verify actual preserved HAP, kernel and packaged-content hashes. Read the
+  compiled module identity, clipboard-only permissions and x64 engine entry.
+  Derive counters from the actual entries/lessons/exercises schema. The
+  expected runner-pass count is the example count, not a static execution
+  measurement. Malformed/encrypted archive input must raise a ValueError
+  subclass at the offline helper API and fail its CLI.
+- A wrapper can publish PENDING while it is alive. An observer must retain
+  the actual validation root/Job and wait for terminal plus empty before the
+  final ownership relay. Acceptance, waiting, cleanup and relay belong in
+  one bounded invocation. Check the completed record for the final budget
+  verdict. A message sent during publication cannot prove its own final exit.
+- Ownership handoff and validation acceptance are separate. Failed validation
+  releases an empty owned tree. `handoffReady` is ownership only;
+  `finalGatePassed` is the completed window verdict. Unknown/live ownership
+  requires HOLD and reconciliation.

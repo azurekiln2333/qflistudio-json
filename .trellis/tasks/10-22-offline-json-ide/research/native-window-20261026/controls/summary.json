@@ -1,0 +1,65 @@
+{
+  "sourceOnlySyntheticControls": true,
+  "cases": [
+    {
+      "case": "normal",
+      "outerExit": 0,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": true,
+      "elapsedSeconds": 3.109,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203237Z-22ae545f\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "orphan",
+      "outerExit": 0,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": true,
+      "elapsedSeconds": 1.63,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203240Z-02562872\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "failed-child",
+      "outerExit": 1,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": false,
+      "elapsedSeconds": 1.608,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203242Z-0079ea8b\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "insufficient-budget",
+      "outerExit": 1,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": false,
+      "elapsedSeconds": 1.131,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203244Z-816408b8\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    },
+    {
+      "case": "failed-acceptance",
+      "outerExit": 1,
+      "terminal": true,
+      "handoffReady": true,
+      "finalGatePassed": false,
+      "elapsedSeconds": 1.119,
+      "result": "D:\\MyNewProjects\\qfli_json\\build\\native-window-artifacts\\20261025T203246Z-19221bff\\result.json",
+      "syntheticOnly": true,
+      "sdkOrNetworkOrDeviceExecuted": false
+    }
+  ],
+  "fixtureObserverChanges": [
+    "Child script replaced by a temporary synthetic process",
+    "Transport replaced by a local temporary process, with no channel message"
+  ],
+  "runtimeAcceptance": false
+}

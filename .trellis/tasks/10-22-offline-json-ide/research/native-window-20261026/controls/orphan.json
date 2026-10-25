@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "grant": 777,
+  "nextOwner": "synthetic-no-real-successor",
+  "startedUtc": "2026-10-25T20:32:40.8389727Z",
+  "scope": "isolated unsigned x64 package validation; no device",
+  "maxSeconds": 240,
+  "exit": 0,
+  "terminal": true,
+  "handoffReady": true,
+  "handoffMeaning": "ownership only; not runtime acceptance",
+  "finalGatePassed": true,
+  "error": null,
+  "rows": [
+    {
+      "name": "acceptance",
+      "started": true,
+      "pid": 68808,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": false,
+      "error": null,
+      "allowedWaitMilliseconds": 5000,
+      "elapsedMilliseconds": 265,
+      "observedProcessIds": [
+        48760,
+        68808
+      ]
+    },
+    {
+      "name": "validation",
+      "started": true,
+      "pid": 20024,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": true,
+      "error": null,
+      "allowedWaitMilliseconds": 209293,
+      "elapsedMilliseconds": 473,
+      "observedProcessIds": [
+        20024,
+        59304,
+        62676,
+        70328
+      ]
+    },
+    {
+      "name": "final-relay",
+      "started": true,
+      "pid": 28616,
+      "exit": 0,
+      "treeEmpty": true,
+      "timedOut": false,
+      "residualCleanup": false,
+      "error": null,
+      "allowedWaitMilliseconds": 5000,
+      "elapsedMilliseconds": 390,
+      "observedProcessIds": [
+        28616,
+        66380
+      ]
+    }
+  ],
+  "childResult": {
+    "terminal": true,
+    "path": "D:\\MyNewProjects\\qfli_json\\build\\native-release-artifacts\\synthetic-native-window-controls-074820a3-orphan\\result.json",
+    "sourceDrift": [],
+    "gateExit": 0,
+    "artifacts": 2,
+    "sha256": "cfa5b075e614c9430fec4d56ffdda52c5c58008b5f882b7ad8d0b5dd5c06dc57",
+    "publication": {
+      "synthetic": true,
+      "treeEmpty": true,
+      "exit": 0
+    }
+  },
+  "childExit": 0,
+  "childGatePassed": true,
+  "identityDrift": [],
+  "budgetExceeded": false,
+  "identities": {
+    "D:\\MyNewProjects\\qfli_json\\build\\native-window-controls-074820a3\\orphan\\observer-copy.ps1": "57faf3547dbe1ea59805004746a1ed787bcf96f50f22e6c9a8dcb54fb5d0f2a4",
+    "D:\\MyNewProjects\\qfli_json\\build\\native-window-controls-074820a3\\orphan\\fake-child.ps1": "3e0ca17dd461f4b4e6cde402c76e9d9bd97e72dcb59d54545a7090ffd3419375",
+    "D:/MyNewProjects/qfli_json/.trellis/.runtime/json-bounded-process.cs": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919",
+    "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json": "af6361444e9b4a4949c8f7df817a847ac6d5e76d2b22522d066b04a29586ceb7",
+    "D:\\ProgramFiles\\PowerShell\\7\\pwsh.exe": "8737aa78bdbe2941083c2c3674da3a9c3ab4cabd2cac040d39d1d0c19f9fc20d"
+  },
+  "childCommand": {
+    "waitMilliseconds": 209293,
+    "program": "D:\\ProgramFiles\\PowerShell\\7\\pwsh.exe",
+    "arguments": [
+      "-NoProfile",
+      "-NonInteractive",
+      "-File",
+      "D:\\MyNewProjects\\qfli_json\\build\\native-window-controls-074820a3\\orphan\\fake-child.ps1",
+      "-GrantEvent",
+      "777",
+      "-PreparedManifest",
+      "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json",
+      "-NextOwner",
+      "synthetic-no-real-successor",
+      "-MaxSeconds",
+      "199"
+    ]
+  },
+  "finishedUtc": "2026-10-25T20:32:42.3485679Z",
+  "elapsedSeconds": 1.63
+}

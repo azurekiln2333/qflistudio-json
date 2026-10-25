@@ -21,5 +21,8 @@
   "wrapperWorkCutoffSeconds": 180,
   "wrapperCleanupReserveSeconds": 50,
   "wrapperMaximumSeconds": 230,
-  "parentAcceptanceAndLaunchReserveSeconds": 10
+  "parentAcceptanceAndLaunchReserveSeconds": 10,
+  "retired": true,
+  "retiredByChannel": 622,
+  "supersededBy": "../native-window-20261026/command-template.json"
 }
