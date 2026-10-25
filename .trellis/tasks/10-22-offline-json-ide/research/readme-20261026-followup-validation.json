@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-26",
+  "scope": "Four-Pi final README consistency follow-up",
+  "controlledChineseDefaultFindings": 0,
+  "controlledChineseStrict25Findings": 0,
+  "localLinks": "all exist",
+  "files": {
+    "README.md": "105f627c1904cd3e33957e65fc4df3d98c846bac76c52a458cc50cd4cc02a117",
+    "README.zh-TW.md": "70018a20577c2d6f22de3c335b176975782500321047b137e219767081195867",
+    "README.en.md": "6a31b80af70ff22b6ec36c109d912dfb2557d0f25e97682d1ee534477fcec25a"
+  },
+  "runtimeTestsRepeated": false,
+  "newDevicePassClaimed": false
+}

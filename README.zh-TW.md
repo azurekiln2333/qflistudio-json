@@ -17,6 +17,11 @@ QFLIJson 是離線 JSON 編輯器。產品在本機處理文件。
 
 產品內建 340 條範例與 340 條教學。新增內容各有 240 條。
 
+新增內容分為 24 類。每類包含 10 條。
+校驗入口檢查 440 條練習答案。
+校驗入口檢查 340 個輸入樣本。
+10 條示例包含補丁或合併結果。
+
 工具頁直接提供 16 張卡片。
 
 | 工具 | 用途 |
@@ -68,6 +73,17 @@ json sort <file>
 json stats <file>
 json get <file> <JSON Pointer>
 ```
+
+`json help` 列出終端命令。
+
+| 輸入 | 結束碼 |
+| --- | --- |
+| 有效 JSON | 0 |
+| 無效 JSON | 1 |
+| 檔案缺失或路徑越界 | 127 |
+
+專案設定可指定入口檔案。
+命名工作區保存專案識別碼與最後路徑。
 
 ## 開發
 
@@ -147,7 +163,7 @@ flutter run --dart-define=QFLI_VERIFY_CATALOG=true
 
 | 範圍 | 結果 |
 | --- | --- |
-| 2026-10-24 主機完整測試 | 124 項通過。 |
+| 2026-10-24 主機完整測試 | 124 項通過，並行數為 1。 |
 | 同次靜態分析 | `lib` 與 `test` 沒有問題。 |
 | 同次資源驗證 | 三份資源一致。 |
 | 2026-10-22 OHOS 模擬器 | API 26 x86_64 通過 340 條範例。 |
@@ -158,6 +174,8 @@ flutter run --dart-define=QFLI_VERIFY_CATALOG=true
 
 主機證據見[驗證記錄](.trellis/tasks/10-22-offline-json-ide/research/host-20261024-published-core.md)。
 主機測試不能證明裝置通過。
+
+JSON 證據不涵蓋兄弟產品。
 
 ## Schema 邊界
 

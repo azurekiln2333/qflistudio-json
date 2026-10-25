@@ -17,6 +17,11 @@ QFLIJson 是离线 JSON 编辑器。产品在本机处理文档。
 
 产品内置 340 条示例与 340 条教程。新增内容各有 240 条。
 
+新增内容分为 24 类。每类包含 10 条。
+校验入口校验 440 条练习答案。
+校验入口校验 340 个输入样本。
+10 条示例包含补丁或合并结果。
+
 工具页直接提供 16 张卡片。
 
 | 工具 | 用途 |
@@ -69,6 +74,17 @@ json stats <file>
 json get <file> <JSON Pointer>
 ```
 
+`json help` 列出终端命令。
+
+| 输入 | 退出码 |
+| --- | --- |
+| 有效 JSON | 0 |
+| 无效 JSON | 1 |
+| 文件缺失或路径越界 | 127 |
+
+项目配置可指定入口文件。
+命名工作区保存项目标识与最后路径。
+
 ## 开发
 
 本仓库是独立 Flutter 应用。它依赖兄弟仓库 `qfli_studio_core`。
@@ -100,11 +116,19 @@ flutter run
 ```
 
 OHOS 构建需要匹配的 Flutter OHOS 工具链。标准 Flutter SDK 不包含该工具链。
+其他 Flutter 通道也许可用。此仓库尚无对应记录。
 
 应用运行时不需要网络。首次开发环境可能需要下载依赖。
 离线开发需预先准备 SDK 与依赖缓存。
 
+OHOS 与 Android 发行版不请求网络权限。
+Android 调试与分析版保留开发网络权限。
+主机测试以 `HttpOverrides` 记录 HTTP 客户端。
+本地 Schema 与 URL 数据测试均记录零个。
+
 ## 校验
+
+测试套件包含 12 个测试文件。
 
 运行测试。
 
@@ -146,7 +170,7 @@ flutter run --dart-define=QFLI_VERIFY_CATALOG=true
 
 | 范围 | 结果 |
 | --- | --- |
-| 2026-10-24 主机完整测试 | 124 项通过。 |
+| 2026-10-24 主机完整测试 | 124 项通过，并发数为 1。 |
 | 同次静态分析 | `lib` 与 `test` 无问题。 |
 | 同次资源校验 | 三份资源一致。 |
 | 2026-10-22 OHOS 模拟器 | API 26 x86_64 通过 340 条示例。 |
@@ -157,6 +181,8 @@ flutter run --dart-define=QFLI_VERIFY_CATALOG=true
 
 主机证据见[校验记录](.trellis/tasks/10-22-offline-json-ide/research/host-20261024-published-core.md)。
 主机测试不能证明设备通过。
+
+JSON 证据不覆盖兄弟产品。
 
 ## Schema 边界
 

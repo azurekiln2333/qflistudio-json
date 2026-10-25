@@ -12,7 +12,7 @@ The app uses one product profile named `json`. That profile registers the JSON r
 
 ## Editor and diagnostics
 
-Open a `.json` file in the shared editor. The editor highlights keys, strings and numbers.
+Open a `.json` file in the shared editor. The editor highlights keys, strings, numbers, booleans and null.
 
 The app checks the exact text in memory, including unsaved edits. The check uses pure Dart parsing. No server or external program is involved.
 
@@ -23,7 +23,7 @@ The app checks the exact text in memory, including unsaved edits. The check uses
 | Click a Problems entry | The editor selects the exact error span. The file stays unchanged on disk. |
 | Fix the error | The next check clears the old warning. |
 
-The document editor has three tabs. The Problems tab (`问题`) lists diagnostics. The Structure tab (`结构`) lists every node by JSON Pointer and jumps to the source on tap. The Output tab (`输出`) records local check results.
+The document editor has three tabs. The Problems tab (`问题 N`, including the count) lists diagnostics. The Structure tab (`结构`) lists every node by JSON Pointer and jumps to the source on tap. The Output tab (`输出`) records local check results.
 
 The editor also has `校验`, `格式化` and `键排序` actions. Saving stays an explicit user action. The app asks before it discards unsaved edits.
 
@@ -74,6 +74,8 @@ json get <file> <JSON Pointer>
 ```
 
 Run `json help` to print this list.
+
+JSON is data. The app provides no breakpoint debugger.
 
 ## Workspaces
 
@@ -142,7 +144,7 @@ Create a project from the `JSON` template. The template writes `src/data.json` w
 }
 ```
 
-The profile tries `data.json` first and `src/data.json` second when it looks for the entry file.
+Project configuration can specify the entry file. Otherwise the profile tries `data.json` first and `src/data.json` second before the shared fallback names.
 
 ## Verification
 
@@ -150,6 +152,13 @@ Run the test suite:
 
 ```text
 flutter test
+```
+
+Run static analysis and the format check:
+
+```text
+dart analyze lib test
+dart format --output=none --set-exit-if-changed lib test
 ```
 
 The suite has 12 test files.
@@ -176,10 +185,10 @@ The audit holds one report at a time. It marks the previous report as incomplete
 
 | Check | Recorded result |
 | --- | --- |
-| Host suite on the published core revision, 2026-10-24 | 124 tests passed |
+| Host suite on the published core revision, 2026-10-24 | 124 tests passed with concurrency 1 |
 | Static analysis | No issues reported for `lib` and `test` |
 | Content reproducibility | All three assets match |
-| Installed audit on an OHOS x86_64 emulator | 340 runner passes, platform `ohos`, no failures |
+| Installed audit on an OHOS API 26 x86_64 emulator | 340 runner passes, platform `ohos`, no failures |
 
 Host evidence: [published-core verification record](.trellis/tasks/10-22-offline-json-ide/research/host-20261024-published-core.md).
 
