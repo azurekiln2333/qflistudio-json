@@ -34,6 +34,8 @@
     "retired_by_event": 622,
     "device_evidence_checker": "research/device-evidence-20261026",
     "synthetic_evidence_tests": 79,
-    "synthetic_process_control_cases": 5
+    "synthetic_process_control_cases": 5,
+    "native_window_evidence_commit": "7ef6a3d",
+    "current_readiness_event": 686
   }
 }

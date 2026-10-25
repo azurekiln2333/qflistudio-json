@@ -8,7 +8,7 @@
     "-File",
     "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_ohos_window.ps1",
     "-GrantEvent",
-    "<NEW-named-grant-event>",
+    "<NEW-integer-channel-grant-event>",
     "-PreparedManifest",
     "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json",
     "-NextOwner",
@@ -17,5 +17,5 @@
     "240"
   ],
   "scope": "unsigned isolated x64 harness + normal package builds and inspection; no device",
-  "childBudget": "Derived from remaining total window after acceptance; current cleanup/final-relay reserve is30s; child has its own50s cleanup reserve"
+  "childBudget": "Derived from remaining total window after acceptance. Reserve 30s after main wait. Child receives floor(mainWait/1000)-10 seconds and reserves 50s internally."
 }

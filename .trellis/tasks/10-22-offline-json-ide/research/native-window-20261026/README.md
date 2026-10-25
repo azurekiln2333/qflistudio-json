@@ -20,8 +20,8 @@ the relay exits can prove that relay's final exit.
 The total budget includes acceptance, the child wrapper, cleanup and the final
 relay. Thirty seconds are reserved after the main wait for current-job
 cleanup, relay and local IO. The child receives a smaller remaining budget
-and reserves fifty seconds internally. A short window may defer validation
-before launch. The frozen proposed command requests 240 seconds.
+and reserves fifty seconds internally. Insufficient remaining budget fails the window
+before validation launches. The frozen proposed command requests 240 seconds.
 
 Five synthetic controls passed: normal completion, a root that leaves a live
 owned descendant, child failure, insufficient budget and failed acceptance.
@@ -44,3 +44,12 @@ and handle close remains unchanged.
 The source runtime and prepared isolated app/core are unchanged. A NEW named
 serial grant and explicit successor are still required. Neither this
 preparation nor the former readiness request is an execution authorization.
+
+The private isolated app retains embedded signing configuration. Standalone
+credential files are excluded. This does not prove signing readiness. The
+tracked research stores hashes rather than signing values. Full SDK and Java
+installation bytes lie outside the named-tool identity capture.
+
+Replace the command template placeholder with the integer channel event of
+a fresh named grant. The SDK window excludes device commands. Installed-target
+verification requires a separate device grant after successful packaging.
