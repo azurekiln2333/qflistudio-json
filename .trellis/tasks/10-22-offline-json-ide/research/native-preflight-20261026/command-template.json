@@ -1,0 +1,25 @@
+{
+  "executionAuthorized": false,
+  "purpose": "Frozen command template; substitute only a NEW named grant event and its explicit successor.",
+  "executable": "D:/ProgramFiles/PowerShell/7/pwsh.exe",
+  "cwd": "D:\\MyNewProjects\\qfli_json",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_ohos_release.ps1",
+    "-GrantEvent",
+    "<fresh-channel-event>",
+    "-PreparedManifest",
+    "D:\\MyNewProjects\\qfli_json\\build\\ohos-final-preparation-20261024.json",
+    "-NextOwner",
+    "c-coordinator",
+    "-MaxSeconds",
+    "230"
+  ],
+  "requestedWindowSeconds": 240,
+  "wrapperWorkCutoffSeconds": 180,
+  "wrapperCleanupReserveSeconds": 50,
+  "wrapperMaximumSeconds": 230,
+  "parentAcceptanceAndLaunchReserveSeconds": 10
+}
