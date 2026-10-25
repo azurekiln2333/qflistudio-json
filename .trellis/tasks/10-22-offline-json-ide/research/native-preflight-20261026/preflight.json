@@ -1,0 +1,86 @@
+{
+  "recordedUtc": "2026-10-25T18:12:27.695843+00:00",
+  "scope": "Source-only preflight, no SDK/Hvigor/Flutter build/device execution",
+  "appCommit": "af1440053411eaea9eeee4eca0cae8269f28baff",
+  "coreCommit": "2f9039a3ba95449679b17257b0313c1ee3644a2c",
+  "preparedManifest": "build/ohos-final-preparation-20261024.json",
+  "preparedManifestSha256": "af6361444e9b4a4949c8f7df817a847ac6d5e76d2b22522d066b04a29586ceb7",
+  "sourceOnlyEvidence": "D:\\MyNewProjects\\qfli_json\\build\\native-final-source-check-bc1001e0",
+  "checks": [
+    {
+      "name": "before",
+      "exit": 0,
+      "files": 804,
+      "cacheReferences": 6,
+      "pluginSourceFiles": 8,
+      "captureSha256": "4da5a8f3ca0311d6ee00f3bda8faf86f358e561d5fa2d58abe1a3fca49dbc360"
+    },
+    {
+      "name": "after",
+      "exit": 0,
+      "files": 804,
+      "cacheReferences": 6,
+      "pluginSourceFiles": 8,
+      "captureSha256": "d904bfe342017472f7066810f3fccf0a27e53c84fae8ff2ff3731df1a1b9decc"
+    },
+    {
+      "name": "changed-tool",
+      "exit": 1,
+      "files": 804,
+      "cacheReferences": 6,
+      "pluginSourceFiles": 8,
+      "captureSha256": "44122d16fc3ecb3ed34a67639b0695e17721ca9c7f47bf43e13fdaa84dbea9b3"
+    }
+  ],
+  "runnerIdentities": {
+    "run_json_ohos_release.ps1": {
+      "sha256": "7a3caecfd2d2cd3ddb28a2fc449d8a0a77a933ea1c28a5ffa6882927ae37f43c",
+      "bytes": 14549
+    },
+    "json_hvigor_phase.ps1": {
+      "sha256": "85477722f652ae60203f69aa1842c3aa2bb718c6a73a94a8c1060f722a02c3c0",
+      "bytes": 294
+    },
+    "prepare_json_ohos_inputs.py": {
+      "sha256": "8ef4f2f4e355fe97aa4ba36029b84f75c62c7db4a97763284cf1cf3caac38ce1",
+      "bytes": 26442
+    },
+    "inspect_json_release_hap.py": {
+      "sha256": "9417170308902ab48c1669a6178ba66ff80b0e74ca1e5924f763a33592705b98",
+      "bytes": 14684
+    },
+    "json-bounded-process.cs": {
+      "sha256": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919",
+      "bytes": 13034
+    }
+  },
+  "powerShellAstErrors": 0,
+  "missingPythonFaultEvidence": "build/native-wrapper-fault-693ce079/check.json",
+  "missingPythonFault": {
+    "outerExit": 1,
+    "persistedExit": 1,
+    "workPhases": 0,
+    "publisherStarted": false
+  },
+  "publicationFaultChecksBeforeFinalHardening": [
+    "Get-Command failure persisted exit1 and not-started publisher",
+    "BoundedProcess.Run exception persisted exit1 and unknown publisher tree"
+  ],
+  "reviewFile": ".trellis/.runtime/native-wrapper-review-pi.md",
+  "reviewResolutions": [
+    "Python prerequisite inside guarded execution",
+    "Plugin TS/JSON complete file enumeration",
+    "Private embedded signing configuration explicitly retained and never exported as content",
+    "Unconfirmed release file marked HOLD",
+    "Final result write failure emits failed JSON on stderr",
+    "50-second cleanup reserve and actual budget-overrun failure",
+    "Per-phase wait budget and elapsed wall time recorded",
+    "Timer race recommendation rejected: callback and handle close share the same lock"
+  ],
+  "remainingBoundaries": [
+    "No new HAP or device result",
+    "Builds remain sequential in one fresh isolated source root; distinct kernels and actual compiler depfiles required",
+    "Full SDK/Java installation bytes are outside the named-tool capture scope",
+    "All real heavy execution needs a fresh named grant and explicit successor"
+  ]
+}
