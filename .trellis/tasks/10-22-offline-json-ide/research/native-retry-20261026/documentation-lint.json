@@ -1,0 +1,16 @@
+{
+  "readmeHardViolations": 0,
+  "existingEnglishDocuments": [
+    {
+      "file": ".trellis/spec/json-offline.md",
+      "unchangedHistoricalFindings": 30,
+      "newFindings": 0
+    },
+    {
+      "file": ".trellis/tasks/10-22-offline-json-ide/implement.md",
+      "unchangedHistoricalFindings": 32,
+      "newFindings": 0
+    }
+  ],
+  "historicalEnglishFindingsNotRewritten": true
+}

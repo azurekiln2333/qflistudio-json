@@ -1,0 +1,160 @@
+[
+  {
+    "case": "before",
+    "sourceFile": "D:\\MyNewProjects\\qfli_json\\build\\native-final-readiness-26555365\\before.json",
+    "sha256": "ec94cdc34931a59616ce858d0432e9c0e30682c433c8c28188455dfce679a977",
+    "files": 805,
+    "cacheReferences": 7,
+    "readinessMismatches": null,
+    "differences": null,
+    "repositoriesChanged": null
+  },
+  {
+    "case": "after",
+    "sourceFile": "D:\\MyNewProjects\\qfli_json\\build\\native-final-readiness-26555365\\after.json",
+    "sha256": "44f9d11883ecd2028bd263dd250f58e76dd0e3f3f73983b501208d9b506aeadd",
+    "files": 805,
+    "cacheReferences": 7,
+    "readinessMismatches": null,
+    "differences": {
+      "files": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "cacheReferences": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "originalAppInputs": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "originalCacheReferences": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "originalExecutableComparison": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "runners": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "tools": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "buildParameters": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "helperIdentity": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      }
+    },
+    "repositoriesChanged": []
+  },
+  {
+    "case": "guarded",
+    "sourceFile": "D:\\MyNewProjects\\qfli_json\\build\\native-final-readiness-26555365\\guarded.json",
+    "sha256": "7aaeae9f367d7543fa810d98600c2c2597b6b2ff07933c3c884787cdcd41402b",
+    "files": 805,
+    "cacheReferences": 7,
+    "readinessMismatches": [],
+    "differences": null,
+    "repositoriesChanged": null
+  },
+  {
+    "case": "tool-changed",
+    "sourceFile": "D:\\MyNewProjects\\qfli_json\\build\\native-final-readiness-26555365\\tool-changed.json",
+    "sha256": "6e0fb4d4009d986ef5c0ce6bded0194841f736cc238e2d0f4e89bffa185bd479",
+    "files": 805,
+    "cacheReferences": 7,
+    "readinessMismatches": null,
+    "differences": {
+      "files": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "cacheReferences": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "originalAppInputs": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "originalCacheReferences": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "originalExecutableComparison": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "runners": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "tools": {
+        "added": [],
+        "deleted": [],
+        "changed": [
+          "python"
+        ]
+      },
+      "buildParameters": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      },
+      "helperIdentity": {
+        "added": [],
+        "deleted": [],
+        "changed": []
+      }
+    },
+    "repositoriesChanged": []
+  },
+  {
+    "case": "readiness-tool-changed",
+    "sourceFile": "D:\\MyNewProjects\\qfli_json\\build\\native-final-readiness-26555365\\readiness-tool-changed.json",
+    "sha256": "988827a422848d25056b021f6f10acbc9c8b9ad56466279b651d7785d1415b2d",
+    "files": 805,
+    "cacheReferences": 7,
+    "readinessMismatches": [
+      "tools"
+    ],
+    "differences": null,
+    "repositoriesChanged": null
+  },
+  {
+    "case": "readiness-source-changed",
+    "sourceFile": "D:\\MyNewProjects\\qfli_json\\build\\native-final-readiness-26555365\\readiness-source-changed.json",
+    "sha256": "d5bb91c2106962ff31a28679dd12b63bae80f48c2ab106169b1c70bd53a65f25",
+    "files": 805,
+    "cacheReferences": 7,
+    "readinessMismatches": [
+      "files"
+    ],
+    "differences": null,
+    "repositoriesChanged": null
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "executionAuthorized": false,
+  "executable": "D:/ProgramFiles/PowerShell/7/pwsh.exe",
+  "cwd": "D:\\MyNewProjects\\qfli_json",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_ohos_window.ps1",
+    "-GrantEvent",
+    "<NEW-integer-channel-grant-event>",
+    "-PreparedManifest",
+    "D:\\MyNewProjects\\qfli_json\\build\\ohos-initialized-preparation-20261026.json",
+    "-NextOwner",
+    "c-coordinator",
+    "-MaxSeconds",
+    "240"
+  ],
+  "preparedManifestSha256": "9d6f867610ed217cc974382a427279c6982c0ed92bd0b0571bae3e30ae4ba62a",
+  "snapshotContainsPriorBuildIntermediates": true,
+  "coreCommit": "2f9039a3ba95449679b17257b0313c1ee3644a2c",
+  "scope": "unsigned isolated x64 harness+normal, exact initialized805/7 input baseline, no device or clean-build claim"
+}

@@ -21,7 +21,7 @@
   "children": [],
   "parent": null,
   "relatedFiles": [],
-  "notes": "Three-language READMEs aligned in cca9ad8. Native703 ran once: harness build exit0, inspection and source comparison failed, normal/device unrun. Parent39.72s, outer terminal/owned Jobs empty, finalGatePassed=false. Grant consumed; source-only diagnosis active. Full family/signing/current device acceptance remains unfinished.",
+  "notes": "Three-language READMEs aligned in cca9ad8. Native703 failed and released terminally. Source-only retry readiness now has 35 pure controls and six CLI controls. Initialized805/7 baseline explicitly retains failed703 intermediates. Fresh native grant and current-source/device/family acceptance remain pending. Root found uncertain Job handle closure before READY. Source-only retention repair must precede a new grant request.",
   "meta": {
     "json_implementation_commit": "6df694e",
     "core_backup_commit": "96e6833",
@@ -36,8 +36,9 @@
     "synthetic_evidence_tests": 79,
     "synthetic_process_control_cases": 5,
     "native_window_evidence_commit": "7ef6a3d",
-    "current_readiness_event": 686,
+    "current_readiness_event": null,
     "consumed_native_grant_event": 703,
-    "native_703_evidence": "research/native-703-20261026"
+    "native_703_evidence": "research/native-703-20261026",
+    "native_retry_readiness": "research/native-retry-20261026"
   }
 }

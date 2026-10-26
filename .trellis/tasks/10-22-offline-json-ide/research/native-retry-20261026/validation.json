@@ -1,0 +1,176 @@
+{
+  "scope": "Source-only readiness and offline inspection repair. No new SDK window executed.",
+  "sourceAttributionControls": 19,
+  "readinessControls": 16,
+  "pureControlsPassed": true,
+  "sourceCaptureCases": 6,
+  "sourceFiles": 805,
+  "cacheReferences": 7,
+  "namedToolAndPluginFiles": 13,
+  "existingToolHashChangeRejected": true,
+  "sourceHashChangeBeforeSdkRejected": true,
+  "initializationProvenance": {
+    "grantEvent": 703,
+    "originalGatePassed": false,
+    "originFileMapsMatchCommittedBefore": true,
+    "historicalInitializationDelta": {
+      "files": {
+        "added": [
+          "nativePlugins/path_provider_ohos/ohos/BuildProfile.ets"
+        ],
+        "deleted": [],
+        "changed": [
+          "app/ohos/entry/oh-package-lock.json5",
+          "app/ohos/oh-package-lock.json5",
+          "nativeCache/oh_modules/.ohpm/lock.json5",
+          "nativePlugins/path_provider_ohos/ohos/oh-package-lock.json5"
+        ]
+      },
+      "cacheReferences": {
+        "added": [
+          "nativePlugins/path_provider_ohos/ohos/oh_modules/@ohos/flutter_ohos"
+        ],
+        "deleted": [],
+        "changed": []
+      }
+    },
+    "evidence": {
+      "before": {
+        "commit": "4ded5d74d5051521d4504e534b20cefb574fa3d7",
+        "path": ".trellis/tasks/10-22-offline-json-ide/research/native-703-20261026/child-source-before.json",
+        "sha256": "6814b76710ccf8fece71a2d350638eeaffa417c92d742900b921d5b2c80c998b"
+      },
+      "after": {
+        "commit": "4ded5d74d5051521d4504e534b20cefb574fa3d7",
+        "path": ".trellis/tasks/10-22-offline-json-ide/research/native-703-20261026/child-source-after.json",
+        "sha256": "1ee516bf941d1590a6845141a9dc355ade09a93b5054e32e33004a7e0788f4ab"
+      }
+    },
+    "futureBuildMayNotIgnoreTheseDifferences": true,
+    "currentFileMapsMatchCommittedAfter": true
+  },
+  "preparedManifestSha256": "9d6f867610ed217cc974382a427279c6982c0ed92bd0b0571bae3e30ae4ba62a",
+  "parentObserverUnchanged": true,
+  "boundedJobHelperUnchanged": true,
+  "newNativeGrantReceived": false,
+  "deviceExecuted": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 73,
+      "sha256": "2cacd8c5b88d28a6324a5b106d17970ce30df8e32f9b76c87d00d4ca430747a8"
+    },
+    "after.json": {
+      "bytes": 249698,
+      "sha256": "44f9d11883ecd2028bd263dd250f58e76dd0e3f3f73983b501208d9b506aeadd"
+    },
+    "after.log": {
+      "bytes": 345,
+      "sha256": "e07b0b74c994188ddb48bfefe1a3739b35635f718aae44df0f5193e452afe90f"
+    },
+    "before.json": {
+      "bytes": 248643,
+      "sha256": "ec94cdc34931a59616ce858d0432e9c0e30682c433c8c28188455dfce679a977"
+    },
+    "before.log": {
+      "bytes": 346,
+      "sha256": "5574de8b0dc4d78e2b261ddf27ef6bad4d3574aab0a184877f3ef0571224ac04"
+    },
+    "capture-checks.json": {
+      "bytes": 4227,
+      "sha256": "13c99e6d99b483a507e20fcdc17968b6e8b1b5da67aab0e5b027b28cdad460fc"
+    },
+    "command-template.json": {
+      "bytes": 883,
+      "sha256": "c2b0dc5b93930be9e224e870aa7877425385c7469e3942b06bd36a913fd5fc7e"
+    },
+    "diagnostic-inspection.json": {
+      "bytes": 59363,
+      "sha256": "a61bd09fc2d499d0e18a4ff0fa317f608ff1d082129704b50bf327a125c36d11"
+    },
+    "documentation-lint.json": {
+      "bytes": 402,
+      "sha256": "3387818f31a356d21ab8b51f5f51fa687089416098c66a51e3f547d0f58d26b2"
+    },
+    "guarded.json": {
+      "bytes": 248816,
+      "sha256": "7aaeae9f367d7543fa810d98600c2c2597b6b2ff07933c3c884787cdcd41402b"
+    },
+    "guarded.log": {
+      "bytes": 347,
+      "sha256": "dede8f2448fb3015883da819b208777069ac6198e0387b69e022ceba12fa6264"
+    },
+    "powershell-syntax.json": {
+      "bytes": 345,
+      "sha256": "1e53e347e28353fc77872ea82f63231c4f6307884f8ec853f55b841f74e8751f"
+    },
+    "prepared-manifest.json": {
+      "bytes": 253516,
+      "sha256": "9d6f867610ed217cc974382a427279c6982c0ed92bd0b0571bae3e30ae4ba62a"
+    },
+    "readiness-source-changed.log": {
+      "bytes": 363,
+      "sha256": "f10257e6facec1b9613b8a06364fef0c8c4fc6fc750f12612f6e628679801174"
+    },
+    "readiness-tool-changed.log": {
+      "bytes": 361,
+      "sha256": "79161a3814453f62e2989b2d7c2463a783f3824ee4cee79b3ecfe91504524f41"
+    },
+    "README.md": {
+      "bytes": 3235,
+      "sha256": "696028d9244d66bffbcb2dfba75e9eb8acc5a9a510687d528ac33e0cedb38581"
+    },
+    "runners/inspect_json_release_hap.py": {
+      "bytes": 25745,
+      "sha256": "7be9dc50d9e5841939750a097fb9351c33fc4c21ee4f32477a4021d7a1119772"
+    },
+    "runners/json-bounded-process.cs": {
+      "bytes": 13034,
+      "sha256": "6657cffb8a9e4ac741f7143d1d771ae8631c649f9227aa0679a5e0e6e0aa5919"
+    },
+    "runners/json_hvigor_phase.ps1": {
+      "bytes": 294,
+      "sha256": "85477722f652ae60203f69aa1842c3aa2bb718c6a73a94a8c1060f722a02c3c0"
+    },
+    "runners/prepare_json_ohos_inputs.py": {
+      "bytes": 29175,
+      "sha256": "890f10ac5820420445fe663f8ca7c317f875962498155dcc285f85935d2695d1"
+    },
+    "runners/run_json_ohos_release.ps1": {
+      "bytes": 14683,
+      "sha256": "0db96b75a97d58b2e7ad11eed7243246a402ea74eac3482859b3fdd15fb77e65"
+    },
+    "runners/run_json_ohos_window.ps1": {
+      "bytes": 10107,
+      "sha256": "aa0af8de601453cb089fc6dcc8cca2a160dac667f08dfafe8221833310fe3df3"
+    },
+    "runners/run_json_window_controls.py": {
+      "bytes": 5597,
+      "sha256": "6f93671a1f24bfa3d46cd431f553ca77b7a4460e30c39252b184b4b4dc2d98f6"
+    },
+    "runners/test_json_native_readiness.py": {
+      "bytes": 5945,
+      "sha256": "f78d1e243a99205438ee4eee23a27eb37e4b08fb6f5f5492bebc5d0723b65f98"
+    },
+    "runners/test_json_native_source_attribution.py": {
+      "bytes": 9229,
+      "sha256": "02945e00f099463b4b36376c36031ea7c6396bc854a0d04f7907fff6db586a5d"
+    },
+    "test_json_native_readiness.py.log": {
+      "bytes": 2040,
+      "sha256": "da479e69f7d94fb7a20a3dd042e339144af83b05067c263b57f9bcea219e2061"
+    },
+    "test_json_native_source_attribution.py.log": {
+      "bytes": 2610,
+      "sha256": "a4d5faafd52bdf28c4f5a728ec364c55cd855ac44c191476be483f136f5d134a"
+    },
+    "tool-changed.log": {
+      "bytes": 351,
+      "sha256": "d325e9262bfe4051a644fd51777e887974629003f04f1c1e6ee97400aea20545"
+    }
+  },
+  "diagnosticOfflineInspectionPassed": true,
+  "diagnosticDoesNotPassGrant703": true,
+  "executionReady": false,
+  "retentionIssue": "unchanged bounded helper closes uncertain handles; source-only repair required before new READY",
+  "coordinatorNoticeEvent": 767
+}

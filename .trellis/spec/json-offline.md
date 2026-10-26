@@ -91,3 +91,20 @@ These contracts cover the product repository, editor/runner injection, local dat
   releases an empty owned tree. `handoffReady` is ownership only;
   `finalGatePassed` is the completed window verdict. Unknown/live ownership
   requires HOLD and reconciliation.
+
+## 8. Native input readiness and isolated plugin attribution
+
+- Capture the reviewed prepared input identity before SDK execution. Compare every raw
+source/cache map, tool and runner identity, frozen core and exact native command. Retire drift
+before starting the SDK.
+- Require a prepared source capture when isolated native plugins exist. Validate plugin
+declarations against metadata and package configuration. Require compiler and aggregate depfile
+membership. Preserve spelled paths and reject links escaping the isolated app, core or
+native-plugin roots.
+- Bind all captured inputs with the wrapper's before/after comparison. Depfile attribution
+covers a subset and does not replace this complete captured-tree gate. External SDK/Pub
+supply-chain reproducibility remains outside this claim.
+- An initialized snapshot may contain prior failed build intermediates only when its exact raw
+maps and committed before/after provenance are disclosed. Never exclude lock files or normalize
+away future drift. A diagnostic reinspection cannot convert a failed historical window into
+acceptance.

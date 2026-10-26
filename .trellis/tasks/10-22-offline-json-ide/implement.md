@@ -43,3 +43,20 @@ C published capability commit `2f9039a3ba95449679b17257b0313c1ee3644a2c`, exact 
 - [ ] Build and inspect new source-bound normal/harness HAPs, then perform separately authorized target acceptance with fresh process marker/export identity matching. Historical x64 evidence is retained separately.
 
 Coordination 286 named JSON after C211/Web219; Web304 explicitly released the slot and JSON306 accepted. Wrapper307 recorded format/test/analyze exits 0 and immediately released to Lua212. This proves the focused host case on the captured composed source; final shared publication and a new OHOS package remain separate gates.
+
+
+### 2026-10-26: source-only native retry readiness
+
+Archived `research/native-retry-20261026`: exact prepared initialized805/7 snapshot, raw
+captures, nine runner/test files, 35 passing pure controls, six source-only CLI cases and zero
+PowerShell syntax errors. The child now compares reviewed prepared identity before SDK
+execution. The inspector binds declared isolated plugins and compiler evidence. Final offline
+reinspection of the preserved703 harness passes diagnostically only. Grant703 remains failed. No
+new native grant or device execution occurred. Parent observer and bounded Job helper remain
+unchanged. Frozen core remains published2f9039a, not current C work-in-progress equivalence. A
+new serial grant, then separate assigned-target device authorization, remain required. Task
+remains in progress for current-source OHOS and family acceptance.
+
+Root found uncertain Job handles close during failed cleanup in the unchanged helper6657cffb.
+This source-only archive is NOT READY. Coordinator notice767 records the issue.
+A separate retention repair must precede a fresh grant request. No native window was started.

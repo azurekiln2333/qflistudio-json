@@ -1,0 +1,24 @@
+test_accept_exact_frozen_isolated_plugin_files (__main__.SourceAttributionTests.test_accept_exact_frozen_isolated_plugin_files) ... ok
+test_changed_plugin_byte_count_is_rejected (__main__.SourceAttributionTests.test_changed_plugin_byte_count_is_rejected) ... ok
+test_changed_plugin_hash_is_rejected (__main__.SourceAttributionTests.test_changed_plugin_hash_is_rejected) ... ok
+test_compiler_source_must_appear_in_aggregate (__main__.SourceAttributionTests.test_compiler_source_must_appear_in_aggregate) ... ok
+test_declared_plugin_must_appear_in_compiler_evidence (__main__.SourceAttributionTests.test_declared_plugin_must_appear_in_compiler_evidence) ... ok
+test_depfile_keeps_spelled_input_paths (__main__.SourceAttributionTests.test_depfile_keeps_spelled_input_paths) ... ok
+test_missing_compiler_depfile_is_rejected (__main__.SourceAttributionTests.test_missing_compiler_depfile_is_rejected) ... ok
+test_missing_prepared_manifest_refuses_native_inputs (__main__.SourceAttributionTests.test_missing_prepared_manifest_refuses_native_inputs) ... ok
+test_native_compiler_source_must_appear_in_aggregate (__main__.SourceAttributionTests.test_native_compiler_source_must_appear_in_aggregate) ... ok
+test_original_live_app_dependency_is_rejected (__main__.SourceAttributionTests.test_original_live_app_dependency_is_rejected) ... ok
+test_original_live_core_dependency_is_rejected (__main__.SourceAttributionTests.test_original_live_core_dependency_is_rejected) ... ok
+test_other_staging_dependency_is_rejected (__main__.SourceAttributionTests.test_other_staging_dependency_is_rejected) ... ok
+test_package_config_must_name_exact_core (__main__.SourceAttributionTests.test_package_config_must_name_exact_core) ... ok
+test_plugin_link_escape_outside_snapshot_is_rejected (__main__.SourceAttributionTests.test_plugin_link_escape_outside_snapshot_is_rejected) ... ok
+test_plugin_metadata_must_match_capture (__main__.SourceAttributionTests.test_plugin_metadata_must_match_capture) ... ok
+test_plugin_package_mapping_must_match_capture (__main__.SourceAttributionTests.test_plugin_package_mapping_must_match_capture) ... ok
+test_undeclared_plugin_input_is_rejected (__main__.SourceAttributionTests.test_undeclared_plugin_input_is_rejected) ... ok
+test_wrong_prepared_app_root_is_rejected (__main__.SourceAttributionTests.test_wrong_prepared_app_root_is_rejected) ... ok
+test_wrong_prepared_core_root_is_rejected (__main__.SourceAttributionTests.test_wrong_prepared_core_root_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.857s
+
+OK

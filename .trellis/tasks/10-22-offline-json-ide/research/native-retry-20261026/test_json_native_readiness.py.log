@@ -1,0 +1,21 @@
+test_added_native_input_refuses_readiness (__main__.ReadinessTests.test_added_native_input_refuses_readiness) ... ok
+test_added_tool_refuses_readiness (__main__.ReadinessTests.test_added_tool_refuses_readiness) ... ok
+test_cache_reference_change_refuses_readiness (__main__.ReadinessTests.test_cache_reference_change_refuses_readiness) ... ok
+test_changed_lock_bytes_refuse_readiness (__main__.ReadinessTests.test_changed_lock_bytes_refuse_readiness) ... ok
+test_core_revision_change_refuses_readiness (__main__.ReadinessTests.test_core_revision_change_refuses_readiness) ... ok
+test_exact_ready_capture_passes (__main__.ReadinessTests.test_exact_ready_capture_passes) ... ok
+test_existing_tool_hash_change_refuses_readiness (__main__.ReadinessTests.test_existing_tool_hash_change_refuses_readiness) ... ok
+test_harness_define_change_refuses_readiness (__main__.ReadinessTests.test_harness_define_change_refuses_readiness) ... ok
+test_helper_identity_change_refuses_readiness (__main__.ReadinessTests.test_helper_identity_change_refuses_readiness) ... ok
+test_invalid_expected_document_refuses_readiness (__main__.ReadinessTests.test_invalid_expected_document_refuses_readiness) ... ok
+test_malformed_command_refuses_readiness (__main__.ReadinessTests.test_malformed_command_refuses_readiness) ... ok
+test_missing_reviewed_commands_refuses_readiness (__main__.ReadinessTests.test_missing_reviewed_commands_refuses_readiness) ... ok
+test_missing_runner_file_refuses_readiness (__main__.ReadinessTests.test_missing_runner_file_refuses_readiness) ... ok
+test_normal_architecture_change_refuses_readiness (__main__.ReadinessTests.test_normal_architecture_change_refuses_readiness) ... ok
+test_runner_file_change_refuses_readiness (__main__.ReadinessTests.test_runner_file_change_refuses_readiness) ... ok
+test_unprepared_snapshot_refuses_readiness (__main__.ReadinessTests.test_unprepared_snapshot_refuses_readiness) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.039s
+
+OK
