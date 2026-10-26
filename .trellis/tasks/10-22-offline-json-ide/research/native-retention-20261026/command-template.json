@@ -1,0 +1,21 @@
+{
+  "executionAuthorized": false,
+  "executable": "D:\\ProgramFiles\\PowerShell\\7\\pwsh.exe",
+  "arguments": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_retention_window.ps1",
+    "-GrantEvent",
+    "<NEW-actual-integer-controls-grant-event>",
+    "-PreparedManifest",
+    "D:\\MyNewProjects\\qfli_json\\build\\json-retention-controls-prepared-20261026.json",
+    "-NextOwner",
+    "c-coordinator",
+    "-MaxSeconds",
+    "120"
+  ],
+  "preparedSha256": "1d7217ce31df281da987c76aae0e9c40230c3a3261be8a88dd2b526cae9a0057",
+  "nativeExecutionAuthorized": false,
+  "requiresProtocolApprovalForTheseExactHashes": true
+}

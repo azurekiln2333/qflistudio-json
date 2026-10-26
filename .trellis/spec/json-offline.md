@@ -108,3 +108,14 @@ supply-chain reproducibility remains outside this claim.
 maps and committed before/after provenance are disclosed. Never exclude lock files or normalize
 away future drift. A diagnostic reinspection cannot convert a failed historical window into
 acceptance.
+
+## 9. Retained HOLD and validation custodians
+
+- Preserve each exact root and Job handle until root terminal and Jobactive0 are observed.
+  An accounting error or failed wait is unknown. It must retain ownership and remain HOLD.
+- An enclosing deadline must not terminate a live wrapper that may retain nested Job handles.
+  Treat that wrapper as a custodian. Mark deadline failure and continue exact observation.
+- Synchronize the deadline timer before closing verified ownership handles. Preserve HOLD,
+  timeout and cleanup errors even after eventual recovery. Record original creation FILETIME.
+- A live HOLD can exceed the budget. It is never a successful bounded window or a release.
+  Preserve the original tool invocation. Require actual completed terminal and relay evidence.

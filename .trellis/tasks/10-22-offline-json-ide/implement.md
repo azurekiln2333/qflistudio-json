@@ -60,3 +60,13 @@ remains in progress for current-source OHOS and family acceptance.
 Root found uncertain Job handles close during failed cleanup in the unchanged helper6657cffb.
 This source-only archive is NOT READY. Coordinator notice767 records the issue.
 A separate retention repair must precede a fresh grant request. No native window was started.
+
+
+### 2026-10-26: retained-HOLD source repair
+
+The helper now retains original handles on uncertain cleanup. Parent validation uses a
+non-terminating custodian deadline. Payloads and publishers retain exact ownership until
+terminal and Jobactive0. Seven host controls are authored, not executed. Two independent
+source reviews accepted this hierarchy. Four PowerShell AST checks passed. Old native
+manifest9d is retired for execution. Protocol question776 and a new controls grant remain
+pending. No compiler, SDK, native or device execution occurred.

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "json-retention-controls-source-freeze",
+  "executionAuthorized": false,
+  "scope": "seven synthetic host ownership controls; no SDK/native/device/core writes",
+  "retiredNativePreparedSha256": "9d6f867610ed217cc974382a427279c6982c0ed92bd0b0571bae3e30ae4ba62a",
+  "files": {
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_retention_window.ps1": {
+      "bytes": 11815,
+      "sha256": "01f5e32396d912d6be6127cf44eb78288f84e6a92c132225c9a10f4018aa0324"
+    },
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_retention_controls.ps1": {
+      "bytes": 10785,
+      "sha256": "f967c0150f284dc21cf798eb5ff7375de8d9a2f1515a0be30301303927c7d513"
+    },
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\json-bounded-process.cs": {
+      "bytes": 20635,
+      "sha256": "2778b1c15c683b8a101a09b8bc444c6163fe2b411a7176f7b38b43106225b2c7"
+    },
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_ohos_window.ps1": {
+      "bytes": 10810,
+      "sha256": "cd5a80c1812a5b6a6d1c72d94ee8dfb01171e7fd0674acae8dff8303698038ab"
+    },
+    "D:\\MyNewProjects\\qfli_json\\.trellis\\.runtime\\run_json_ohos_release.ps1": {
+      "bytes": 15632,
+      "sha256": "47678ee0df8a5d57d40c8700d98bd1549fe119b88c40764a2035aba6f721e7ab"
+    },
+    "D:\\ProgramFiles\\PowerShell\\7\\pwsh.exe": {
+      "bytes": 301408,
+      "sha256": "8737aa78bdbe2941083c2c3674da3a9c3ab4cabd2cac040d39d1d0c19f9fc20d"
+    }
+  }
+}

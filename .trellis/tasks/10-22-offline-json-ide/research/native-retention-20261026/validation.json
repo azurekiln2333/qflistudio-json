@@ -1,0 +1,86 @@
+{
+  "scope": "source-only retained-HOLD repair and authored controls",
+  "runtimeControlsExecuted": false,
+  "compilerExecuted": false,
+  "sdkExecuted": false,
+  "nativeExecuted": false,
+  "deviceExecuted": false,
+  "sourceProtocolApprovedByC": false,
+  "controlsGrantReceived": false,
+  "nativePreparedRetired": true,
+  "controlsPreparedIdentity": {
+    "bytes": 1503,
+    "sha256": "1d7217ce31df281da987c76aae0e9c40230c3a3261be8a88dd2b526cae9a0057"
+  },
+  "authoredControlCount": 7,
+  "powerShellSyntaxFiles": 4,
+  "powerShellSyntaxErrors": 0,
+  "sourceReviewPassed": true,
+  "faultInjectionCoverage": "API query/termination failure and permanent nonconvergence remain source-only, untested",
+  "files": {
+    ".gitattributes": {
+      "bytes": 73,
+      "sha256": "2cacd8c5b88d28a6324a5b106d17970ce30df8e32f9b76c87d00d4ca430747a8"
+    },
+    "command-template.json": {
+      "bytes": 713,
+      "sha256": "791dab0d0464ab9ddd4800bc2f2498c797fc10e914655374340c32f64719f60b"
+    },
+    "controls-powershell-syntax.json": {
+      "bytes": 247,
+      "sha256": "b83856f0ac0d83908e0ba09ad830bd035e0a113d5b987a2a6e1746043da980ff"
+    },
+    "controls-prepared.json": {
+      "bytes": 1503,
+      "sha256": "1d7217ce31df281da987c76aae0e9c40230c3a3261be8a88dd2b526cae9a0057"
+    },
+    "documentation-lint.json": {
+      "bytes": 341,
+      "sha256": "9ed504575e968073bdcccca98cb2e6ab8b723aa6f7f7a9114a307fd3b4c4f113"
+    },
+    "final-powershell-syntax.json": {
+      "bytes": 810,
+      "sha256": "3d1ac60a53244c9d395f0d8c0bb9b732466285a06e50d03c979820f79e79e6b7"
+    },
+    "job-retention-review.md": {
+      "bytes": 4517,
+      "sha256": "86b6e20d56b7c9e94af8d95db4832b9985a83af2486c7c890d8263fb0d980e9f"
+    },
+    "native-powershell-syntax.json": {
+      "bytes": 236,
+      "sha256": "2f5c180d8e59fe5a9e925914fb18b87d058f4b6f8617af98309e11ecfc402607"
+    },
+    "README.md": {
+      "bytes": 2027,
+      "sha256": "6cdddf0888be04ed986824e9b124641d678a0cd017e484960defc1d3c0e9d095"
+    },
+    "retention-controls-source-rationale.md": {
+      "bytes": 3256,
+      "sha256": "bcbceac136dea7cb4baf10bcf9430e54c48d1dfc106cfa228f1a4a39f840ecd5"
+    },
+    "retention-protocol-review.md": {
+      "bytes": 11664,
+      "sha256": "1dbe8726bc22ca26c50cad9f53949b051d3d9e95230c80d52f8c760303479be0"
+    },
+    "runners/json-bounded-process.cs": {
+      "bytes": 20635,
+      "sha256": "2778b1c15c683b8a101a09b8bc444c6163fe2b411a7176f7b38b43106225b2c7"
+    },
+    "runners/run_json_ohos_release.ps1": {
+      "bytes": 15632,
+      "sha256": "47678ee0df8a5d57d40c8700d98bd1549fe119b88c40764a2035aba6f721e7ab"
+    },
+    "runners/run_json_ohos_window.ps1": {
+      "bytes": 10810,
+      "sha256": "cd5a80c1812a5b6a6d1c72d94ee8dfb01171e7fd0674acae8dff8303698038ab"
+    },
+    "runners/run_json_retention_controls.ps1": {
+      "bytes": 10785,
+      "sha256": "f967c0150f284dc21cf798eb5ff7375de8d9a2f1515a0be30301303927c7d513"
+    },
+    "runners/run_json_retention_window.ps1": {
+      "bytes": 11815,
+      "sha256": "01f5e32396d912d6be6127cf44eb78288f84e6a92c132225c9a10f4018aa0324"
+    }
+  }
+}

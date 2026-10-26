@@ -21,7 +21,7 @@
   "children": [],
   "parent": null,
   "relatedFiles": [],
-  "notes": "Three-language READMEs aligned in cca9ad8. Native703 failed and released terminally. Source-only retry readiness now has 35 pure controls and six CLI controls. Initialized805/7 baseline explicitly retains failed703 intermediates. Fresh native grant and current-source/device/family acceptance remain pending. Root found uncertain Job handle closure before READY. Source-only retention repair must precede a new grant request.",
+  "notes": "Source input-binding repair d0f3c50 committed. Retained-HOLD helper and custodian integration source-reviewed. Seven controls authored, Windows runtime unrun. Protocol acceptance and fresh controls grant pending. Previous initialized native manifest retired because runner hashes changed. Native703 remains failed/consumed. Device/current-source/family acceptance remains open.",
   "meta": {
     "json_implementation_commit": "6df694e",
     "core_backup_commit": "96e6833",
@@ -39,6 +39,8 @@
     "current_readiness_event": null,
     "consumed_native_grant_event": 703,
     "native_703_evidence": "research/native-703-20261026",
-    "native_retry_readiness": "research/native-retry-20261026"
+    "native_retry_readiness": "research/native-retry-20261026",
+    "native_retention_repair": "research/native-retention-20261026",
+    "retention_protocol_question_event": 776
   }
 }

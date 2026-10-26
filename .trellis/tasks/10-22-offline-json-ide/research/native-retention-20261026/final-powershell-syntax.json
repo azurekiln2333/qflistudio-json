@@ -1,0 +1,22 @@
+[
+  {
+    "path": "D:/MyNewProjects/qfli_json/.trellis/.runtime/run_json_ohos_window.ps1",
+    "errors": [],
+    "sha256": "cd5a80c1812a5b6a6d1c72d94ee8dfb01171e7fd0674acae8dff8303698038ab"
+  },
+  {
+    "path": "D:/MyNewProjects/qfli_json/.trellis/.runtime/run_json_ohos_release.ps1",
+    "errors": [],
+    "sha256": "47678ee0df8a5d57d40c8700d98bd1549fe119b88c40764a2035aba6f721e7ab"
+  },
+  {
+    "path": "D:/MyNewProjects/qfli_json/.trellis/.runtime/run_json_retention_window.ps1",
+    "errors": [],
+    "sha256": "01f5e32396d912d6be6127cf44eb78288f84e6a92c132225c9a10f4018aa0324"
+  },
+  {
+    "path": "D:/MyNewProjects/qfli_json/.trellis/.runtime/run_json_retention_controls.ps1",
+    "errors": [],
+    "sha256": "f967c0150f284dc21cf798eb5ff7375de8d9a2f1515a0be30301303927c7d513"
+  }
+]

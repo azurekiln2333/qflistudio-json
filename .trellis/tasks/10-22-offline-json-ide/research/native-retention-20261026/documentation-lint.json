@@ -1,0 +1,15 @@
+{
+  "readmeHardViolations": 0,
+  "existingDocuments": [
+    {
+      "path": ".trellis/spec/json-offline.md",
+      "historicalEnglishFindings": 30,
+      "newFindings": 0
+    },
+    {
+      "path": ".trellis/tasks/10-22-offline-json-ide/implement.md",
+      "historicalEnglishFindings": 32,
+      "newFindings": 0
+    }
+  ]
+}
