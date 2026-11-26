@@ -16,7 +16,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE_CONTENT = ROOT.parent / "qfli_studio_core" / "assets" / "content"
+CORE_CONTENT = ROOT.parent / "qflistudio-core" / "assets" / "content"
 OUTPUT = ROOT / "assets" / "content"
 UPDATED = "2026-10-22"
 

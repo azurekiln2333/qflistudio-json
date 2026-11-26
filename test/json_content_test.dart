@@ -73,10 +73,10 @@ void main() {
     () {
       final baseline = ContentCatalog.fromJson(
         tutorialsSource: File(
-          '../qfli_studio_core/assets/content/tutorials.json',
+          '../qflistudio-core/assets/content/tutorials.json',
         ).readAsStringSync(),
         examplesSource: File(
-          '../qfli_studio_core/assets/content/examples.json',
+          '../qflistudio-core/assets/content/examples.json',
         ).readAsStringSync(),
       );
       final originalExamples = baseline.examples.where((e) => e.type == 'json');

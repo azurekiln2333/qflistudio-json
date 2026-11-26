@@ -105,11 +105,11 @@ The original 100 example identities stay intact. Each example carries a code blo
 
 This repository is a Flutter app. It is an independent Git repository.
 
-The app depends on `qfli_studio_core`. Check out that repository next to this one:
+The app depends on `qfli_studio_core`. Check out `qflistudio-core` next to this one:
 
 ```text
 checkout-parent/
-  qfli_studio_core/
+  qflistudio-core/
   qfli_json/
 ```
 
@@ -117,8 +117,8 @@ checkout-parent/
 | --- | --- |
 | Dart SDK | `^3.11.5` |
 | Flutter | A Flutter SDK that satisfies the Dart constraint |
-| Shared core | `../qfli_studio_core` by path |
-| Editor | `re_editor` from `../qfli_studio_core/vendor/re_editor` |
+| Shared core | `../qflistudio-core` by path |
+| Editor | `re_editor` from `../qflistudio-core/vendor/re_editor` |
 | Other packages | `path`, `cupertino_icons` |
 | Test packages | `flutter_test`, `flutter_lints ^6.0.0` |
 
@@ -275,6 +275,6 @@ The OHOS host requests the clipboard permission. Tools and the editor copy resul
 | `test/` | Test suite |
 | `.trellis/spec/json-offline.md` | Product contracts and the validation matrix |
 
-Shared UI, the editor and the workspace store live in `../qfli_studio_core`. Change them there, and keep their own tests and evidence with them.
+Shared UI, the editor and the workspace store live in `../qflistudio-core`. Change them there, and keep their own tests and evidence with them.
 
 Product contracts: [JSON offline specification](.trellis/spec/json-offline.md).

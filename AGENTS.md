@@ -21,3 +21,12 @@ Managed by Trellis. Edits outside this block are preserved; edits inside may be 
 <!-- TRELLIS:END -->
 
 改写中文技术文本时套用受控中文规则：一句一动作、主动语态、一词一义（同一概念全篇同一个词）、不用分号连接动作、句长（指令 ≤ 25 字、说明 ≤ 40 字）、去掉虚动词（进行 / 加以 + 名词）、套话（需要注意的是、在一定程度上）、营销形容词（无缝、强大、赋能、闭环）与含糊词（若干、一些、相关）； 不得改动情态（可能 / 也许）：置信度是内容。机械首查用 python <repo>/scripts/ste-lint-zh.py <文件>。
+
+## Cloud-only validation
+
+This repository is source-first. Agents may inspect Git metadata, text, hashes and ignored paths locally.
+Agents must not run build, test, analyze, lint, pub get, dependency installation, SDK installation or package generation locally.
+Run those operations only in GitHub Actions. Keep build, native, Flutter and test outputs in short-lived GitHub artifacts.
+Never commit signing keys, certificates, passwords, absolute machine paths, caches, generated outputs or installers.
+Use the sibling core checkout `../qflistudio-core` and keep package name `qfli_studio_core`.
+Treat unsigned iOS, Android, macOS and OHOS outputs as unsigned evidence. Do not call them installable releases.

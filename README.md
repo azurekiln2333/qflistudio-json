@@ -87,18 +87,18 @@ json get <file> <JSON Pointer>
 
 ## 开发
 
-本仓库是独立 Flutter 应用。它依赖兄弟仓库 `qfli_studio_core`。
+本仓库是独立 Flutter 应用。它依赖兄弟仓库 `qflistudio-core`。
 
 两个仓库必须位于同一父目录。
 
 ```text
 checkout-parent/
-  qfli_studio_core/
+  qflistudio-core/
   qfli_json/
 ```
 
 `pubspec.yaml` 声明 Dart 约束 `^3.11.5`。
-编辑器依赖指向 `../qfli_studio_core/vendor/re_editor`。
+编辑器依赖指向 `../qflistudio-core/vendor/re_editor`。
 
 1. 安装 Flutter SDK。
 2. 检出兄弟仓库。

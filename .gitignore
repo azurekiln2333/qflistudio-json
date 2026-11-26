@@ -80,7 +80,8 @@ app.*.map.json
 /.workbuddy-ai/
 /.zcode/
 
-# Local Trellis/agent runtime metadata. Committed task artifacts remain visible.
+# Local Trellis/agent runtime metadata. Durable workflow, specs, tasks and the
+# codex journal are tracked. Developer identity and runtime state stay local.
 /.agents/
 /.dsh/
 /.trellis/.gitignore
@@ -89,11 +90,20 @@ app.*.map.json
 /.trellis/agents/
 /.trellis/config.yaml
 /.trellis/scripts/
-/.trellis/spec/
 /.trellis/tasks/00-bootstrap-guidelines/
-/.trellis/workflow.md
-/.trellis/workspace/
+/.trellis/.developer
 /.trellis/.runtime/
+
+# Signing material and machine-local configuration.
+**/*.p12
+**/*.p7b
+**/*.cer
+**/*.pem
+**/*.key
+**/*.jks
+**/*.keystore
+**/local.properties
+**/flutter_export_environment.sh
 
 # Local diagnostic exports and shell inspection fragments
 /_*.txt
