@@ -237,3 +237,14 @@ Date: 2026-11-26. Branch: `main`. Task: `.trellis/tasks/11-26-github-cloud-migra
 - Run `45848522721` passed setup, syntax, docs and native preparation. Product tests reported 123 passes and one named-workspace restoration failure. Platform packaging remains skipped pending that verification gate. See `research/cloud-evidence.md` for exact commits, jobs and boundaries.
 - Target was still empty except for `.git` at the pre-pull inspection. Final pull, byte equality and Herdr handoff are pending. No source/build/WSL cleanup occurred.
 - No local build, test, analyzer, lint, package resolution, SDK installation or CI-helper execution occurred during migration. Git/text/hash audits are separate from product validation.
+
+## Session 7: Android and OHOS cloud packaging corrections
+
+Date: 2026-11-27 (Asia/Shanghai). Branch: `main`. Task: `.trellis/tasks/11-26-github-cloud-migration/`.
+
+- GitHub runs `45888643244` and `45888770210` used `d01803693d5f4c05299b3d8c748677c0f5aa91f1`. Verification and Windows, Linux, macOS and iOS passed. Android and OHOS failed. The all-six gate failed and release publication was skipped.
+- Pi `w5X:p2` prepared four Android Gradle changes from fixed Flutter source and primary compatibility documentation. A separately authorized workflow NDK preinstall alignment matches the existing Flutter request. These are pending cloud validation.
+- Pi `w5X:p3` owns the OHOS entry-module native packaging filter and emitted HAP evidence. Pi `w5X:p4` reviews native input/output boundaries. The full historical input archive remains preserved. Output permits only arm64; the native contract and fingerprint verifier are unchanged.
+- Pi `w5X:p5` records exact jobs, metadata and limits in `research/cloud-evidence.md`. The main coordinator reviews, commits and dispatches. Transient Pi connection failures are retried in the same Herdr panes.
+- Core owner `w63:p1` has no final migration SHA. JSON retains tested baseline `476a30acee21dc486ee2849dd8064a7be665e4d5`. Core preservation and final migration remain that owner's responsibility.
+- The target still contains only `.git` and canonical GitHub origin. Final pull, byte equality and formal handoff remain pending. Local work remains limited to Git, source edits, text and hashes. No local build/test/install or cleanup occurred.

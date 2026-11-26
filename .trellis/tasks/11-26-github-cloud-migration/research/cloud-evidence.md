@@ -20,6 +20,8 @@ All validation commands reported below ran in GitHub Actions. No local build, te
 | [45848522721](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45848522721) | `9113f2ec0380a999b05fe27fd10de33e549fb061` | Setup, Python compilation, Chinese docs and early native preparation succeeded. Analyzer had eight nonfatal informational deprecations. Product suite had 123 passes and one failure. All platform packages were skipped. |
 | [45850250184](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45850250184) | `9113f2ec0380a999b05fe27fd10de33e549fb061` | OHOS dependency resolution succeeded with the pinned OHOS SDK, Flutter and core inputs. This was a resolve-lock run, not installer acceptance. |
 | [45864418468](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45864418468) | `874f1959ad2f4b75a521952017c3f49591e9b771` | Completed with failure. Verification, Windows and iOS succeeded. OHOS app setup, Linux distribution packaging, Android SDK preparation and macOS Xcode build failed. All-six failed. Release was skipped. |
+| [45888643244](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45888643244) | `d01803693d5f4c05299b3d8c748677c0f5aa91f1` | Push, attempt 1, completed with failure. Verification and four platform jobs (Windows, Linux, macOS and iOS) passed. Android and OHOS failed. All-six failed. Release was skipped. |
+| [45888770210](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45888770210) | `d01803693d5f4c05299b3d8c748677c0f5aa91f1` | Workflow dispatch with main-reported `publish=true`, attempt 1, completed with failure. Verification and the same four platform jobs passed. Android and OHOS failed. All-six failed. Release was skipped. |
 
 ## Confirmed fixes
 
@@ -119,13 +121,107 @@ Both metadata sets bind attempt `1`, run `45864418468`, app `874f1959ad2f4b75a52
 
 Both `SHA256SUMS` files declare native-input archive SHA256 `6bd854073673d1207d84d9ae6fa771d79c6f5106fc3dcfdc3ec896a94d5dbbc1`. That archive was not independently fetched or hashed. Package and native-member hashes above are cloud-verifier metadata, not a local reinspection of those binaries. Both records explicitly retain `runtimeValidation=not-run`, `deviceValidation=not-run`, `signingValidation=not-performed`, `installerValidation=not-performed` and `durablePublication=required-separate-release-or-immutable-store`. Metadata consistency does not satisfy any of those gates. The unsigned iOS output is not an installable release.
 
+## d018036: push and publish-requested dispatch results
+
+Read-only run and jobs API requests confirm that both runs used exact app commit `d01803693d5f4c05299b3d8c748677c0f5aa91f1` on `main`, attempt `1`. Both finished with `status=completed` and `conclusion=failure`. Run `45888643244` has event `push`, created at `2026-11-26T20:07:01Z` and last updated at `2026-11-26T20:15:40Z`. Run `45888770210` has event `workflow_dispatch`, created at `2026-11-26T20:08:00Z` and last updated at `2026-11-26T20:22:48Z`. Main supplied the latter's dispatch input `publish=true`; the run API identifies the event, not the input value.
+
+| Gate/job | Push 45888643244: job ID / API conclusion | Dispatch 45888770210: job ID / API conclusion |
+| --- | --- | --- |
+| Verification | `140145541002` / `success` | `140149130942` / `success` |
+| Windows | `140146185306` / `success` | `140149745156` / `success` |
+| Linux | `140146185335` / `success` | `140149745184` / `success` |
+| macOS | `140146185337` / `success` | `140149745161` / `success` |
+| iOS | `140146185537` / `success` | `140149745188` / `success` |
+| Android | `140146185432` / `failure` | `140149745207` / `failure` |
+| OHOS | `140146185215` / `failure` | `140149745141` / `failure` |
+| All-six | `140149059754` / `failure` | `140151989392` / `failure` |
+| Immutable release | `140149129056` / `skipped` | `140152038743` / `skipped` |
+
+This is verification plus **four successful platform jobs**, not five platform jobs. Neither run satisfies the all-six gate. The publish-requested dispatch did not publish a release. These are exact-run API conclusions, not device, signing or independent payload acceptance. Later prepared Android/OHOS source corrections are not validated by either run.
+
+### Android fatal wrapper mismatch and prepared correction
+
+Both Android jobs failed at step 13, `Build ABI-explicit Android APKs and universal AAB`, while applying `dev.flutter.flutter-gradle-plugin` from `android/app/build.gradle.kts` line 1. The actual push log at `2026-11-26T20:11:27.6832617Z` reports project Gradle **8.14.0**, below Flutter's minimum **9.3.1**. The dispatch log repeats those exact fatal versions at `2026-11-26T20:20:01.3185934Z`. The first `assembleRelease` failed with exit 1 in both jobs. These are wrapper-version failures after SDK preparation, not the earlier run's missing `sdkmanager` failure. They do not establish any subsequent APK/AAB build or verification result.
+
+Pi `w5X:p2` owns the prepared four-file Android correction:
+
+- `android/gradle/wrapper/gradle-wrapper.properties`: pin the distribution to `gradle-9.3.1-all.zip`, replacing `gradle-8.14-all.zip`.
+- `android/settings.gradle.kts`: change AGP `8.11.1` to `9.1.1` and Kotlin Gradle plugin `2.2.20` to `2.4.20`.
+- `android/gradle.properties`: add `android.newDsl=false` and `android.builtInKotlin=false` while retaining the Kotlin Gradle plugin.
+- `android/app/build.gradle.kts`: replace the legacy `android.kotlinOptions` JVM target block with typed `kotlin.compilerOptions` and retain JVM 17.
+
+This is a prepared source correction, not a GitHub-verified Android result. The log's suggested `--android-skip-build-dependency-validation` bypass is not used. Flutter/core/native pins, SDK/NDK/CMake inputs, ABI targets, signing classifications, strict lock enforcement and native/all-six/release gates are not relaxed by these four files. P2 owns its source and research review. P3 separately owns the OHOS producer correction. Only fresh GitHub execution can validate the integrated changes.
+
+P2's [Android toolchain research](android-toolchain.md) is READY/FROZEN at SHA256 `b33c156c7277229185d1bc129a8f098feb5e07297b24ad58c88944a5f84c8635`. It records both fatal logs, the pinned Flutter source paths/blobs/hashes, fatal minima versus warning thresholds, the selected versions and the four source-file hashes. The prepared Gradle/AGP pair may retain warnings. No warning threshold was turned into a demonstrated fatal failure, and no prepared correction is treated as tested.
+
+The same research records the separate NDK preinstall alignment that main authorized and p2 implemented. The failed runs declared workflow `ANDROID_NDK_VERSION=27.0.12077973`, while the app's `flutter.ndkVersion` requests `28.2.13676358` from pinned Flutter. The current workflow diff changes only that environment value to `28.2.13676358`; its frozen SHA256 is `e868d531ef41790b49ceb71d60fe7e5780b1ac929abe0d521fa122e3930682b5`. The app still uses `ndkVersion = flutter.ndkVersion`. No app override, CMake, signing, ABI or gate change is included. This implemented alignment is separate from the frozen four-file correction and remains cloud-unvalidated. The observed failures precede compiler invocation. Neither those failures nor the source edit proves that sdkmanager installed NDK 28.2 or that any compiler used it. Direct installed/executed-NDK provenance remains unestablished.
+
+## Run 45888643244: blocked OHOS architecture gate
+
+The run API confirms attempt `1` at app commit `d01803693d5f4c05299b3d8c748677c0f5aa91f1`, status `completed`, conclusion `failure`. [OHOS job 140146185215](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45888643244/job/140146185215) passed SDK setup, strict app setup, native preparation and unsigned HAP creation. Step 7, `Verify HAP native members, lock and provenance before staging`, emitted `native-dependency-blocked: unrequested-packaged-native-architecture` at `2026-11-26T20:13:24.8085975Z`. The native verifier exited 2. The enclosing step exited 1. Installer and native publication-input uploads were skipped. In dispatch run `45888770210`, OHOS job `140149745141` also built the unsigned HAP successfully, then failed the same step 7 with `unrequested-packaged-native-architecture` at `2026-11-26T20:21:24.4354258Z`. Its installer/native uploads were likewise skipped. The detailed intermediate-metadata audit below belongs to push run `45888643244`; it is not a payload audit of the dispatch run.
+
+### Directly observed metadata
+
+Pi's metadata-only diagnosis read artifact directories and allowlisted JSON/log ranges. This report reused the preserved text and independently checked its hashes. It fetched no HAP, binary, SDK, installer or complete payload archive. It ran no local CI helper, build, test, analyzer or lint.
+
+| Preserved text | SHA256 |
+| --- | --- |
+| OHOS `build-facts.json` | `9339f42e794f0df5979556ef21544fd73c1f583be92e508b8a37f0769287fff1` |
+| `ohos-toolchain.json` | `d1fd5e965153f144971bd92290ade7f3e9059f88d0f9cffcd094aa226d22045f` |
+| Native `INTERMEDIATE_MANIFEST.json` | `adbe908582b5bc1aaa0e7402ff84fbf5dd19bdb520286bcd7430e1ba0c13718f` |
+| Blocked OHOS `verify.json` | `398a77333a0cc9f33973b2c3149002638b42517ba8c04ab86c4a5dc7f0862f3c` |
+
+Build facts bind this app commit, core `476a30acee21dc486ee2849dd8064a7be665e4d5` and OHOS Flutter `3.41.10-ohos-1.0.1` at `adaf911c35c9136a7d18fc424d714c9ec7724e60`. They record mode-lock SHA256 `bbb6311daad0206abd04b88984b5511bf1f46327250f4691dc09fd37b3e5b958`, `buildExitCode=0` and `packageBuilt=true`. The cloud-recorded unsigned HAP SHA256 is `b84c1d55978ed1cee824ca2aafc47f0b3d85d3ebc29e23562bf01e6a93a63cbd`. This is a metadata value, not an independent HAP rehash.
+
+The build command requests `ohos-arm64`. The native intermediate manifest lists `libs/default/arm64-v8a/{libapp.so,libflutter.so,libqfli_git.so}` and an additional `libs/default/x86_64/libqfli_git.so`, beneath `ohos/entry/build/default/intermediates/`. It also lists the extra x86_64 library under `stripped_native_libs/default/`. The merged x86_64 input is 1,944,568 bytes with SHA256 `e70e3c72aab2f317da84bfbff4b5fabfed332391a4121225ecfe7c7dc338f6ba`, matching the reviewed upstream OHOS x86_64 input in `prepare.json`. The stripped x86_64 intermediate is 1,944,384 bytes with SHA256 `6f3537a191ba66a610d11054b2a4613d7218f1e16fed01a5ca6f6277af465f5a`.
+
+Build facts record `targetSdkVersion=26.0.0`, `sdkApiVersion=26`, `sdkVersion=26.0.0.105` and Node `24.14.1`. Toolchain facts distinguish tools `26.0.0.821` from installed SDK `26.0.0.105` at API `26`. These identifiers do not indicate toolchain drift. The tool source is a third-party redistribution with `releaseImmutable=false`; committed asset byte counts and SHA256 values are its trust anchor. Pre-build/profile/facts and the helper's ZIP/arm64-engine check do not establish emitted `targetAPIVersion`. No compiled `module.json` or `pack.info` was read.
+
+### Inference and correction boundary
+
+The unchanged native verifier checks each qfli_git member's exact path/ABI and reviewed payload fingerprint before checking the requested output architecture set. The observed `unrequested-packaged-native-architecture` error therefore implies that an extra qfli_git member passed those earlier guards. Together with the intermediate manifest, this supports the diagnosis that the arm64 HAP retained upstream x86_64 qfli_git. The HAP member path `libs/x86_64/libqfli_git.so` is inferred from the executed guards and error. It was not read from a fetched HAP directory.
+
+`tool/ci/native-contract.json` and the verifier's `expected_archs` require exactly `arm64-v8a` for the OHOS output. `EXPECTED_ABIS` also includes x86_64 to check the complete immutable upstream input inventory. That input-coverage requirement grants no permission to emit x86_64 in this HAP. No diagnostic ABI exception or legitimate verifier correction was identified. Keep the guard closed. The producer/HAR merge must exclude unrequested ABIs before HAP creation while preserving the immutable native input archive and arm64 payload fingerprint. That correction requires a fresh GitHub run.
+
+This evidence update changes neither `tool/ci/native_dependencies.py` (SHA256 `26cd74056e9d9e83b6d944b2786ed01442141a90b77fb7570b78ba54cb44d5fc`) nor `tool/ci/native-contract.json` (SHA256 `5980ba82a5ab98012d8013a9139ce73d1b5bb5b730e9cf88e7d3260fe369617b`). The blocked result remains failed package verification. It supplies no runtime, device, signing, installation or release acceptance.
+
+### Diagnostic transport metadata
+
+The artifact API binds both entries below to this run and exact app commit. API digests describe outer transport ZIPs. They were not independently rehashed and do not validate payload binaries or durable publication.
+
+| Artifact | ID | Bytes | API digest | Expires UTC |
+| --- | --- | ---: | --- | --- |
+| `intermediate-native-ohos-arm64` | `15151275736` | 35979809 | `sha256:eff06a039af08ec09c51f444179b7a3d25b07db13c7f1cd236ac69f99ff65e19` | `2026-11-29T20:13:46Z` |
+| `intermediate-flutter-ohos-arm64` | `15151101048` | 31295290 | `sha256:a3b2a88f4bfdfe1918e2179c62ed4734584be54167ebc0c9d91148fec95afbc4` | `2026-11-29T20:13:43Z` |
+
 ## Acceptance still pending
 
-- Successful full product verification on the final JSON commit. Run `45864418468` passed verification only for its exact head, not for later corrections.
-- Successful Linux, macOS, Android and OHOS package jobs. Windows and iOS succeeded at `874f1959ad2f4b75a521952017c3f49591e9b771` only.
+- Successful full product verification on the final JSON commit. Recorded successes apply only to their exact run heads, not to later corrections.
+- Successful Android and OHOS package jobs. Both `d01803693d5f4c05299b3d8c748677c0f5aa91f1` runs passed verification plus the four Windows/Linux/macOS/iOS jobs. Neither run validates later prepared corrections. This report did not inspect those four platform jobs' new artifact payloads.
 - Successful all-six package/native gates on the same final JSON commit.
 - Native post-package verification and payload/checksum inspection for all six platforms. The API transport ledger is not payload inspection.
 - Immutable JSON release publication. Repository immutability being enabled alone is not publication evidence.
 - Target pull, tracked-byte comparison and formal Herdr handoff.
 
 Unsigned or debug-signed outputs cannot prove production signing, store readiness or installed-device behavior. Core and sibling-app runs are not JSON acceptance evidence.
+
+## Round 6 prepared-source inventory
+
+Main completed integrated read-only review and reported p4's review pass. The frozen identities below describe implemented source/configuration, **not cloud-tested corrections or acceptance**. Both baseline runs `45888643244` (push) and `45888770210` (main-reported `publish=true`) remain historical failures at exact app commit `d01803693d5f4c05299b3d8c748677c0f5aa91f1`: verification plus four platform jobs passed, Android/OHOS failed, all-six failed and release was skipped.
+
+| Owner / frozen file | Prepared change | SHA256 |
+| --- | --- | --- |
+| p2: `android/gradle/wrapper/gradle-wrapper.properties` | Gradle `9.3.1` | `b690d26223576fe4e63889fad9a00df81945cb870b9476cc5a563152a1a88a74` |
+| p2: `android/settings.gradle.kts` | AGP `9.1.1`, Kotlin Gradle plugin `2.4.20` | `f1df33c48dc80dd7a8c5f47d772f3ddef2d6c07869d9acba62e1cf04b47d1e87` |
+| p2: `android/gradle.properties` | Legacy DSL/external Kotlin compatibility flags | `a2c1bfc0f8368940c2eef40cdd320988d1ce2d2265b8250b7cae85f5429d5ef7` |
+| p2: `android/app/build.gradle.kts` | Typed Kotlin compiler options, JVM 17 retained | `3b47faf3aa85812bf2f3932ae9ef5fbdf0f3e7c3ef2052ceb36f0dbbd508b1b3` |
+| p2: `.github/workflows/app-installers.yml` | Separately authorized one-line NDK preinstall alignment to `28.2.13676358` | `e868d531ef41790b49ceb71d60fe7e5780b1ac929abe0d521fa122e3930682b5` |
+| p3: `ohos/entry/build-profile.json5` | Entry native packaging filter excludes `**/x86_64/*.so` | `05e2d503451f884d19f2f2886c55c4ca92bf279614405546e1551c5fae026e2b` |
+| p3: `tool/ci/build_ohos.py` | Guard exact filter/input/profile identities and inspect emitted HAP metadata | `59813ae96cca58fffc39cb283505e332e53c0a472bc26c039ac3cbff09307fa3` |
+
+Separate frozen research:
+
+- P2's [Android toolchain rationale](android-toolchain.md), SHA256 `b33c156c7277229185d1bc129a8f098feb5e07297b24ad58c88944a5f84c8635`, explains the actual fatal wrapper error, pinned-source version requirements, four-file correction and separately authorized NDK alignment. It does not prove installed NDK identity, compiler use or an Android package result.
+- P3's [OHOS ABI-filter and emitted-metadata design](ohos-abi-filter.md), SHA256 `5a3926220ac60e1e88476f092f9b48a589e3a86dc8e67375654732fcc179f809`, documents pre-HAP native filtering, unchanged input/profile guards, and planned cloud-recorded emitted member names, `.so` hashes, raw `module.json`/optional `pack.info` and exact compiled target-API fields. The implementation is not evidence that new metadata has been emitted. Compiled target API remains recorded-only, not guessed or verified against an invented encoding.
+
+Fresh GitHub execution must validate the integrated commit. The unchanged native verifier and contract still govern package identity and the arm64-only OHOS output. No local executable validation ran for this appendix. No source/workflow edit, payload retrieval, Git mutation, signing/device/runtime acceptance or durable-release claim is included.

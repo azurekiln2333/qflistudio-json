@@ -17,7 +17,13 @@
   - [x] Android job 140064304819: step 7 could not locate `sdkmanager`. Owner `w5X:p2` resolved it from the pinned runner SDK root. Cloud revalidation is pending.
   - [x] macOS job 140064304834: step 11 had duplicate `QFLIJson.bundle` outputs. Owner `w5X:p5` removed only the global Xcode product-name override. Cloud revalidation is pending.
   - [x] Integrated read-only review by `w5X:p2` found no concrete blocker. `w5X:p4` inspected Windows/iOS native metadata without downloading packages. `w5X:p5` recorded run/job/artifact evidence.
-- [ ] Round 5 cloud revalidation on the unified commit: strict OHOS mode lock, Linux package closure, Android SDK setup, macOS universal build, all-six gate and immutable release readback. Trigger `workflow_dispatch` with `publish=true`; publication remains gated by all-six success.
+- [x] Round 5 cloud revalidation at `d01803693d5f4c05299b3d8c748677c0f5aa91f1`: push run `45888643244` and publish-request run `45888770210` completed. Verify, Windows, Linux, macOS and iOS passed. Android and OHOS failed. All-six failed; release was skipped.
+- [ ] Round 6 fixes and same-commit cloud acceptance. Main `w5X:p1` reviews, commits, pushes and dispatches; Pi owners implement. No local executable validation.
+  - [x] Android owner `w5X:p2`: align Gradle/AGP/KGP and compiler options with the fixed Flutter minima and official compatibility tables. Four Android Gradle files are frozen for review. No bypass flags, SDK/core repin or signing/ABI changes.
+  - [x] OHOS producer owner `w5X:p3`: configured the documented entry-module x86_64 packaging exclusion and cloud-only emitted metadata/ABI evidence. Full native input archive and profile hashes must remain unchanged. Source is frozen; actual cloud acceptance is pending.
+  - [x] Native reviewer `w5X:p4`: reviewed the exact frozen producer hashes and full diff without a concrete blocker. Output remains arm64-only. Full upstream input coverage and the unchanged native fingerprint gate remain separate requirements.
+  - [x] Evidence owner `w5X:p5`: recorded both Round 5 runs, the Android toolchain evidence and the Round 6 prepared-source inventory. Inferred HAP paths and unverified compiled target API remain clearly labelled.
+  - [ ] Integrate reviewed changes and run GitHub verification and all six package/native gates. Publish only after success, then require immutable Release API readback for the exact accepted inputs.
 - [ ] Pull the target and compare commits, trees and tracked file contents.
 - [ ] Confirm clean source and target worktrees and GitHub-only target remotes.
 - [ ] Record cleanup inventory and final handoff through Herdr.

@@ -8,8 +8,8 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 6
-- **Last Active**: 2026-11-26
+- **Total Sessions**: 7
+- **Last Active**: 2026-11-27
 <!-- @@@/auto:current-status -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 7 | 2026-11-27 | Android and OHOS cloud packaging corrections | `d018036` baseline; next candidate pending | `main` |
 | 6 | 2026-11-26 | GitHub preservation and cloud-only migration, validation in progress | `1a8b9fb` through `9113f2e` | `main` |
 | 5 | 2026-10-24 | JSON published-core complete suite and reliable audit exports | `d7fddf3` | `feat/offline-json-workbench` |
 | 4 | 2026-10-24 | JSON named workspace persistence and exact integration handoff | `9bd21f6841583815829c94e7898e5a692ee07a10` | `feat/offline-json-workbench` |
