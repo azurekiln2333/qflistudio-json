@@ -1,0 +1,19 @@
+{
+  "id": "github-cloud-migration",
+  "name": "github-cloud-migration",
+  "title": "Preserve JSON source and Trellis on GitHub and migrate to cloud-only builds",
+  "status": "in_progress",
+  "creator": "codex",
+  "assignee": "codex",
+  "createdAt": "2026-11-26",
+  "completedAt": null,
+  "branch": "feat/offline-json-workbench",
+  "base_branch": "main",
+  "children": [],
+  "notes": "User approved task creation and full implementation on 2026-11-26. Trellis scripts are absent in this standalone repository; planning and activation are recorded manually. All builds, tests, analysis and dependency resolution must run on GitHub. Prior product acceptance remains open.",
+  "source_path": "D:/MyNewProjects/qfli_json",
+  "target_path": "E:/MyNewProjects/QFLIProjects/qflistudio-json",
+  "github_repository": "azurekiln2333/qflistudio-json",
+  "herdr_source_pane": "w5X:p1",
+  "herdr_target_pane": "w6Q:p1"
+}
