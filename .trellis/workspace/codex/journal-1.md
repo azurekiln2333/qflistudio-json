@@ -223,3 +223,17 @@ Fixed stale successful audit exports with fresh invocation identity, failure per
 - Four actual Herdr Pi now diagnose703 via disjoint source-only tasks.
   Monitor session72586 retries failed requests in original panes.
 - No new SDK run is authorized by diagnosis. Full family/device gates open.
+
+## Session 6: GitHub preservation and cloud-only migration
+
+Date: 2026-11-26. Branch: `main`. Task: `.trellis/tasks/11-26-github-cloud-migration/`.
+
+- User authorized task creation and the full JSON migration. Source is `D:/MyNewProjects/qfli_json`; target is `E:/MyNewProjects/QFLIProjects/qflistudio-json`.
+- Rewrote all 25 unpublished historical commits only at the OHOS signing profile. Original sensitive history remains in private local backup refs and `.git/migration-backup/`. The tracked history map connects original and published commits.
+- Published source, specifications, tasks and journals to canonical GitHub. The feature branch was verified as merged and removed. Only main remains as a development branch.
+- Preserved 72 unique runtime payloads, two aliases and mappings to 20 existing tracked duplicates. All 94 mapped paths were checked for byte size and SHA256. UI/session quarantine and historical build packages remain local and on hold.
+- Added six-platform cloud workflows, immutable native input identities, package checks, bounded intermediate collection and release gates. Committed repository-local cloud-only rules. All Pi coordination uses Herdr.
+- GitHub run `45825769686` resolved the committed dependency lock. Subsequent runs found and fixed the SDK local-tag identity issue (`80c3cda`) and Chinese README terminology (`9113f2e`).
+- Run `45848522721` passed setup, syntax, docs and native preparation. Product tests reported 123 passes and one named-workspace restoration failure. Platform packaging remains skipped pending that verification gate. See `research/cloud-evidence.md` for exact commits, jobs and boundaries.
+- Target was still empty except for `.git` at the pre-pull inspection. Final pull, byte equality and Herdr handoff are pending. No source/build/WSL cleanup occurred.
+- No local build, test, analyzer, lint, package resolution, SDK installation or CI-helper execution occurred during migration. Git/text/hash audits are separate from product validation.

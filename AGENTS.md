@@ -26,6 +26,7 @@ Managed by Trellis. Edits outside this block are preserved; edits inside may be 
 
 This repository is source-first. Agents may inspect Git metadata, text, hashes and ignored paths locally.
 Agents must not run build, test, analyze, lint, pub get, dependency installation, SDK installation or package generation locally.
+Do not run local emulators, benchmarks or native compilation. Do not download installers, SDKs or build caches into this workspace.
 Run those operations only in GitHub Actions. Keep build, native, Flutter and test outputs in short-lived GitHub artifacts.
 Never commit signing keys, certificates, passwords, absolute machine paths, caches, generated outputs or installers.
 Use the sibling core checkout `../qflistudio-core` and keep package name `qfli_studio_core`.

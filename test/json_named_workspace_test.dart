@@ -14,6 +14,7 @@ import 'package:qfli_studio_core/editor/editor_page.dart';
 import 'package:qfli_studio_core/editor/editor_problems_bar.dart';
 import 'package:qfli_studio_core/editor/file_explorer.dart';
 import 'package:qfli_studio_core/editor/project_history.dart';
+import 'package:qfli_studio_core/layout/app_form_factor.dart';
 import 'package:qfli_studio_core/models/project.dart';
 import 'package:qfli_studio_core/services/app_paths.dart';
 import 'package:qfli_studio_core/services/studio_profile.dart';
@@ -326,7 +327,13 @@ class _Fixture {
 
   Future<void> mountHome(WidgetTester tester) async {
     await tester.pumpWidget(
-      QfliApp(store: store, auth: auth, settings: settings),
+      QfliApp(
+        store: store,
+        auth: auth,
+        settings: settings,
+        // Keep this real Home/editor fixture independent of the CI host OS.
+        formFactor: AppFormFactor.phone,
+      ),
     );
     await _until(
       tester,

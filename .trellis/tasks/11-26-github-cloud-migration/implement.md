@@ -2,13 +2,13 @@
 
 - [x] Verify source, target, GitHub identity and Herdr participants.
 - [x] Obtain user approval for task creation and implementation.
-- [ ] Audit branches, ignored durable files, generated output and credentials.
-- [ ] Preserve Trellis progress and establish cloud-only agent rules.
-- [ ] Make core dependency paths portable and pin cloud inputs.
-- [ ] Implement six-platform CI and bounded artifact retention.
-- [ ] Review changes without local builds or tests.
-- [ ] Merge reviewed branches into main and commit source changes.
-- [ ] Push GitHub and run remote validation.
+- [x] Audit branches, ignored durable files, generated output and credentials.
+- [x] Preserve Trellis progress and establish cloud-only agent rules.
+- [x] Make core dependency paths portable and pin cloud inputs.
+- [x] Implement six-platform CI and bounded artifact retention.
+- [x] Review changes without local builds or tests.
+- [x] Merge reviewed branches into main and commit source changes.
+- [x] Push GitHub and run remote validation.
 - [ ] Resolve cloud failures or record exact external blockers.
 - [ ] Pull the target and compare commits, trees and tracked file contents.
 - [ ] Confirm clean source and target worktrees and GitHub-only target remotes.

@@ -7,7 +7,7 @@
   "assignee": "codex",
   "createdAt": "2026-11-26",
   "completedAt": null,
-  "branch": "feat/offline-json-workbench",
+  "branch": "main",
   "base_branch": "main",
   "children": [],
   "notes": "User approved task creation and full implementation on 2026-11-26. Trellis scripts are absent in this standalone repository; planning and activation are recorded manually. All builds, tests, analysis and dependency resolution must run on GitHub. Prior product acceptance remains open.",

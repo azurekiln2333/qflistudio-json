@@ -102,11 +102,11 @@ jobs:
             target: linux-x64
             signing: unsigned
           - platform: macos
-            runner: macos-14
+            runner: macos-15
             target: macos-universal
             signing: ad-hoc-or-unsigned-not-notarized
           - platform: ios
-            runner: macos-14
+            runner: macos-15
             target: ios-arm64
             signing: unsigned-not-installable-without-provisioning
           - platform: android
