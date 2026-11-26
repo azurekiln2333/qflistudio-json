@@ -1,0 +1,417 @@
+name: JSON cloud verification and installers
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish a NEW immutable prerelease after the all-six gate.
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: json-packages-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CORE_REF: 476a30acee21dc486ee2849dd8064a7be665e4d5
+  FLUTTER_VERSION: 3.50.0
+  FLUTTER_COMMIT: ab2912035e160d9cad6306df307576da6128ebdb
+  OHOS_FLUTTER_VERSION: 3.41.10-ohos-1.0.1
+  OHOS_FLUTTER_COMMIT: adaf911c35c9136a7d18fc424d714c9ec7724e60
+  OHOS_TOOLS_VERSION: 26.0.0.821
+  OHOS_API_LEVEL: '26'
+  OHOS_NODE_VERSION: 24.14.1
+  ANDROID_NDK_VERSION: 27.0.12077973
+  ANDROID_CMAKE_VERSION: 3.22.1
+  FLUTTER_SUPPRESS_ANALYTICS: 'true'
+  CI: 'true'
+
+jobs:
+  verify:
+    name: Enforced dependency lock, analyzer and product tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: qflistudio
+          persist-credentials: false
+      - uses: ./qflistudio/.github/actions/app-setup
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          flutter-commit: ${{ env.FLUTTER_COMMIT }}
+          core-ref: ${{ env.CORE_REF }}
+      - name: Check Python syntax, Chinese docs and native parser in GitHub first
+        working-directory: qflistudio
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python tool/ci/run_logged.py python-syntax -- python -m compileall -q tool/ci .github/actions/setup-ohos
+          python tool/ci/run_logged.py chinese-docs -- python scripts/ste-lint-zh.py README.md README.zh-TW.md
+          python tool/ci/run_logged.py native-prepare -- python tool/ci/native_dependencies.py --target linux --phase prepare
+      - name: Run checks in GitHub only
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tool/ci/run_logged.py analyzer -- flutter analyze --no-pub --no-fatal-infos
+          python tool/ci/run_logged.py tests -- flutter test --no-pub --reporter expanded
+          python tool/ci/run_logged.py content -- python tool/build_json_content.py --check
+          python tool/ci/dependency_guard.py verify
+      - name: Collect bounded diagnostic files
+        if: always()
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          python tool/ci/collect_diagnostics.py
+          python tool/ci/collect_intermediates.py
+      - name: Verification diagnostics (3 days; not entire caches)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: diagnostics-verify
+          path: |
+            qflistudio/build/ci-diagnostics/
+            qflistudio/build/ci-intermediates/
+            ${{ runner.temp }}/qfli-upstream-core-patch.json
+          retention-days: 3
+          if-no-files-found: warn
+
+  build:
+    name: Package ${{ matrix.platform }} after verification
+    needs: verify
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: windows
+            runner: windows-2022
+            target: windows-x64
+            signing: unsigned
+          - platform: linux
+            runner: ubuntu-24.04
+            target: linux-x64
+            signing: unsigned
+          - platform: macos
+            runner: macos-14
+            target: macos-universal
+            signing: ad-hoc-or-unsigned-not-notarized
+          - platform: ios
+            runner: macos-14
+            target: ios-arm64
+            signing: unsigned-not-installable-without-provisioning
+          - platform: android
+            runner: ubuntu-24.04
+            target: android-multiabi
+            signing: debug-key-not-production
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 90
+    steps:
+      - name: Preserve committed source bytes on Windows before either checkout
+        if: matrix.platform == 'windows'
+        shell: bash
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: qflistudio
+          persist-credentials: false
+      - name: Linux GTK and secure-storage native prerequisites
+        if: matrix.platform == 'linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y clang cmake ninja-build pkg-config libgtk-3-dev libsecret-1-dev dpkg-dev
+      - uses: ./qflistudio/.github/actions/app-setup
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          flutter-commit: ${{ env.FLUTTER_COMMIT }}
+          core-ref: ${{ env.CORE_REF }}
+      - name: Verify Windows C++ ATL and redistributable prerequisites
+        if: matrix.platform == 'windows'
+        working-directory: qflistudio
+        shell: pwsh
+        run: ./tool/ci/windows_prerequisites.ps1
+      - name: Prepare Android SDK tools on the hosted runner
+        if: matrix.platform == 'android'
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${JAVA_HOME_17_X64:-}"
+          echo "JAVA_HOME=$JAVA_HOME_17_X64" >> "$GITHUB_ENV"
+          echo "$JAVA_HOME_17_X64/bin" >> "$GITHUB_PATH"
+          "$JAVA_HOME_17_X64/bin/java" -version
+          sdkmanager --install 'platforms;android-36' 'build-tools;36.0.0' "ndk;$ANDROID_NDK_VERSION" "cmake;$ANDROID_CMAKE_VERSION"
+      - name: Verify exact-pin native inputs before platform build
+        working-directory: qflistudio
+        shell: bash
+        env:
+          PLATFORM: ${{ matrix.platform }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test -f tool/ci/native_dependencies.py || { echo 'missing-native-contract: consumer helper absent' >&2; exit 2; }
+          target="$PLATFORM"
+          if [ "$PLATFORM" = macos ]; then target=macos-universal; fi
+          python tool/ci/run_logged.py native-prepare -- python tool/ci/native_dependencies.py --target "$target" --phase prepare
+      - name: Build Windows release payload
+        if: matrix.platform == 'windows'
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          set -euo pipefail
+          flutter config --enable-windows-desktop
+          python tool/ci/run_logged.py flutter-build -- flutter build windows --release --no-pub
+      - name: Build Linux release payload
+        if: matrix.platform == 'linux'
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          set -euo pipefail
+          flutter config --enable-linux-desktop
+          python tool/ci/run_logged.py flutter-build -- flutter build linux --release --no-pub
+      - name: Build QFLIJson macOS universal app without distribution signing
+        if: matrix.platform == 'macos'
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          set -euo pipefail
+          flutter config --enable-macos-desktop
+          python tool/ci/run_logged.py flutter-build -- flutter build macos --release --no-pub --config-only
+          python tool/ci/run_logged.py xcode-build -- xcodebuild -workspace macos/Runner.xcworkspace -scheme Runner -configuration Release -derivedDataPath build/macos -destination 'generic/platform=macOS' ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO PRODUCT_NAME=QFLIJson build
+      - name: Build unsigned iOS device payload
+        if: matrix.platform == 'ios'
+        working-directory: qflistudio
+        shell: bash
+        run: python tool/ci/run_logged.py flutter-build -- flutter build ios --release --no-codesign --no-pub
+      - name: Build ABI-explicit Android APKs and universal AAB
+        if: matrix.platform == 'android'
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tool/ci/run_logged.py flutter-apks -- flutter build apk --release --no-pub --split-per-abi --target-platform android-arm,android-arm64,android-x64
+          python tool/ci/run_logged.py flutter-aab -- flutter build appbundle --release --no-pub --target-platform android-arm,android-arm64,android-x64
+      - name: Create real distribution containers preserving payload metadata
+        working-directory: qflistudio
+        shell: bash
+        env:
+          PLATFORM: ${{ matrix.platform }}
+        run: python tool/ci/run_logged.py packaging -- python tool/ci/package_platform.py "$PLATFORM"
+      - name: Verify every runtime package and reject lock drift before staging
+        working-directory: qflistudio
+        shell: bash
+        env:
+          PLATFORM: ${{ matrix.platform }}
+          TARGET: ${{ matrix.target }}
+          SIGNING: ${{ matrix.signing }}
+          GH_TOKEN: ${{ github.token }}
+        run: python tool/ci/finish_platform.py --platform "$PLATFORM" --target "$TARGET" --signing "$SIGNING"
+      - name: Installer transport (14 days)
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: installer-${{ matrix.target }}
+          path: qflistudio/build/ci-artifacts/${{ matrix.target }}/
+          retention-days: 14
+          if-no-files-found: error
+          compression-level: 0
+      - name: Native inputs for durable release publication (14-day transport only)
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: native-${{ matrix.target }}
+          path: qflistudio/build/ci-artifacts/native-${{ matrix.target }}/
+          retention-days: 14
+          if-no-files-found: error
+          compression-level: 0
+      - name: Collect bounded Flutter and native intermediates
+        if: always()
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          python tool/ci/collect_diagnostics.py
+          python tool/ci/collect_intermediates.py
+      - name: Flutter intermediate diagnostics (3 days)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: intermediate-flutter-${{ matrix.target }}
+          path: |
+            qflistudio/build/ci-diagnostics/flutter/
+            qflistudio/build/ci-intermediates/flutter/
+            ${{ runner.temp }}/qfli-upstream-core-patch.json
+          retention-days: 3
+          if-no-files-found: warn
+      - name: Native intermediate diagnostics (3 days)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: intermediate-native-${{ matrix.target }}
+          path: |
+            qflistudio/build/ci-diagnostics/native/
+            qflistudio/build/ci-intermediates/native/
+          retention-days: 3
+          if-no-files-found: warn
+
+  ohos:
+    name: Package unsigned OHOS arm64 after verification
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: qflistudio
+          persist-credentials: false
+      - uses: ./qflistudio/.github/actions/setup-ohos
+        with:
+          version: ${{ env.OHOS_TOOLS_VERSION }}
+          api-level: ${{ env.OHOS_API_LEVEL }}
+          node-version: ${{ env.OHOS_NODE_VERSION }}
+      - uses: ./qflistudio/.github/actions/app-setup
+        with:
+          flutter-version: ${{ env.OHOS_FLUTTER_VERSION }}
+          flutter-commit: ${{ env.OHOS_FLUTTER_COMMIT }}
+          flutter-mode: ohos
+          core-ref: ${{ env.CORE_REF }}
+      - name: Verify exact-pin OHOS native inputs
+        working-directory: qflistudio
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test -f tool/ci/native_dependencies.py || { echo 'missing-native-contract: consumer helper absent' >&2; exit 2; }
+          python tool/ci/run_logged.py native-prepare -- python tool/ci/native_dependencies.py --target ohos --phase prepare
+      - name: Build unsigned HAP with verified OHOS SDK and no Pub mutation
+        working-directory: qflistudio
+        shell: bash
+        run: python tool/ci/run_logged.py flutter-build -- python tool/ci/build_ohos.py --app-dir . --output-dir "$RUNNER_TEMP/ohos-package" --api-level "$OHOS_API_LEVEL" --flutter-commit "$OHOS_FLUTTER_COMMIT"
+      - name: Verify HAP native members, lock and provenance before staging
+        working-directory: qflistudio
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test -n "${HAP_PATH:-}" || { echo 'OHOS helper did not export HAP_PATH' >&2; exit 1; }
+          python tool/ci/finish_platform.py --platform ohos --target ohos-arm64 --signing unsigned --package "$HAP_PATH"
+      - name: OHOS installer transport (14 days)
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: installer-ohos-arm64
+          path: qflistudio/build/ci-artifacts/ohos-arm64/
+          retention-days: 14
+          if-no-files-found: error
+          compression-level: 0
+      - name: OHOS native inputs for durable publication (14-day transport only)
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: native-ohos-arm64
+          path: qflistudio/build/ci-artifacts/native-ohos-arm64/
+          retention-days: 14
+          if-no-files-found: error
+          compression-level: 0
+      - name: Collect bounded diagnostics
+        if: always()
+        working-directory: qflistudio
+        shell: bash
+        run: |
+          python tool/ci/collect_diagnostics.py
+          python tool/ci/collect_intermediates.py
+      - name: OHOS Flutter intermediates (3 days)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: intermediate-flutter-ohos-arm64
+          path: |
+            qflistudio/build/ci-diagnostics/flutter/
+            qflistudio/build/ci-intermediates/flutter/
+            ${{ runner.temp }}/ohos-package/flutter-build.log
+            ${{ runner.temp }}/ohos-package/build-facts.json
+          retention-days: 3
+          if-no-files-found: warn
+      - name: OHOS native and toolchain diagnostics (3 days)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: intermediate-native-ohos-arm64
+          path: |
+            qflistudio/build/ci-diagnostics/native/
+            qflistudio/build/ci-intermediates/native/
+            ${{ runner.temp }}/ohos-toolchain.json
+          retention-days: 3
+          if-no-files-found: warn
+
+  all-six:
+    name: All six platform package/native gates
+    if: always()
+    needs: [verify, build, ohos]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Require successful verification and every platform build
+        env:
+          VERIFY_RESULT: ${{ needs.verify.result }}
+          MATRIX_RESULT: ${{ needs.build.result }}
+          OHOS_RESULT: ${{ needs.ohos.result }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$VERIFY_RESULT" = success
+          test "$MATRIX_RESULT" = success
+          test "$OHOS_RESULT" = success
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: qflistudio
+          persist-credentials: false
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: installer-*
+          path: release-inputs
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: native-*
+          path: release-inputs
+      - name: Require twelve exact-run installer/native input sets and valid checksums
+        shell: bash
+        run: python qflistudio/tool/ci/all_six_gate.py --root release-inputs
+
+  release:
+    name: Publish new immutable release with asset checksums
+    needs: all-six
+    if: github.event_name == 'workflow_dispatch' && inputs.publish && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: qflistudio
+          persist-credentials: false
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: installer-*
+          path: release-inputs
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          pattern: native-*
+          path: release-inputs
+      - name: Recheck all-six and publish without overwriting any existing asset
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python qflistudio/tool/ci/all_six_gate.py --root release-inputs
+          python qflistudio/tool/ci/publish_release.py --root release-inputs

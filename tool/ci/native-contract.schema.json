@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "native-contract.schema.json",
+  "title": "JSON exact-pin bundled Git native contract",
+  "description": "This schema describes an input contract, not a native runtime or installer pass. The consumer also validates every pinned upstream lock byte and Git blob.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "status", "mode", "core", "plugin", "upstreamLock", "nativeSource", "caBundle", "targets"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"const": 1},
+    "status": {"enum": ["approved", "blocked"]},
+    "mode": {"const": "bundled-git-blob"},
+    "core": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit"],
+      "properties": {
+        "repository": {"const": "azurekiln2333/qflistudio-core"},
+        "commit": {"const": "476a30acee21dc486ee2849dd8064a7be665e4d5"}
+      }
+    },
+    "plugin": {
+      "type": "object", "additionalProperties": false,
+      "required": ["package", "repository", "commit"],
+      "properties": {
+        "package": {"const": "qfli_git"},
+        "repository": {"const": "azurekiln2333/qflistudio-git"},
+        "commit": {"const": "697291a27818612ae9dc53d83d4f99fa5887908e"}
+      }
+    },
+    "upstreamLock": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "gitBlob", "bytes", "sha256", "schemaVersion", "apiVersion", "contractSha256"],
+      "properties": {
+        "path": {"const": "native_libs.lock.json"},
+        "gitBlob": {"const": "1a7428add5902ce7d4ae48106bdf24a732aae48c"},
+        "bytes": {"const": 11314},
+        "sha256": {"const": "0aaa998ab74802473ad0186b0a17f8b6d9e8302a44de6d072af6bf3d3de31a66"},
+        "schemaVersion": {"const": 2},
+        "apiVersion": {"const": 3},
+        "contractSha256": {"const": "d12d803c7ec7fc6d6ccb3d3abbb705b9748452da1873de86a699e37459c4486a"}
+      }
+    },
+    "nativeSource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["commit", "runId"],
+      "properties": {
+        "commit": {"const": "194a6c9dd70873a472e441b67875766541572372"},
+        "runId": {"const": "44863517943"}
+      }
+    },
+    "caBundle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "gitBlob"],
+      "properties": {
+        "path": {"const": "assets/cacert.pem"},
+        "gitBlob": {"const": "4a38c72a9e1a35c4c24459989b18fd455be1b78e"}
+      }
+    },
+    "targets": {
+      "type": "object", "additionalProperties": false,
+      "required": ["windows", "linux", "macos", "ios", "android", "ohos"],
+      "properties": {
+        "windows": {"$ref": "#/$defs/desktop"},
+        "linux": {"$ref": "#/$defs/desktop"},
+        "macos": {"$ref": "#/$defs/desktop"},
+        "ios": {"$ref": "#/$defs/mobile"},
+        "android": {"$ref": "#/$defs/mobile"},
+        "ohos": {"$ref": "#/$defs/mobile"}
+      }
+    }
+  },
+  "$defs": {
+    "desktop": {
+      "type": "object", "additionalProperties": false,
+      "required": ["backend", "architectures"],
+      "properties": {
+        "backend": {"const": "external-git-cli"},
+        "architectures": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["x86_64", "arm64"]}}
+      }
+    },
+    "mobile": {
+      "type": "object", "additionalProperties": false,
+      "required": ["backend", "architectures"],
+      "properties": {
+        "backend": {"const": "qfli-git-ffi"},
+        "architectures": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["arm64", "arm64-v8a", "armeabi-v7a", "x86_64"]}}
+      }
+    }
+  }
+}

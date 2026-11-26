@@ -1,41 +1,46 @@
 name: Resolve pinned JSON dependency lock
 on:
   workflow_dispatch:
+    inputs:
+      flutter-mode:
+        description: Resolve with the same pinned SDK as the installer job.
+        type: choice
+        options: [upstream, ohos]
+        default: upstream
 permissions:
   contents: read
 jobs:
   resolve:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           path: qflistudio
           persist-credentials: false
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: ./qflistudio/.github/actions/setup-ohos
+        if: inputs.flutter-mode == 'ohos'
         with:
-          repository: azurekiln2333/qflistudio-core
-          ref: 476a30acee21dc486ee2849dd8064a7be665e4d5
-          path: qflistudio-core
-          persist-credentials: false
-      - name: Install exact upstream Flutter
-        shell: bash
-        run: |
-          git clone --depth 1 --branch 3.50.0 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
-          test "$(git -C "$RUNNER_TEMP/flutter" rev-parse HEAD)" = ab2912035e160d9cad6306df307576da6128ebdb
-          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
-      - name: Resolve lock on GitHub only
+          version: '26.0.0.821'
+          api-level: '26'
+          node-version: '24.14.1'
+      - uses: ./qflistudio/.github/actions/app-setup
+        with:
+          flutter-mode: ${{ inputs.flutter-mode }}
+          flutter-version: ${{ inputs.flutter-mode == 'ohos' && '3.41.10-ohos-1.0.1' || '3.50.0' }}
+          flutter-commit: ${{ inputs.flutter-mode == 'ohos' && 'adaf911c35c9136a7d18fc424d714c9ec7724e60' || 'ab2912035e160d9cad6306df307576da6128ebdb' }}
+          core-ref: 476a30acee21dc486ee2849dd8064a7be665e4d5
+          dependency-mode: resolve
+      - name: Record cloud lock provenance
         working-directory: qflistudio
         shell: bash
         run: |
-          flutter config --no-analytics
-          flutter pub get
           dart pub deps --json > dependency-graph.json
-          printf 'app=%s\ncore=%s\nflutter=%s\n' "$GITHUB_SHA" "$(git -C ../qflistudio-core rev-parse HEAD)" "$(git -C "$RUNNER_TEMP/flutter" rev-parse HEAD)" > lock-provenance.txt
+          printf 'app=%s\ncore=%s\nflutter=%s\nmode=%s\n' "$GITHUB_SHA" "$QFLI_CORE_COMMIT" "$QFLI_FLUTTER_COMMIT" "$QFLI_FLUTTER_MODE" > lock-provenance.txt
           sha256sum pubspec.yaml pubspec.lock dependency-graph.json >> lock-provenance.txt
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: resolved-lock
+          name: resolved-lock-${{ inputs.flutter-mode }}
           path: |
             qflistudio/pubspec.lock
             qflistudio/dependency-graph.json

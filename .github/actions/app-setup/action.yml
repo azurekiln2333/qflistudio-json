@@ -1,0 +1,81 @@
+name: QFLI JSON cloud setup
+description: Verify pinned sources and resolve the approved dependency lock without drift.
+inputs:
+  flutter-version:
+    description: Reviewed Flutter tag.
+    required: true
+  flutter-commit:
+    description: Full immutable Flutter source commit.
+    required: true
+  flutter-mode:
+    description: upstream or ohos.
+    default: upstream
+  core-ref:
+    description: Full reviewed sibling core commit.
+    default: 476a30acee21dc486ee2849dd8064a7be665e4d5
+  cache-scope:
+    description: Reserved job identity; mutable SDK caches are deliberately disabled.
+    default: cloud
+  dependency-mode:
+    description: enforce normally; resolve is reserved for the independent resolve-lock workflow.
+    default: enforce
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+      with:
+        python-version: '3.13'
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        repository: azurekiln2333/qflistudio-core
+        ref: ${{ inputs.core-ref }}
+        path: qflistudio-core
+        persist-credentials: false
+    - name: Verify sources and install pinned SDK in GitHub only
+      shell: bash
+      working-directory: qflistudio
+      env:
+        QFLI_FLUTTER_VERSION: ${{ inputs.flutter-version }}
+        QFLI_FLUTTER_COMMIT: ${{ inputs.flutter-commit }}
+        QFLI_FLUTTER_MODE: ${{ inputs.flutter-mode }}
+        EXPECTED_CORE: ${{ inputs.core-ref }}
+      run: |
+        set -euo pipefail
+        test "$GITHUB_ACTIONS" = true
+        [[ "$EXPECTED_CORE" =~ ^[0-9a-f]{40}$ ]]
+        test "$(git -C ../qflistudio-core rev-parse HEAD)" = "$EXPECTED_CORE"
+        case "$QFLI_FLUTTER_MODE" in
+          upstream) bash tool/ci/patch_upstream_core.sh "$PWD" "$(cd ../qflistudio-core && pwd)" ;;
+          ohos) ;;
+          *) echo 'Unsupported Flutter mode' >&2; exit 2 ;;
+        esac
+        args=("$RUNNER_TEMP/qfli-flutter" "$QFLI_FLUTTER_VERSION" "$QFLI_FLUTTER_COMMIT")
+        if [ "$QFLI_FLUTTER_MODE" = ohos ]; then args+=(--ohos); fi
+        bash tool/ci/setup_flutter.sh "${args[@]}"
+        echo "$RUNNER_TEMP/qfli-flutter/bin" >> "$GITHUB_PATH"
+        echo "QFLI_FLUTTER_ROOT=$RUNNER_TEMP/qfli-flutter" >> "$GITHUB_ENV"
+        echo "QFLI_FLUTTER_VERSION=$QFLI_FLUTTER_VERSION" >> "$GITHUB_ENV"
+        echo "QFLI_FLUTTER_COMMIT=$QFLI_FLUTTER_COMMIT" >> "$GITHUB_ENV"
+        echo "QFLI_FLUTTER_MODE=$QFLI_FLUTTER_MODE" >> "$GITHUB_ENV"
+        echo "QFLI_CORE_COMMIT=$EXPECTED_CORE" >> "$GITHUB_ENV"
+    - name: Resolve approved cloud dependencies
+      shell: bash
+      working-directory: qflistudio
+      env:
+        DEPENDENCY_MODE: ${{ inputs.dependency-mode }}
+      run: |
+        set -euo pipefail
+        flutter config --no-analytics
+        if [ "$QFLI_FLUTTER_MODE" = ohos ]; then flutter config --enable-ohos; fi
+        case "$DEPENDENCY_MODE" in
+          enforce)
+            python tool/ci/dependency_guard.py select --mode "$QFLI_FLUTTER_MODE"
+            python tool/ci/run_logged.py pub-get -- flutter pub get --enforce-lockfile
+            python tool/ci/dependency_guard.py verify
+            ;;
+          resolve)
+            echo 'Resolution-only mode: generated lock must be reviewed and committed before installers run.'
+            python tool/ci/run_logged.py resolve-lock -- flutter pub get
+            ;;
+          *) echo 'Invalid dependency-mode' >&2; exit 2 ;;
+        esac

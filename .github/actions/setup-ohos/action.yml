@@ -1,0 +1,52 @@
+name: Setup pinned OHOS command line tools
+description: Install digest-pinned HarmonyOS tools and require API 26 and Node 24.14.1.
+inputs:
+  version:
+    description: Reviewed command-line tools release.
+    required: true
+    default: '26.0.0.821'
+  api-level:
+    description: Required installed HarmonyOS API level.
+    required: true
+    default: '26'
+  node-version:
+    description: Exact Node version selected for Flutter and Hvigor.
+    required: true
+    default: '24.14.1'
+outputs:
+  sdk-version:
+    description: Installed SDK metadata version, not the tools archive version.
+    value: ${{ steps.sdk.outputs.sdk-version }}
+  api-version:
+    description: Verified installed SDK API level.
+    value: ${{ steps.sdk.outputs.api-version }}
+  sdk-home:
+    description: Installed HarmonyOS SDK home.
+    value: ${{ steps.sdk.outputs.sdk-home }}
+  node-home:
+    description: Exact Node home used by Hvigor.
+    value: ${{ steps.sdk.outputs.node-home }}
+  facts-path:
+    description: Toolchain identity report for bounded artifact retention.
+    value: ${{ steps.sdk.outputs.facts-path }}
+runs:
+  using: composite
+  steps:
+    - name: Select exact Node runtime
+      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      with:
+        node-version: ${{ inputs.node-version }}
+        check-latest: false
+    - name: Install and verify reviewed SDK
+      id: sdk
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        OHOS_TOOLS_VERSION: ${{ inputs.version }}
+        OHOS_API_LEVEL: ${{ inputs.api-level }}
+        OHOS_NODE_VERSION: ${{ inputs.node-version }}
+      run: |
+        bash "$GITHUB_ACTION_PATH/setup.sh" \
+          -v "$OHOS_TOOLS_VERSION" \
+          -a "$OHOS_API_LEVEL" \
+          -n "$OHOS_NODE_VERSION"

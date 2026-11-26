@@ -1,0 +1,40 @@
+{
+  "$schema": "./native-contract.schema.json",
+  "schemaVersion": 1,
+  "status": "blocked",
+  "mode": "bundled-git-blob",
+  "core": {
+    "repository": "azurekiln2333/qflistudio-core",
+    "commit": "476a30acee21dc486ee2849dd8064a7be665e4d5"
+  },
+  "plugin": {
+    "package": "qfli_git",
+    "repository": "azurekiln2333/qflistudio-git",
+    "commit": "697291a27818612ae9dc53d83d4f99fa5887908e"
+  },
+  "upstreamLock": {
+    "path": "native_libs.lock.json",
+    "gitBlob": "1a7428add5902ce7d4ae48106bdf24a732aae48c",
+    "bytes": 11314,
+    "sha256": "0aaa998ab74802473ad0186b0a17f8b6d9e8302a44de6d072af6bf3d3de31a66",
+    "schemaVersion": 2,
+    "apiVersion": 3,
+    "contractSha256": "d12d803c7ec7fc6d6ccb3d3abbb705b9748452da1873de86a699e37459c4486a"
+  },
+  "nativeSource": {
+    "commit": "194a6c9dd70873a472e441b67875766541572372",
+    "runId": "44863517943"
+  },
+  "caBundle": {
+    "path": "assets/cacert.pem",
+    "gitBlob": "4a38c72a9e1a35c4c24459989b18fd455be1b78e"
+  },
+  "targets": {
+    "windows": {"backend": "external-git-cli", "architectures": ["x86_64"]},
+    "linux": {"backend": "external-git-cli", "architectures": ["x86_64"]},
+    "macos": {"backend": "external-git-cli", "architectures": ["arm64", "x86_64"]},
+    "ios": {"backend": "qfli-git-ffi", "architectures": ["arm64"]},
+    "android": {"backend": "qfli-git-ffi", "architectures": ["armeabi-v7a", "arm64-v8a", "x86_64"]},
+    "ohos": {"backend": "qfli-git-ffi", "architectures": ["arm64-v8a"]}
+  }
+}

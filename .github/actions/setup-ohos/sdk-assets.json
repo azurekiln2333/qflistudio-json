@@ -1,0 +1,38 @@
+{
+  "repository": "ErBWs/ohos-sdk",
+  "releaseId": 380949054,
+  "version": "26.0.0.821",
+  "apiLevel": "26",
+  "releaseImmutable": false,
+  "provenance": "GitHub release asset IDs and SHA-256 digests read through gh api. Committed expected digests are authoritative; a checksum fetched beside an archive is not a trust anchor.",
+  "platforms": {
+    "Linux-X64": {
+      "archive": "ohos-sdk-linux-amd64.tar.gz",
+      "parts": [
+        {"name": "ohos-sdk-linux-amd64.tar.gz.aa", "id": 540521089, "bytes": 1572864000, "sha256": "4321eb328558169e9531594139910a42b1c88057fb09f852be85ff2487e6adbc"},
+        {"name": "ohos-sdk-linux-amd64.tar.gz.ab", "id": 540521084, "bytes": 700317187, "sha256": "26e9ae251e761fbc9ec4e7ad780b5b291130e7824af2324167530941e11ad592"}
+      ]
+    },
+    "macOS-X64": {
+      "archive": "ohos-sdk-mac-amd64.zip",
+      "parts": [
+        {"name": "ohos-sdk-mac-amd64.zip.aa", "id": 540521078, "bytes": 1572864000, "sha256": "05a46373ffdf646f89722b47e1e02bdf94ae7f437089ad58df91c939c2e866d7"},
+        {"name": "ohos-sdk-mac-amd64.zip.ab", "id": 540521080, "bytes": 663792330, "sha256": "c95e84e133628d5e0e39bba2fc977f38a8204f3443b878c6846db3cd46737259"}
+      ]
+    },
+    "macOS-ARM64": {
+      "archive": "ohos-sdk-mac-arm64.zip",
+      "parts": [
+        {"name": "ohos-sdk-mac-arm64.zip.aa", "id": 540521079, "bytes": 1572864000, "sha256": "95fedd7d0faf9f8f8bcbf62a2ea87275eaac8b7636fda72ef2328bd3061506cc"},
+        {"name": "ohos-sdk-mac-arm64.zip.ab", "id": 540521083, "bytes": 566637456, "sha256": "de32e7b0e368c897cbf2b3ba184c8ecb90478f72a616431f7839875594bcf430"}
+      ]
+    },
+    "Windows-X64": {
+      "archive": "ohos-sdk-windows-amd64.zip",
+      "parts": [
+        {"name": "ohos-sdk-windows-amd64.zip.aa", "id": 540521077, "bytes": 1572864000, "sha256": "f0e3873d0d02357b78ccd1d7fc8dde56f4ff951e8ab5660a7bcdf4dc442f7855"},
+        {"name": "ohos-sdk-windows-amd64.zip.ab", "id": 540521081, "bytes": 1149004472, "sha256": "ea6c862860843a8e7cf68852d4b793dd64f56826d3b2d4e68bca4c2eba6533cf"}
+      ]
+    }
+  }
+}
