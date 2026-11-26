@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "type": "measurement",
+  "values": [1, 3, 5],
+  "metadata": {"deterministic": true, "case": 1}
+}

@@ -1,0 +1,41 @@
+"""Capture exact inputs for a coordinated host integration run (read-only)."""
+import hashlib
+import json
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+root = Path(__file__).resolve().parents[2]
+report = {
+    "capturedUtc": datetime.now(timezone.utc).isoformat(),
+    "scope": "app/core lib and test Dart, pubspec manifests/locks, content JSON assets",
+    "repositories": {},
+    "files": {},
+}
+for label, directory in (("app", root), ("core", root.parent / "qfli_studio_core")):
+    report["repositories"][label] = {
+        "head": subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=directory, text=True
+        ).strip(),
+        "status": subprocess.check_output(
+            ["git", "status", "--porcelain"], cwd=directory, text=True
+        ).splitlines(),
+    }
+    paths = set()
+    for folder in ("lib", "test"):
+        paths.update((directory / folder).rglob("*.dart"))
+    for folder in ("assets/content", "assets/tutorials"):
+        paths.update((directory / folder).rglob("*.json"))
+    paths.update(directory / name for name in ("pubspec.yaml", "pubspec.lock"))
+    for path in sorted(paths):
+        if path.is_file():
+            data = path.read_bytes()
+            key = f"{label}/{path.relative_to(directory).as_posix()}"
+            report["files"][key] = {
+                "sha256": hashlib.sha256(data).hexdigest(),
+                "bytes": len(data),
+            }
+target = Path(sys.argv[1])
+target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+print(f"Captured {len(report['files'])} input files to {target}")

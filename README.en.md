@@ -110,7 +110,7 @@ The app depends on `qfli_studio_core`. Check out `qflistudio-core` next to this 
 ```text
 checkout-parent/
   qflistudio-core/
-  qfli_json/
+  qflistudio-json/
 ```
 
 | Dependency | Value |
@@ -124,16 +124,21 @@ checkout-parent/
 
 OHOS builds require a matching Flutter OHOS toolchain. The standard Flutter SDK does not include that toolchain. A different Flutter channel may also work, but this checkout does not record a result for it.
 
-The installed app works offline. Initial developer setup may need to download dependencies. Prepare the SDK and package cache before working offline.
+The installed app works offline. Initial cloud setup may need to download dependencies. Do not install SDKs or package caches in the local workspace.
 
 ## Build and run
 
-Run these commands from the product root.
+Local work is limited to source editing, Git operations and read-only inspection.
+All builds, tests, analyzers, lint and dependency installation run on GitHub.
+Clone both repositories as siblings, keeping the reviewed core commit:
 
 ```text
-flutter pub get
-flutter run
+git clone https://github.com/azurekiln2333/qflistudio-core.git
+git -C qflistudio-core checkout 476a30acee21dc486ee2849dd8064a7be665e4d5
+git clone https://github.com/azurekiln2333/qflistudio-json.git
 ```
+
+Use GitHub Actions for execution. See [cloud-ci.md](docs/cloud-ci.md).
 
 Create a project from the `JSON` template. The template writes `src/data.json` with this content:
 
@@ -147,6 +152,8 @@ Create a project from the `JSON` template. The template writes `src/data.json` w
 Project configuration can specify the entry file. Otherwise the profile tries `data.json` first and `src/data.json` second before the shared fallback names.
 
 ## Verification
+
+The commands below are cloud-only instructions. Do not execute them locally.
 
 Run the test suite:
 

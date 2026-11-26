@@ -1,0 +1,86 @@
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+
+ROOT = Path(r"D:\MyNewProjects\qfli_json")
+spec = importlib.util.spec_from_file_location("live", ROOT / ".trellis/.runtime/inspect_json_release_hap.py")
+live = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(live)
+
+app = (ROOT / "build/o6e60792d/qfli_json").resolve()
+core = (ROOT / "build/o6e60792d/qfli_studio_core").resolve()
+source_before = json.loads(
+    (ROOT / "build/native-release-artifacts/20261025T215530Z-c940500b/evidence/source-before.json")
+    .read_text(encoding="utf-8-sig")
+)
+
+aggregate = app / "build/ohos/intermediates/flutter/defaultDebug/flutter_build.d"
+parsed = live.parse_depfile(aggregate)
+kernel_output = [o for o in parsed["outputs"] if o.name == "kernel_blob.bin"][0]
+kernel = hashlib.sha256(kernel_output.read_bytes()).hexdigest()
+
+print("live.LIVE_APP  =", live.LIVE_APP)
+print("LIVE_APP == repo root:", live.LIVE_APP == ROOT.resolve())
+print("LIVE_CORE == live core sibling:", live.LIVE_CORE == ROOT.parent / "qfli_studio_core")
+print("spelled paths kept:", len(parsed["inputPaths"]) == len(parsed["inputs"]))
+print("lexical_inside native self:", live.lexical_inside(app.parent / "native_plugins", app.parent / "native_plugins"))
+print("lexical_inside .. escape  :", live.lexical_inside(app / "..", app))
+
+native = live.isolated_native_root(app)
+print("native root derived:", native is not None)
+
+original = live.parse_depfile
+
+
+def call(label, manifest, extra=None, spelled=None):
+    def wrapper(path):
+        dep = original(path)
+        if extra is not None:
+            dep["inputs"] = list(dep["inputs"]) + [extra]
+            dep["inputPaths"] = list(dep["inputPaths"]) + [spelled if spelled is not None else extra]
+        return dep
+
+    live.parse_depfile = wrapper
+    try:
+        try:
+            result = live.source_dependencies(app, core, kernel, prepared=manifest)
+            print("{} -> PASS native={} ohos={}".format(
+                label, result["isolatedNativePlugins"]["inputCount"], result["ohosPlugins"]["ohosCount"]))
+        except live.BlockedInspection as error:
+            print("{} -> BLOCKED: {}".format(label, error))
+    finally:
+        live.parse_depfile = original
+
+
+call("R1 source-before.json", source_before)
+call("R2 no manifest", None)
+call("R3 live source", source_before, ROOT / "lib/json/json_tools.dart")
+call("R4 arbitrary build", source_before, ROOT / "build/deadbeef/scratch/x.dart")
+call("R5 undeclared native", source_before, native / "evil.txt")
+call("R6 external toolchain", source_before, Path(r"D:\ProgramFiles\x\e.dart"))
+call("R7 lexical escape (spelled in app)", source_before, ROOT / "lib/json/json_tools.dart", app / "link.dart")
+
+for label, field, value in (("R8 appRoot=live", "appRoot", str(ROOT)), ("R9 coreRoot alias", "coreRoot", str(core) + "_x")):
+    doc = json.loads(json.dumps(source_before))
+    doc[field] = value
+    call(label, doc)
+
+doc = json.loads(json.dumps(source_before))
+doc["files"].pop("nativePlugins/path_provider_ohos/LICENSE")
+call("R10 entry removed", doc)
+doc = json.loads(json.dumps(source_before))
+doc["files"]["nativePlugins/path_provider_ohos/LICENSE"]["sha256"] = "0" * 64
+call("R11 sha zeroed", doc)
+doc = json.loads(json.dumps(source_before))
+doc["files"]["nativePlugins/../evil.txt"] = {"bytes": 1, "sha256": "a" * 64}
+call("R12 unsafe key", doc)
+
+_, mappings = live.package_roots(app, core)
+bad = dict(mappings)
+bad["path_provider_ohos"] = ROOT / "lib"
+try:
+    live.ohos_plugin_mappings(app, bad, native)
+    print("R13 OHOS path mismatch -> PASS")
+except live.BlockedInspection as error:
+    print("R13 OHOS path mismatch -> BLOCKED:", error)

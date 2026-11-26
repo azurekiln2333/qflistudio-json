@@ -1,0 +1,21 @@
+{
+  "recordedUtc": "2026-10-26T03:27:49.883462+00:00",
+  "sourceCommit": "395753b395f9f50a9dbf13e4afa02955f91a7654",
+  "sourceProtocolRequestEvent": 800,
+  "protocolApproved": false,
+  "controlsGrantReceived": false,
+  "runtimeControlsExecuted": false,
+  "controlsPreparedPath": "D:\\MyNewProjects\\qfli_json\\build\\json-retention-controls-prepared-20261026.json",
+  "controlsPreparedSha256": "1d7217ce31df281da987c76aae0e9c40230c3a3261be8a88dd2b526cae9a0057",
+  "originalNativeGrantConsumed": 703,
+  "originalNativeGatePassed": false,
+  "oldNativeManifestRetired": true,
+  "sourceFreezeManifestIndependentlyMatched": true,
+  "piReviewBatchComplete": true,
+  "piRequestFailuresObserved": 0,
+  "monitorSessionsTerminal": [
+    76246,
+    56382
+  ],
+  "nextStep": "Read C messages since800. Source approval is not execution authority. Request fresh host-controls grant after exact protocol approval. Launch actual returned event in one retention-window invocation. No native until controls pass and fresh native bindings/grant. No device or shared core mutation."
+}

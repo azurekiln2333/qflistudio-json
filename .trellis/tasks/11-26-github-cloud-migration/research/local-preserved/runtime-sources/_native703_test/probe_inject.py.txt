@@ -1,0 +1,53 @@
+import hashlib
+import importlib.util
+import json
+import zipfile
+from pathlib import Path
+
+spec = importlib.util.spec_from_file_location(
+    "cand", r".trellis/.runtime/inspect_json_release_hap_candidate.py"
+)
+m = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(m)
+
+app = Path(r"build/o6e60792d/qfli_json").resolve()
+core = Path(r"build/o6e60792d/qfli_studio_core").resolve()
+hap = app / "ohos/entry/build/default/outputs/default/entry-default-unsigned.hap"
+with zipfile.ZipFile(hap) as bundle:
+    kernel = hashlib.sha256(bundle.read(m.KERNEL_ENTRY)).hexdigest()
+prepared = json.loads(
+    Path(
+        r"build/native-release-artifacts/20261025T215530Z-c940500b/evidence/prepared.json"
+    ).read_text(encoding="utf-8-sig")
+)
+native = m.isolated_native_root(app)
+orig = m.parse_depfile
+
+
+def run(label, extra, manifest):
+    def wrapper(path):
+        dep = orig(path)
+        dep["inputs"] = list(dep["inputs"]) + [extra]
+        return dep
+
+    m.parse_depfile = wrapper
+    try:
+        result = m.source_dependencies(app, core, kernel, prepared=manifest)
+        print(
+            "{} -> PASS native={} ohos={}".format(
+                label,
+                result["isolatedNativePlugins"]["inputCount"],
+                result["ohosPlugins"]["ohosCount"],
+            )
+        )
+    except m.BlockedInspection as error:
+        print("{} -> BLOCKED: {}".format(label, error))
+    finally:
+        m.parse_depfile = orig
+
+
+run("J live source injected", m.LIVE_APP / "lib/json/json_tools.dart", prepared)
+run("K arbitrary build path injected", m.LIVE_APP / "build/deadbeef/scratch/x.dart", prepared)
+run("L external toolchain injected", Path(r"D:\ProgramFiles\Huawei\DevEco Studio\tools\e.dart"), prepared)
+run("M undeclared native path injected", native / "evil.txt", prepared)
+run("N live source injected, no manifest", m.LIVE_APP / "lib/json/json_tools.dart", None)

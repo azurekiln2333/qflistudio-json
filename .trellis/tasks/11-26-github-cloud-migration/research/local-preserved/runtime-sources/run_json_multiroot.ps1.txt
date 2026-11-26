@@ -1,0 +1,34 @@
+$ErrorActionPreference = 'Stop'
+$jsonResearch = '.trellis/tasks/10-22-offline-json-ide/research'
+$jsonRun = [ordered]@{
+  startedUtc = [DateTime]::UtcNow.ToString('o')
+  scope = 'new same-name multi-root EditorPage/JsonDocumentPage regression and scoped analysis only'
+  flutter = 'D:/ProgramFiles/flutter_ohos/bin/flutter.bat'
+  formatExit = $null
+  testExit = $null
+  analyzeExit = $null
+}
+& 'D:\ProgramFiles\flutter_ohos\bin\dart.bat' format test/json_multi_root_editor_test.dart *> "$jsonResearch/host-20261023-multiroot-format.log"
+$jsonRun.formatExit = $LASTEXITCODE
+if ($jsonRun.formatExit -ne 0) { exit $jsonRun.formatExit }
+python .trellis/.runtime/capture_integration.py "$jsonResearch/host-20261023-multiroot-source-before.json"
+try {
+  & 'D:\ProgramFiles\flutter_ohos\bin\flutter.bat' --suppress-analytics test --no-pub --concurrency=1 --timeout 45s test/json_multi_root_editor_test.dart *> "$jsonResearch/host-20261023-multiroot-test.log"
+  $jsonRun.testExit = $LASTEXITCODE
+  if ($jsonRun.testExit -eq 0) {
+    & 'D:\ProgramFiles\flutter_ohos\bin\flutter.bat' --suppress-analytics analyze --no-pub test/json_multi_root_editor_test.dart *> "$jsonResearch/host-20261023-multiroot-analyze.log"
+    $jsonRun.analyzeExit = $LASTEXITCODE
+  }
+} finally {
+  python .trellis/.runtime/capture_integration.py "$jsonResearch/host-20261023-multiroot-source-after.json"
+  $jsonRun.finishedUtc = [DateTime]::UtcNow.ToString('o')
+  $jsonRun | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath "$jsonResearch/host-20261023-multiroot-result.json" -Encoding utf8NoBOM
+  $jsonRelease = "JSON286 wrapper terminal: testExit=$($jsonRun.testExit), scopedAnalyzeExit=$($jsonRun.analyzeExit), formatExit=$($jsonRun.formatExit). Explicitly RELEASES bounded host slot to Lua212 then queued ready owners per C286. No full117-suite, native, HAP or device command was run. Exact logs/fingerprints/result in JSON task research/host-20261023-multiroot-*. Root reviews results source-only after this release."
+  $jsonRelease | trellis channel send qfli-core-release-sync --scope global --as json-offline-1022 --to c-coordinator,studio-main,lua-offline-1022 --stdin
+}
+Get-Content -LiteralPath "$jsonResearch/host-20261023-multiroot-test.log" -Tail 30
+if ($null -ne $jsonRun.analyzeExit) {
+  Get-Content -LiteralPath "$jsonResearch/host-20261023-multiroot-analyze.log" -Tail 15
+}
+if ($jsonRun.testExit -ne 0) { exit $jsonRun.testExit }
+exit $jsonRun.analyzeExit

@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "status": "BLOCKED",
+  "mode": "harness",
+  "hap": "D:\\MyNewProjects\\qfli_json\\build\\o6e60792d\\qfli_json\\ohos\\entry\\build\\default\\outputs\\default\\entry-default-unsigned.hap",
+  "copiedHap": null,
+  "error": "BlockedInspection: Native plugin inputs need the prepared manifest: pass --prepared",
+  "inspectedUtc": "2026-10-25T22:24:03.889929+00:00"
+}

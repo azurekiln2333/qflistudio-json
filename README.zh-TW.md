@@ -94,34 +94,36 @@ json get <file> <JSON Pointer>
 ```text
 checkout-parent/
   qflistudio-core/
-  qfli_json/
+  qflistudio-json/
 ```
 
 `pubspec.yaml` 宣告 Dart 約束 `^3.11.5`。
 編輯器依賴指向 `../qflistudio-core/vendor/re_editor`。
 
-1. 安裝 Flutter SDK。
-2. 檢出兄弟倉庫。
-3. 進入本倉庫根目錄。
-4. 解析依賴。
+僅在本機檢出原始碼。
+建置、測試與依賴安裝全部在 GitHub 執行。
+本機禁止建置、測試、分析和依賴安裝。
 
 ```text
-flutter pub get
+git clone https://github.com/azurekiln2333/qflistudio-core.git
+git -C qflistudio-core checkout 476a30acee21dc486ee2849dd8064a7be665e4d5
+git clone https://github.com/azurekiln2333/qflistudio-json.git
 ```
 
-5. 啟動目標裝置上的應用程式。
-
-```text
-flutter run
-```
+從 GitHub Actions 發起驗證。
+工作流說明見 [cloud-ci.md](docs/cloud-ci.md)。
 
 OHOS 建置需要匹配的 Flutter OHOS 工具鏈。標準 Flutter SDK 不包含該工具鏈。
 其他 Flutter 通道可能也能運作。
 
-應用程式執行時不需要網路。首次開發環境可能需要下載依賴。
-離線開發需預先準備 SDK 與依賴快取。
+應用程式執行時不需要網路。
+雲端首次設定可能需要下載依賴。
+本機不安裝 SDK 或依賴快取。
 
 ## 驗證
+
+以下指令只允許在 GitHub 執行。
+不要在本機執行這些指令。
 
 執行測試。
 

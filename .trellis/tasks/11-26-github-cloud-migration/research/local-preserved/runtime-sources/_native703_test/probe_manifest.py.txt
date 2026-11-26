@@ -1,0 +1,71 @@
+import json
+from pathlib import Path
+
+ROOT = Path(r"D:\MyNewProjects\qfli_json")
+ARCH = ROOT / ".trellis/tasks/10-22-offline-json-ide/research/native-retry-20261026"
+OLD = ROOT / ".trellis/tasks/10-22-offline-json-ide/research/native-703-20261026"
+
+prepared = json.loads((ARCH / "prepared-manifest.json").read_text(encoding="utf-8-sig"))
+before = json.loads((OLD / "child-source-before.json").read_text(encoding="utf-8-sig"))
+after = json.loads((OLD / "child-source-after.json").read_text(encoding="utf-8-sig"))
+print("prepared keys:", sorted(prepared.keys()))
+
+
+def as_map(value):
+    if value is None:
+        return {}
+    if isinstance(value, list):
+        return {k: None for k in value}
+    if isinstance(value, dict):
+        return value
+    return {}
+
+
+def cmp(label, left, right):
+    print(label, "| left", len(left), "right", len(right),
+          "| onlyL", len(set(left) - set(right)), "onlyR", len(set(right) - set(left)))
+
+
+for field in ("originalAppInputs", "originalCacheReferences", "originalApp", "originalCore"):
+    if field in prepared:
+        print("prepared[{}] sample".format(field), json.dumps(prepared[field])[:200])
+
+oai = as_map(prepared.get("originalAppInputs"))
+print("--- originalAppInputs vs committed before/after ---")
+for name, doc in (("before", before), ("after", after)):
+    other = as_map(doc.get("originalAppInputs"))
+    cmp("prepared.originalAppInputs vs committed {} originalAppInputs".format(name), oai, other)
+    cmp("prepared.originalAppInputs vs committed {} files".format(name), oai, as_map(doc.get("files")))
+
+ocr = as_map(prepared.get("originalCacheReferences"))
+print("--- originalCacheReferences vs committed ---")
+for name, doc in (("before", before), ("after", after)):
+    cmp("prepared.originalCacheReferences vs committed {} {}".format(name, name),
+        ocr, as_map(doc.get("originalCacheReferences")))
+
+print("--- counts ---")
+print("prepared files", len(as_map(prepared.get("files"))))
+print("prepared tools", len(as_map(prepared.get("tools"))), "->", sorted(as_map(prepared.get("tools"))))
+print("prepared runners", len(as_map(prepared.get("runners"))))
+print("prepared helperIdentity", json.dumps(prepared.get("helperIdentity"))[:200])
+native_keys = [k for k in as_map(prepared.get("files")) if k.startswith("nativePlugins/")]
+print("prepared nativePlugins file count", len(native_keys))
+print("prepared tools+nativePlugins =", len(as_map(prepared.get("tools"))) + len(native_keys))
+
+print("--- look for the number 13 in archived scripts ---")
+import re
+for name in ("test_json_native_readiness.py", "test_json_native_source_attribution.py",
+             "prepare_json_ohos_inputs.py", "run_json_ohos_window.ps1", "run_json_ohos_release.ps1"):
+    text = (ARCH / "runners" / name).read_text(encoding="utf-8", errors="replace")
+    hits = [m.group(0) for m in re.finditer(r"\b13\b", text)]
+    if hits:
+        print(name, "has", len(hits), "'13' occurrences")
+        for m in re.finditer(r".{0,60}\b13\b.{0,60}", text):
+            print("   ", m.group(0).replace("\n", " "))
+
+print("--- parentObserverUnchanged basis ---")
+win = (ARCH / "runners/run_json_ohos_window.ps1").read_bytes()
+import hashlib
+print("archive window sha", hashlib.sha256(win).hexdigest()[:16])
+window_archives = sorted((ROOT / ".trellis/tasks/10-22-offline-json-ide/research").glob("native-window-20261026/*"))
+print("native-window archive files:", [p.name for p in window_archives][:20])

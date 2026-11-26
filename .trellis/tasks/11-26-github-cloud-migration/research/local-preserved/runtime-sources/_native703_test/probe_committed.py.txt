@@ -1,0 +1,83 @@
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path(r"D:\MyNewProjects\qfli_json")
+COMMIT = "d0f3c50"
+ARCH_REL = ".trellis/tasks/10-22-offline-json-ide/research/native-retry-20261026"
+ARCH = ROOT / ARCH_REL
+PYC = "__pycache__"
+
+
+def git(*args, binary=False):
+    out = subprocess.run(["git", *args], cwd=str(ROOT), capture_output=True)
+    if out.returncode != 0:
+        raise SystemExit("git failed: {} {}".format(args, out.stderr.decode("utf-8", "replace")))
+    return out.stdout if binary else out.stdout.decode("utf-8", "replace")
+
+
+def blob(rel):
+    return git("cat-file", "-p", "{}:{}".format(COMMIT, rel), binary=True)
+
+
+tree = {}
+for line in git("ls-tree", "-r", "--long", COMMIT, "--", ARCH_REL).splitlines():
+    meta, path = line.split("\t", 1)
+    parts = meta.split()
+    tree[path[len(ARCH_REL) + 1:]] = {"blob": parts[2], "bytes": int(parts[3])}
+
+validation = json.loads(blob(ARCH_REL + "/validation.json").decode("utf-8"))
+declared = validation["files"]
+
+print("committed files (excl pycache):", len([k for k in tree if PYC not in k]))
+print("declared files:", len(declared))
+print("pycache committed:", [k for k in tree if PYC in k])
+
+mismatch = []
+for rel, meta in declared.items():
+    if rel not in tree:
+        mismatch.append((rel, "NOT IN COMMIT"))
+        continue
+    raw = blob("{}/{}".format(ARCH_REL, rel))
+    digest = hashlib.sha256(raw).hexdigest()
+    if len(raw) != meta["bytes"] or digest != meta["sha256"]:
+        mismatch.append((rel, "decl {}/{} blob {}/{}".format(
+            meta["bytes"], meta["sha256"][:12], len(raw), digest[:12])))
+    work = (ARCH / rel).read_bytes()
+    if hashlib.sha256(work).hexdigest() != digest:
+        mismatch.append((rel, "worktree differs from committed blob"))
+print("declared-vs-committed mismatches:", len(mismatch))
+for item in mismatch:
+    print("   MISMATCH", item[0], item[1])
+
+undeclared = [k for k in tree if k not in declared and k != "validation.json" and PYC not in k]
+print("committed but undeclared:", sorted(undeclared))
+print("validation.json commits itself:", "validation.json" in declared)
+
+print("=== declared hash vs committed blob, all ok? ===")
+allok = not mismatch
+print(allok)
+
+print("=== new keys on committed validation.json ===")
+for key in ("scope", "executionReady", "retentionIssue", "coordinatorNoticeEvent",
+            "diagnosticOfflineInspectionPassed", "diagnosticDoesNotPassGrant703",
+            "parentObserverUnchanged", "boundedJobHelperUnchanged", "pureControlsPassed",
+            "newNativeGrantReceived", "deviceExecuted", "namedToolAndPluginFiles",
+            "sourceAttributionControls", "readinessControls", "sourceCaptureCases",
+            "sourceFiles", "cacheReferences", "existingToolHashChangeRejected",
+            "sourceHashChangeBeforeSdkRejected", "preparedManifestSha256"):
+    print(" ", key, "=", json.dumps(validation.get(key))[:200])
+
+print("=== per-file declared table (committed) ===")
+for rel in sorted(declared):
+    print(" ", rel, declared[rel]["bytes"], declared[rel]["sha256"][:12])
+
+print("=== documentation-lint.json now ===")
+print(blob(ARCH_REL + "/documentation-lint.json").decode("utf-8")[:400])
+
+print("=== README NOT READY context ===")
+readme = blob(ARCH_REL + "/README.md").decode("utf-8")
+for index, line in enumerate(readme.splitlines(), 1):
+    if "NOT READY" in line or "retention" in line.lower() or "READY" in line:
+        print(index, ":", line)

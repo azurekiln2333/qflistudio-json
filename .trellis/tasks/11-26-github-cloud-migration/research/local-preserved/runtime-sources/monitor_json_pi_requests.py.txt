@@ -1,0 +1,43 @@
+import hashlib, json, subprocess, time
+from pathlib import Path
+CLI=r"D:\ProgramFiles\herdr-windows-x86_64\herdr.exe"
+TASKS={
+ "w29:p3":("final-window-doc-review.md","继续完成冻结交接说明只读核查，写入约定文件。"),
+ "w29:p4":("final-readme-review.md","继续完成三语README只读核查，写入约定文件。"),
+ "w29:p5":("final-evidence-hash-review.md","继续完成冻结证据哈希只读核查，写入约定文件。"),
+ "w29:p6":("final-monitor-review.md","继续完成重试脚本只读审查，写入约定文件。")}
+ROOT=Path(r"D:\MyNewProjects\qfli_json")
+LOG=ROOT/"build/pi-final-review-request-monitor.jsonl"
+START=time.monotonic(); states={}; failure_tokens={}; retries={k:0 for k in TASKS}; done=set(); observed_working=set()
+def emit(event,**data):
+ row={"utc":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),"event":event,**data}
+ with LOG.open("a",encoding="utf-8") as f:f.write(json.dumps(row,ensure_ascii=False)+"\n")
+ print(json.dumps(row,ensure_ascii=False),flush=True)
+def run(*args):
+ r=subprocess.run([CLI,*args],capture_output=True,encoding="utf-8",errors="replace",timeout=15)
+ if r.returncode:raise RuntimeError(r.stderr[-500:])
+ return r.stdout
+emit("started",targets=list(TASKS),maximumSeconds=600)
+while time.monotonic()-START<600 and len(done)<len(TASKS):
+ for pane,(filename,prompt) in TASKS.items():
+  if pane in done:continue
+  try:
+   agent=json.loads(run("agent","get",pane))["result"]["agent"]
+   state=agent.get("agent_status"); token=(agent.get("state_change_seq"),agent.get("completion_seq"))
+   if states.get(pane)!=(state,token):emit("state",pane=pane,state=state,token=token);states[pane]=(state,token)
+   if state=="working":observed_working.add(pane);continue
+   if state=="blocked":emit("blocked",pane=pane);continue
+   if state not in ("idle","done"):continue
+   tail=run("agent","read",pane,"--source","recent-unwrapped","--lines","30")
+   failed=("Retry failed after" in tail or "Error: Connection error." in tail)
+   if failed:
+    key=(token,hashlib.sha256(tail.encode()).hexdigest())
+    if failure_tokens.get(pane)==key:continue
+    failure_tokens[pane]=key
+    result=run("agent","prompt",pane,"已确认本轮请求失败。"+prompt+" 不执行SDK、Flutter、hdc或设备操作，不改他人文件，不commit。")
+    retries[pane]+=1;emit("retried",pane=pane,count=retries[pane]);continue
+   if pane in observed_working and (ROOT/".trellis/.runtime"/filename).is_file():
+    done.add(pane);emit("settled_with_output",pane=pane,file=filename,retries=retries[pane])
+  except Exception as e:emit("observation_error",pane=pane,error=str(e))
+ if len(done)<len(TASKS):time.sleep(15)
+emit("finished",settled=sorted(done),retries=retries,remaining=[k for k in TASKS if k not in done])

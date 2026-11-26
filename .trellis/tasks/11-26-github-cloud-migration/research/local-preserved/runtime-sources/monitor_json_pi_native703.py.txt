@@ -1,0 +1,111 @@
+import json
+import subprocess
+import time
+from pathlib import Path
+
+CLI = r"D:\ProgramFiles\herdr-windows-x86_64\herdr.exe"
+ROOT = Path(r"D:\MyNewProjects\qfli_json")
+STATE = ROOT / "build/pi-native703-monitor-state.json"
+LOG = ROOT / "build/pi-native703-request-monitor.jsonl"
+TASK_START = 1792965664.662261
+TASKS = {
+    "w29:p3": "native703-path-review.md",
+    "w29:p4": "native703-drift-review.md",
+    "w29:p5": "native703-inspector-fix.md",
+    "w29:p6": "native703-acceptance-review.md",
+}
+MAX_RETRIES = 5
+
+def emit(event, **data):
+    row = {"utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "event": event, **data}
+    text = json.dumps(row, ensure_ascii=True)
+    print(text, flush=True)
+    try:
+        with LOG.open("a", encoding="utf-8") as out:
+            out.write(text + "\n")
+    except OSError as exc:
+        print(json.dumps({"event": "log_error", "error": str(exc)}), flush=True)
+
+def call(*args):
+    run = subprocess.run([CLI, *args], capture_output=True, encoding="utf-8", errors="replace", timeout=15)
+    if run.returncode:
+        raise RuntimeError((run.stderr or run.stdout)[-1000:])
+    return run.stdout
+
+def output_ready(pane):
+    path = ROOT / ".trellis/.runtime" / TASKS[pane]
+    return path.is_file() and path.stat().st_mtime >= TASK_START and path.stat().st_size > 0
+
+def decision(state, fresh, tail, token, saved, now):
+    if state in ("done", "idle") and fresh:
+        return "done"
+    if state not in ("done", "idle"):
+        return "wait"
+    # Only terminal panes can retry. A fresh completed output always wins.
+    failed = "Retry failed after" in tail or "Error: Connection error." in tail
+    if not failed or saved.get("handled") == token:
+        return "wait"
+    if saved.get("attempts", 0) >= MAX_RETRIES:
+        return "retry_limit"
+    if now < saved.get("nextAttempt", 0):
+        return "wait"
+    return "retry"
+
+def save(data):
+    temp = STATE.with_suffix(".tmp")
+    temp.write_text(json.dumps(data, ensure_ascii=True, indent=2), encoding="utf-8")
+    temp.replace(STATE)
+
+def main():
+    data = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
+    started = time.monotonic()
+    emit("started", targets=list(TASKS), maximumSeconds=3600)
+    while time.monotonic() - started < 3600:
+        for pane in TASKS:
+            item = data.setdefault(pane, {})
+            if item.get("done") or item.get("limited"):
+                continue
+            try:
+                agent = json.loads(call("agent", "get", pane))["result"]["agent"]
+                state = agent.get("agent_status")
+                token = [agent.get("state_change_seq"), agent.get("completion_seq")]
+                if item.get("lastState") != [state, token]:
+                    emit("state", pane=pane, state=state, token=token)
+                    item["lastState"] = [state, token]
+                tail = ""
+                fresh = output_ready(pane)
+                if state in ("done", "idle") and not fresh:
+                    tail = call("agent", "read", pane, "--source", "recent-unwrapped", "--lines", "30")
+                action = decision(state, fresh, tail, token, item, time.time())
+                if action == "done":
+                    item["done"] = True
+                    emit("settled_with_fresh_output", pane=pane, file=TASKS[pane], retries=item.get("attempts", 0))
+                elif action == "retry_limit":
+                    item["limited"] = True
+                    emit("retry_limit", pane=pane, attempts=item.get("attempts"))
+                elif action == "retry":
+                    item["attempts"] = item.get("attempts", 0) + 1
+                    item["nextAttempt"] = time.time() + min(120, 15 * 2 ** (item["attempts"] - 1))
+                    save(data)  # Persist attempt before transport, not successful delivery.
+                    emit("retry_attempt", pane=pane, attempt=item["attempts"])
+                    call("agent", "prompt", pane,
+                         "本轮连接失败，请继续原只读任务，保留已有产出并先检查目标文件。完成核查后写入 .trellis/.runtime/" + TASKS[pane] +
+                         "。不执行SDK、Flutter、hdc或设备操作，不修改冻结文件，不commit。")
+                    item["handled"] = token  # Only confirmed transport consumes this event.
+                    emit("retry_delivered", pane=pane, attempt=item["attempts"])
+                elif state == "blocked" and item.get("blockedToken") != token:
+                    item["blockedToken"] = token
+                    emit("blocked_requires_diagnosis", pane=pane, token=token)
+                item["observationErrors"] = 0
+            except Exception as exc:
+                item["observationErrors"] = item.get("observationErrors", 0) + 1
+                emit("observation_error", pane=pane, count=item["observationErrors"], error=str(exc))
+            save(data)
+        if all(v.get("done") or v.get("limited") for v in data.values()) and len(data) == len(TASKS):
+            break
+        time.sleep(15)
+    emit("finished", settled=[p for p in TASKS if data[p].get("done")],
+         remaining=[p for p in TASKS if not data[p].get("done")], retries={p:data[p].get("attempts",0) for p in TASKS})
+
+if __name__ == "__main__":
+    main()

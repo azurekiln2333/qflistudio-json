@@ -1,0 +1,126 @@
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+ROOT = Path(r"D:\MyNewProjects\qfli_json")
+ARCH = ROOT / ".trellis/tasks/10-22-offline-json-ide/research/native-retry-20261026"
+OLD = ROOT / ".trellis/tasks/10-22-offline-json-ide/research/native-703-20261026"
+COMMIT = "4ded5d7"
+REL_OLD = ".trellis/tasks/10-22-offline-json-ide/research/native-703-20261026"
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def git_blob(path_in_repo):
+    out = subprocess.run(
+        ["git", "cat-file", "-p", "{}:{}".format(COMMIT, path_in_repo)],
+        cwd=str(ROOT), capture_output=True,
+    )
+    return out.stdout if out.returncode == 0 else None
+
+
+v = json.loads((ARCH / "validation.json").read_text(encoding="utf-8"))
+
+print("=== A. declared file hashes ===")
+bad = []
+for rel, meta in v["files"].items():
+    f = ARCH / rel
+    if not f.is_file():
+        bad.append((rel, "MISSING"))
+        continue
+    raw = f.read_bytes()
+    if len(raw) != meta["bytes"] or sha(raw) != meta["sha256"]:
+        bad.append((rel, "decl {}/{} actual {}/{}".format(
+            meta["bytes"], meta["sha256"][:12], len(raw), sha(raw)[:12])))
+print("declared", len(v["files"]), "mismatch", len(bad))
+for item in bad:
+    print("  MISMATCH", item[0], item[1])
+print("preparedManifestSha256 == files[prepared-manifest.json]:",
+      v["preparedManifestSha256"] == v["files"]["prepared-manifest.json"]["sha256"])
+
+print("=== B. undeclared archive files ===")
+declared = set(v["files"]) | {"validation.json"}
+actual = {str(f.relative_to(ARCH)).replace("\\", "/") for f in ARCH.rglob("*") if f.is_file()}
+for name in sorted(actual - declared):
+    print("  UNDECLARED", name, (ARCH / name).stat().st_size)
+
+print("=== C. committed 703 provenance hashes ===")
+prov = v["initializationProvenance"]["evidence"]
+for key in ("before", "after"):
+    item = prov[key]
+    blob = git_blob(item["path"])
+    local = (ROOT / item["path"]).read_bytes()
+    print(key, "declared", item["sha256"][:16])
+    print("   worktree", sha(local)[:16], "match", sha(local) == item["sha256"], "bytes", len(local))
+    print("   git blob ", (sha(blob)[:16] if blob is not None else "ABSENT"),
+          "match", blob is not None and sha(blob) == item["sha256"])
+
+print("=== D. file-map comparisons ===")
+
+
+def file_map(doc):
+    return {k: (m.get("bytes"), m.get("sha256")) for k, m in (doc.get("files") or {}).items()}
+
+
+def cache_map(doc):
+    refs = doc.get("cacheReferences")
+    if isinstance(refs, dict):
+        return set(refs)
+    if isinstance(refs, list):
+        return set(refs)
+    return set()
+
+
+retry_before = json.loads((ARCH / "before.json").read_text(encoding="utf-8-sig"))
+retry_after = json.loads((ARCH / "after.json").read_text(encoding="utf-8-sig"))
+retry_guarded = json.loads((ARCH / "guarded.json").read_text(encoding="utf-8-sig"))
+retry_prepared = json.loads((ARCH / "prepared-manifest.json").read_text(encoding="utf-8-sig"))
+old_before = json.loads((OLD / "child-source-before.json").read_text(encoding="utf-8-sig"))
+old_after = json.loads((OLD / "child-source-after.json").read_text(encoding="utf-8-sig"))
+
+pairs = [
+    ("retry before vs committed 703 before", file_map(retry_before), file_map(old_before)),
+    ("retry before vs committed 703 after ", file_map(retry_before), file_map(old_after)),
+    ("retry after  vs committed 703 after ", file_map(retry_after), file_map(old_after)),
+    ("retry guarded vs committed 703 after", file_map(retry_guarded), file_map(old_after)),
+    ("retry prepared vs committed 703 after", file_map(retry_prepared), file_map(old_after)),
+]
+for label, left, right in pairs:
+    only_left = set(left) - set(right)
+    only_right = set(right) - set(left)
+    differed = {k for k in set(left) & set(right) if left[k] != right[k]}
+    print(label, "| left", len(left), "right", len(right),
+          "| onlyL", len(only_left), "onlyR", len(only_right), "diff", len(differed))
+    for k in sorted(only_left)[:6]:
+        print("    only-left ", k)
+    for k in sorted(only_right)[:6]:
+        print("    only-right", k)
+    for k in sorted(differed)[:6]:
+        print("    differed  ", k)
+
+print("cacheReferences retry before:", len(cache_map(retry_before)),
+      "after:", len(cache_map(retry_after)),
+      "prepared:", len(cache_map(retry_prepared)),
+      "703 before:", len(cache_map(old_before)),
+      "703 after:", len(cache_map(old_after)))
+print("declared counts: sourceFiles", v["sourceFiles"], "cacheReferences", v["cacheReferences"],
+      "namedToolAndPluginFiles", v["namedToolAndPluginFiles"])
+print("actual retry after files", len(file_map(retry_after)),
+      "prepared files", len(file_map(retry_prepared)))
+
+print("=== E. declared historical delta vs computed ===")
+before_map, after_map = file_map(old_before), file_map(old_after)
+added = sorted(set(after_map) - set(before_map))
+deleted = sorted(set(before_map) - set(after_map))
+changed = sorted(k for k in set(before_map) & set(after_map) if before_map[k] != after_map[k])
+declared_delta = v["initializationProvenance"]["historicalInitializationDelta"]
+print("computed added  ", added)
+print("declared added  ", declared_delta["files"]["added"], "match", added == sorted(declared_delta["files"]["added"]))
+print("computed deleted", deleted, "declared", declared_delta["files"]["deleted"], "match", deleted == sorted(declared_delta["files"]["deleted"]))
+print("computed changed", changed)
+print("declared changed", sorted(declared_delta["files"]["changed"]), "match", changed == sorted(declared_delta["files"]["changed"]))
+print("computed cacheRef added", sorted(cache_map(old_after) - cache_map(old_before)))
+print("declared cacheRef added", declared_delta["cacheReferences"]["added"])

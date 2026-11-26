@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "status": "BLOCKED",
+  "mode": "harness",
+  "hap": "D:\\MyNewProjects\\qfli_json\\build\\o6e60792d\\qfli_json\\ohos\\entry\\build\\default\\outputs\\default\\entry-default-unsigned.hap",
+  "copiedHap": null,
+  "error": "BlockedInspection: Prepared manifest has no SHA-256 for native plugin: nativePlugins/path_provider_ohos/LICENSE",
+  "inspectedUtc": "2026-10-25T22:26:36.114726+00:00"
+}

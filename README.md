@@ -94,32 +94,31 @@ json get <file> <JSON Pointer>
 ```text
 checkout-parent/
   qflistudio-core/
-  qfli_json/
+  qflistudio-json/
 ```
 
 `pubspec.yaml` 声明 Dart 约束 `^3.11.5`。
 编辑器依赖指向 `../qflistudio-core/vendor/re_editor`。
 
-1. 安装 Flutter SDK。
-2. 检出兄弟仓库。
-3. 进入本仓库根目录。
-4. 解析依赖。
+仅在本机检出源码。
+构建、测试与依赖安装全部在 GitHub 执行。
+本机禁止构建、测试、分析和依赖安装。
 
 ```text
-flutter pub get
+git clone https://github.com/azurekiln2333/qflistudio-core.git
+git -C qflistudio-core checkout 476a30acee21dc486ee2849dd8064a7be665e4d5
+git clone https://github.com/azurekiln2333/qflistudio-json.git
 ```
 
-5. 启动目标设备上的应用。
-
-```text
-flutter run
-```
+从 GitHub Actions 发起验证。
+工作流说明见 [cloud-ci.md](docs/cloud-ci.md)。
 
 OHOS 构建需要匹配的 Flutter OHOS 工具链。标准 Flutter SDK 不包含该工具链。
 其他 Flutter 通道也许可用。此仓库尚无对应记录。
 
-应用运行时不需要网络。首次开发环境可能需要下载依赖。
-离线开发需预先准备 SDK 与依赖缓存。
+应用运行时不需要网络。
+云端首次配置可能需要下载依赖。
+本机不安装 SDK 或依赖缓存。
 
 OHOS 与 Android 发行版不请求网络权限。
 Android 调试与分析版保留开发网络权限。
@@ -127,6 +126,9 @@ Android 调试与分析版保留开发网络权限。
 本地 Schema 与 URL 数据测试均记录零个。
 
 ## 校验
+
+以下命令只允许在 GitHub 执行。
+不要在本机运行这些命令。
 
 测试套件包含 12 个测试文件。
 

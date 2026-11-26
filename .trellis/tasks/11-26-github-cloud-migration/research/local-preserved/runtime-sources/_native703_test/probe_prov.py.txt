@@ -1,0 +1,48 @@
+import hashlib
+import json
+from pathlib import Path
+
+ARCH = Path(r"D:\MyNewProjects\qfli_json\.trellis/tasks/10-22-offline-json-ide/research/native-retry-20261026")
+v = json.loads((ARCH / "validation.json").read_text(encoding="utf-8"))
+p = json.loads((ARCH / "prepared-manifest.json").read_text(encoding="utf-8-sig"))
+d = json.loads((ARCH / "diagnostic-inspection.json").read_text(encoding="utf-8-sig"))
+
+print("=== prepared vs validation provenance ===")
+print("prepared.initializationGatePassed:", p.get("initializationGatePassed"))
+print("prepared.snapshotState:", json.dumps(p.get("snapshotState"))[:200])
+print("prepared.preparedOrigin:", json.dumps(p.get("preparedOrigin"))[:200])
+print("prepared.snapshotContainsPriorBuildIntermediates:", p.get("snapshotContainsPriorBuildIntermediates"))
+print("validation newNativeGrantReceived:", v["newNativeGrantReceived"], "deviceExecuted:", v["deviceExecuted"])
+print("prepared provenance == validation provenance:",
+      json.dumps(p.get("initializationProvenance"), sort_keys=True) == json.dumps(v.get("initializationProvenance"), sort_keys=True))
+if json.dumps(p.get("initializationProvenance"), sort_keys=True) != json.dumps(v.get("initializationProvenance"), sort_keys=True):
+    print("prepared provenance:", json.dumps(p.get("initializationProvenance"))[:600])
+    print("validation provenance:", json.dumps(v.get("initializationProvenance"))[:600])
+
+print("=== prepared.diagnosticHap ===")
+print(json.dumps(p.get("diagnosticHap"))[:400])
+
+print("=== diagnostic.sourceCapture ===")
+sc = d.get("sourceCapture")
+print(json.dumps(sc)[:600])
+if isinstance(sc, dict):
+    for key in ("preparedManifest", "sha256", "path", "files", "cacheReferences"):
+        if key in sc:
+            print("  ", key, "=", str(sc[key])[:120])
+
+print("=== archive prepared-manifest sha vs diagnostic binding ===")
+arch_sha = hashlib.sha256((ARCH / "prepared-manifest.json").read_bytes()).hexdigest()
+print("archive prepared-manifest sha:", arch_sha)
+print("validation.preparedManifestSha256:", v["preparedManifestSha256"], "match", arch_sha == v["preparedManifestSha256"])
+
+print("=== diagnostic hap hash vs 703 evidence ===")
+print("diagnostic hapSha256:", d.get("hapSha256"))
+old = json.loads((ARCH.parent / "native-703-20261026/child-harness-artifact.json").read_text(encoding="utf-8-sig"))
+print("703 child-harness-artifact hapSha256:", old.get("hapSha256"))
+print("703 child-harness-artifact status/passed:", old.get("status"), old.get("passed"))
+print("=== 703 validation.json (committed) top keys ===")
+ov = json.loads((ARCH.parent / "native-703-20261026/validation.json").read_text(encoding="utf-8"))
+print(sorted(ov.keys()))
+for k in ("passed", "status", "finalGatePassed", "deviceExecuted"):
+    if k in ov:
+        print("  703", k, "=", str(ov[k])[:120])

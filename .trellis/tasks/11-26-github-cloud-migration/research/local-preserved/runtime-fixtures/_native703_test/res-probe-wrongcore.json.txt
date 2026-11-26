@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "status": "BLOCKED",
+  "mode": "harness",
+  "hap": "D:\\MyNewProjects\\qfli_json\\build\\o6e60792d\\qfli_json\\ohos\\entry\\build\\default\\outputs\\default\\entry-default-unsigned.hap",
+  "copiedHap": null,
+  "error": "BlockedInspection: Prepared manifest coreRoot differs from the inspected root: D:\\MyNewProjects\\qfli_json\\build\\o6e60792d\\qfli_studio_core_other",
+  "inspectedUtc": "2026-10-25T22:26:35.318165+00:00"
+}
