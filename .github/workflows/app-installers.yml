@@ -147,10 +147,26 @@ jobs:
         run: |
           set -euo pipefail
           test -n "${JAVA_HOME_17_X64:-}"
-          echo "JAVA_HOME=$JAVA_HOME_17_X64" >> "$GITHUB_ENV"
-          echo "$JAVA_HOME_17_X64/bin" >> "$GITHUB_PATH"
-          "$JAVA_HOME_17_X64/bin/java" -version
-          sdkmanager --install 'platforms;android-36' 'build-tools;36.0.0' "ndk;$ANDROID_NDK_VERSION" "cmake;$ANDROID_CMAKE_VERSION"
+          export JAVA_HOME="$JAVA_HOME_17_X64"
+          export PATH="$JAVA_HOME/bin:$PATH"
+          echo "JAVA_HOME=$JAVA_HOME" >> "$GITHUB_ENV"
+          echo "$JAVA_HOME/bin" >> "$GITHUB_PATH"
+          "$JAVA_HOME/bin/java" -version
+          sdk_root="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          if [ -z "$sdk_root" ] || [ ! -d "$sdk_root" ]; then
+            echo 'dependency-blocked: hosted Android SDK root is missing' >&2
+            exit 2
+          fi
+          sdkmanager="$sdk_root/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$sdkmanager" ]; then
+            echo 'dependency-blocked: hosted Android command-line tools are missing from the SDK root' >&2
+            exit 2
+          fi
+          export ANDROID_HOME="$sdk_root" ANDROID_SDK_ROOT="$sdk_root"
+          echo "ANDROID_HOME=$sdk_root" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$sdk_root" >> "$GITHUB_ENV"
+          echo "$(dirname "$sdkmanager")" >> "$GITHUB_PATH"
+          "$sdkmanager" --sdk_root="$sdk_root" --install 'platforms;android-36' 'build-tools;36.0.0' "ndk;$ANDROID_NDK_VERSION" "cmake;$ANDROID_CMAKE_VERSION"
       - name: Verify exact-pin native inputs before platform build
         working-directory: qflistudio
         shell: bash
@@ -187,7 +203,7 @@ jobs:
           set -euo pipefail
           flutter config --enable-macos-desktop
           python tool/ci/run_logged.py flutter-build -- flutter build macos --release --no-pub --config-only
-          python tool/ci/run_logged.py xcode-build -- xcodebuild -workspace macos/Runner.xcworkspace -scheme Runner -configuration Release -derivedDataPath build/macos -destination 'generic/platform=macOS' ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO PRODUCT_NAME=QFLIJson build
+          python tool/ci/run_logged.py xcode-build -- xcodebuild -workspace macos/Runner.xcworkspace -scheme Runner -configuration Release -derivedDataPath build/macos -destination 'generic/platform=macOS' ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
       - name: Build unsigned iOS device payload
         if: matrix.platform == 'ios'
         working-directory: qflistudio

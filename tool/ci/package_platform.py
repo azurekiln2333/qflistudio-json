@@ -148,7 +148,10 @@ def package_linux(output: Path, manifest: dict) -> None:
             is_elf = stream.read(4) == b"\x7fELF"
         if not is_elf:
             continue
-        text = run("ldd", str(path.resolve()), capture=True)
+        # Plugin build paths must not override the packaged Flutter libraries.
+        text = run("env", "-u", "LD_PRELOAD", "-u", "LD_AUDIT",
+                   f"LD_LIBRARY_PATH={(source / 'lib').resolve()}",
+                   "ldd", str(path.resolve()), capture=True)
         require("not found" not in text, f"unresolved Linux runtime library in {path.name}")
         dependency_lines.append({"member": path.relative_to(source).as_posix(), "ldd": text})
         for resolved in re.findall(r"=>\s+(/[^\s]+)", text):
