@@ -36,10 +36,15 @@ if [ "$actual" != "$expected" ]; then
   echo 'Flutter source commit mismatch' >&2
   exit 1
 fi
-# Tags are a secondary identity check, never a substitute for the full commit.
-tag_commit="$(git ls-remote --tags "$repository" "refs/tags/$version" "refs/tags/$version^{}" | awk 'END {print $1}')"
-if [ -z "$tag_commit" ] || [ "$tag_commit" != "$expected" ]; then
-  echo 'Flutter version tag is missing or does not identify the locked commit' >&2
+# Flutter derives its framework version from LOCAL Git tags. Checking a remote
+# tag alone leaves a SHA-only checkout at 0.0.0-unknown during Pub resolution.
+# Fetch only the reviewed tag, then peel it and recheck against the source pin.
+# Do not create a synthetic tag or trust the mutable remote tag instead of SHA.
+git -C "$target" fetch --no-tags --depth=1 origin "refs/tags/$version:refs/tags/$version"
+tag_commit="$(git -C "$target" rev-parse "refs/tags/$version^{commit}")"
+if [ "$tag_commit" != "$expected" ] || [ "$(git -C "$target" rev-parse HEAD)" != "$expected" ]; then
+  echo 'Flutter version tag does not identify the locked source commit' >&2
   exit 1
 fi
-printf 'Flutter source verified: %s (%s)\n' "$version" "$actual"
+test "$(git -C "$target" describe --tags --exact-match --match "$version" HEAD)" = "$version"
+printf 'Flutter source and local version tag verified: %s (%s)\n' "$version" "$actual"
