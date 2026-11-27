@@ -184,7 +184,7 @@ def main():
         fail(f'Flutter is {actual_flutter}, expected {PINNED_FLUTTER}')
     core = app.parent / 'qflistudio-core'
     core_commit = git(core, 'rev-parse', 'HEAD')
-    if core_commit != '476a30acee21dc486ee2849dd8064a7be665e4d5':
+    if core_commit != '1ae4674a4b153701b0c3b3ff04b1a1b77a318611':
         fail(f'Unreviewed shared-core revision: {core_commit}')
     huawei = (core / 'lib/pages/auth/huawei_quick_login_view.dart').read_bytes().replace(b'\r\n', b'\n')
     huawei_blob = hashlib.sha1(b'blob ' + str(len(huawei)).encode() + b'\0' + huawei).hexdigest()

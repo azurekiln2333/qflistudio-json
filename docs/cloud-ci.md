@@ -9,7 +9,7 @@ Do not run CI helpers locally or fake GITHUB_ACTIONS to bypass their guards.
 | Input | Reviewed value |
 | --- | --- |
 | App repository | azurekiln2333/qflistudio-json |
-| Sibling core | 476a30acee21dc486ee2849dd8064a7be665e4d5 |
+| Sibling core | 1ae4674a4b153701b0c3b3ff04b1a1b77a318611 |
 | Git plugin | 697291a27818612ae9dc53d83d4f99fa5887908e |
 | Historical native producer | 194a6c9dd70873a472e441b67875766541572372, run 44863517943 |
 | Official Flutter | 3.50.0 at ab2912035e160d9cad6306df307576da6128ebdb |
@@ -18,12 +18,13 @@ Do not run CI helpers locally or fake GITHUB_ACTIONS to bypass their guards.
 | Android NDK / CMake | 27.0.12077973 / 3.22.1 |
 
 These are fixed inputs, not claims about the newest available versions.
-The core owner has not announced its final migration commit.
-Change that pin only after reviewing its dependency and native contracts.
+The coordinator approved this core revision for the 2026-11-28 pin wave.
+Change that pin only after a new coordinator decision and contract review.
 The workflows check out qflistudio and qflistudio-core as siblings.
 The package/import name remains qfli_studio_core.
 The app owns re_editor and xterm overrides under ../qflistudio-core/vendor/.
-The upstream compatibility patch changes only the disposable CI Huawei login widget.
+Core's explicit prepare_flutter_core.py invocation checks the pinned SDK and
+changes only the disposable CI Huawei login widget for official Flutter.
 It does not change dependency manifests. OHOS retains the original widget.
 
 ## Dependency lock

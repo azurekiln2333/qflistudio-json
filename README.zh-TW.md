@@ -106,7 +106,7 @@ checkout-parent/
 
 ```text
 git clone https://github.com/azurekiln2333/qflistudio-core.git
-git -C qflistudio-core checkout 476a30acee21dc486ee2849dd8064a7be665e4d5
+git -C qflistudio-core checkout 1ae4674a4b153701b0c3b3ff04b1a1b77a318611
 git clone https://github.com/azurekiln2333/qflistudio-json.git
 ```
 

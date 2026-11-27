@@ -12,7 +12,7 @@ inputs:
     default: upstream
   core-ref:
     description: Full reviewed sibling core commit.
-    default: 476a30acee21dc486ee2849dd8064a7be665e4d5
+    default: 1ae4674a4b153701b0c3b3ff04b1a1b77a318611
   cache-scope:
     description: Reserved job identity; mutable SDK caches are deliberately disabled.
     default: cloud
@@ -45,13 +45,18 @@ runs:
         [[ "$EXPECTED_CORE" =~ ^[0-9a-f]{40}$ ]]
         test "$(git -C ../qflistudio-core rev-parse HEAD)" = "$EXPECTED_CORE"
         case "$QFLI_FLUTTER_MODE" in
-          upstream) bash tool/ci/patch_upstream_core.sh "$PWD" "$(cd ../qflistudio-core && pwd)" ;;
-          ohos) ;;
+          upstream) core_flavor=official ;;
+          ohos) core_flavor=ohos ;;
           *) echo 'Unsupported Flutter mode' >&2; exit 2 ;;
         esac
         args=("$RUNNER_TEMP/qfli-flutter" "$QFLI_FLUTTER_VERSION" "$QFLI_FLUTTER_COMMIT")
         if [ "$QFLI_FLUTTER_MODE" = ohos ]; then args+=(--ohos); fi
         bash tool/ci/setup_flutter.sh "${args[@]}"
+        python ../qflistudio-core/tool/ci/prepare_flutter_core.py \
+          --core-root ../qflistudio-core --app-root "$PWD" \
+          --sdk-root "$RUNNER_TEMP/qfli-flutter" \
+          --sdk-revision "$QFLI_FLUTTER_COMMIT" --flavor "$core_flavor" \
+          | tee "$RUNNER_TEMP/qfli-upstream-core-patch.json"
         echo "$RUNNER_TEMP/qfli-flutter/bin" >> "$GITHUB_PATH"
         echo "QFLI_FLUTTER_ROOT=$RUNNER_TEMP/qfli-flutter" >> "$GITHUB_ENV"
         echo "QFLI_FLUTTER_VERSION=$QFLI_FLUTTER_VERSION" >> "$GITHUB_ENV"

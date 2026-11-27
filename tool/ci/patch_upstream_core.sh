@@ -20,7 +20,7 @@ import subprocess
 import sys
 
 app, core = (Path(arg).resolve() for arg in sys.argv[1:])
-expected_commit = '476a30acee21dc486ee2849dd8064a7be665e4d5'
+expected_commit = '1ae4674a4b153701b0c3b3ff04b1a1b77a318611'
 expected_blob = '0ed4033647630449f73bd9b51faee35bbd8cde64'
 relative = 'lib/pages/auth/huawei_quick_login_view.dart'
 actual_commit = subprocess.check_output(

@@ -21,7 +21,7 @@ import zipfile
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urljoin, urlparse
 
-CORE = "476a30acee21dc486ee2849dd8064a7be665e4d5"
+CORE = "1ae4674a4b153701b0c3b3ff04b1a1b77a318611"
 PLUGIN = "697291a27818612ae9dc53d83d4f99fa5887908e"
 NATIVE_SOURCE = "194a6c9dd70873a472e441b67875766541572372"
 NATIVE_RUN = "44863517943"
