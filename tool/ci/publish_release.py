@@ -16,7 +16,7 @@ import tempfile
 import urllib.parse
 
 TARGETS = ("windows-x64", "linux-x64", "macos-universal", "ios-arm64", "android-multiabi", "ohos-arm64")
-CORE_COMMIT = "1ae4674a4b153701b0c3b3ff04b1a1b77a318611"
+CORE_COMMIT = "8e031313ffc8d531c5a6b4d131f721f35da04c86"
 
 
 def fail(message: str) -> None:

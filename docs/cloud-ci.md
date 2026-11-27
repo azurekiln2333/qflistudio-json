@@ -9,7 +9,7 @@ Do not run CI helpers locally or fake GITHUB_ACTIONS to bypass their guards.
 | Input | Reviewed value |
 | --- | --- |
 | App repository | azurekiln2333/qflistudio-json |
-| Sibling core | 1ae4674a4b153701b0c3b3ff04b1a1b77a318611 |
+| Sibling core | 8e031313ffc8d531c5a6b4d131f721f35da04c86 |
 | Git plugin | 697291a27818612ae9dc53d83d4f99fa5887908e |
 | Historical native producer | 194a6c9dd70873a472e441b67875766541572372, run 44863517943 |
 | Official Flutter | 3.50.0 at ab2912035e160d9cad6306df307576da6128ebdb |

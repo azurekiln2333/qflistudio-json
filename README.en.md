@@ -134,7 +134,7 @@ Clone both repositories as siblings, keeping the reviewed core commit:
 
 ```text
 git clone https://github.com/azurekiln2333/qflistudio-core.git
-git -C qflistudio-core checkout 1ae4674a4b153701b0c3b3ff04b1a1b77a318611
+git -C qflistudio-core checkout 8e031313ffc8d531c5a6b4d131f721f35da04c86
 git clone https://github.com/azurekiln2333/qflistudio-json.git
 ```
 
