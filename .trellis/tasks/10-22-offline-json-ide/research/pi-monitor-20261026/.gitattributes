@@ -1,0 +1,2 @@
+# Preserve the original SHA-256 recorded by the migration evidence manifest.
+/monitor_final_reviews.py -text

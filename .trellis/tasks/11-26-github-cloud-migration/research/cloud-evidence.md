@@ -2,6 +2,12 @@
 
 All validation commands reported below ran in GitHub Actions. No local build, test, analyzer, lint, dependency resolution, SDK installation or CI-helper execution was used. Evidence retrieval used read-only GitHub API and job-log requests. Times are UTC. This report separates executed checks from skipped jobs.
 
+## Current readback — 2026-11-27
+
+Push `45912056448` and publish dispatch `45912230227` both passed verification, all six platform package/native jobs and the all-six gate at app `1e144e2423d6bd8b4d68a0b04983f6b97de8f996`. Only the dispatch published immutable prerelease `460010784`. Its 71 manifest entries match release API asset names, sizes and digests. See [Round 6 actual evidence](#round-6-actual-cloud-and-immutable-release-readback) for job IDs, tag resolution, text-index hashes, artifact names and signing limits.
+
+Earlier failed, pending and prepared-source sections retain their historical meaning. These new passes apply only to the exact run head. They do not establish production signing, installation, device/FFI behavior or completion of the target-workspace migration.
+
 ## Fixed inputs
 
 - Repository: `azurekiln2333/qflistudio-json`.
@@ -22,6 +28,8 @@ All validation commands reported below ran in GitHub Actions. No local build, te
 | [45864418468](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45864418468) | `874f1959ad2f4b75a521952017c3f49591e9b771` | Completed with failure. Verification, Windows and iOS succeeded. OHOS app setup, Linux distribution packaging, Android SDK preparation and macOS Xcode build failed. All-six failed. Release was skipped. |
 | [45888643244](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45888643244) | `d01803693d5f4c05299b3d8c748677c0f5aa91f1` | Push, attempt 1, completed with failure. Verification and four platform jobs (Windows, Linux, macOS and iOS) passed. Android and OHOS failed. All-six failed. Release was skipped. |
 | [45888770210](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45888770210) | `d01803693d5f4c05299b3d8c748677c0f5aa91f1` | Workflow dispatch with main-reported `publish=true`, attempt 1, completed with failure. Verification and the same four platform jobs passed. Android and OHOS failed. All-six failed. Release was skipped. |
+| [45912056448](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45912056448) | `1e144e2423d6bd8b4d68a0b04983f6b97de8f996` | Push, attempt 1, completed with success. Verification, all six platform jobs and all-six passed. Release was skipped. |
+| [45912230227](https://github.com/azurekiln2333/qflistudio-json/actions/runs/45912230227) | `1e144e2423d6bd8b4d68a0b04983f6b97de8f996` | Workflow dispatch, attempt 1, completed with success. Verification, all six platform jobs, all-six and publication passed. Release API confirms immutable prerelease `460010784`. |
 
 ## Confirmed fixes
 
@@ -194,7 +202,9 @@ The artifact API binds both entries below to this run and exact app commit. API 
 | `intermediate-native-ohos-arm64` | `15151275736` | 35979809 | `sha256:eff06a039af08ec09c51f444179b7a3d25b07db13c7f1cd236ac69f99ff65e19` | `2026-11-29T20:13:46Z` |
 | `intermediate-flutter-ohos-arm64` | `15151101048` | 31295290 | `sha256:a3b2a88f4bfdfe1918e2179c62ed4734584be54167ebc0c9d91148fec95afbc4` | `2026-11-29T20:13:43Z` |
 
-## Acceptance still pending
+## Historical acceptance pending before Round 6
+
+This list records the pre-Round-6 state. The exact-run package gates and immutable publication are resolved only for `1e144e2423d6bd8b4d68a0b04983f6b97de8f996` by the later readback below. Independent binary inspection, production signing, device/runtime acceptance and target migration are not supplied by this metadata audit.
 
 - Successful full product verification on the final JSON commit. Recorded successes apply only to their exact run heads, not to later corrections.
 - Successful Android and OHOS package jobs. Both `d01803693d5f4c05299b3d8c748677c0f5aa91f1` runs passed verification plus the four Windows/Linux/macOS/iOS jobs. Neither run validates later prepared corrections. This report did not inspect those four platform jobs' new artifact payloads.
@@ -225,3 +235,70 @@ Separate frozen research:
 - P3's [OHOS ABI-filter and emitted-metadata design](ohos-abi-filter.md), SHA256 `5a3926220ac60e1e88476f092f9b48a589e3a86dc8e67375654732fcc179f809`, documents pre-HAP native filtering, unchanged input/profile guards, and planned cloud-recorded emitted member names, `.so` hashes, raw `module.json`/optional `pack.info` and exact compiled target-API fields. The implementation is not evidence that new metadata has been emitted. Compiled target API remains recorded-only, not guessed or verified against an invented encoding.
 
 Fresh GitHub execution must validate the integrated commit. The unchanged native verifier and contract still govern package identity and the arm64-only OHOS output. No local executable validation ran for this appendix. No source/workflow edit, payload retrieval, Git mutation, signing/device/runtime acceptance or durable-release claim is included.
+
+## Round 6 actual cloud and immutable-release readback
+
+Read on `2026-11-27` under the unified migration directive dated `2026-11-27`. Sources were read-only `gh api` run/jobs/artifacts/release/tag metadata and job logs. The only release-asset bodies retrieved were the small text indices `RELEASE_MANIFEST.json` and `SHA256SUMS`. No Actions artifact, binary, installer, HAP or native-input archive was downloaded. No build, local executable validation, Git mutation or dispatch ran.
+
+### Same-commit executed gates
+
+Both runs used `main`, app `1e144e2423d6bd8b4d68a0b04983f6b97de8f996`, core `476a30acee21dc486ee2849dd8064a7be665e4d5` and attempt `1`. Both API statuses are `completed`, conclusions `success`. Push `45912056448` was created at `2026-11-26T23:37:43Z` and last updated at `23:45:52Z`. Dispatch `45912230227` was created at `2026-11-26T23:39:35Z` and last updated at `23:56:13Z`.
+
+| Gate | Push 45912056448: job / conclusion | Dispatch 45912230227: job / conclusion |
+| --- | --- | --- |
+| Verification | `140222502145` / `success` | `140225010155` / `success` |
+| Windows | `140222948719` / `success` | `140225468072` / `success` |
+| Linux | `140222948765` / `success` | `140225467953` / `success` |
+| macOS | `140222948752` / `success` | `140225467983` / `success` |
+| iOS | `140222948681` / `success` | `140225467933` / `success` |
+| Android | `140222948667` / `success` | `140225468006` / `success` |
+| OHOS | `140222948606` / `success` | `140225467897` / `success` |
+| All-six | `140224823513` / `success` | `140227496043` / `success` |
+| Immutable publication | `140225010240` / `skipped` | `140227655812` / `success` |
+
+Both verification logs report 124 passing tests, three verified offline JSON curriculum assets and byte-for-byte unchanged dependency manifests/selected lock. Analyzer output retains eight informational deprecations, not a zero-diagnostic result. All twelve platform jobs report `verified-packaging`. Both all-six jobs executed the twelve-input/checksum gate and report exact-run package/native success. Dispatch publication rechecked that gate at `2026-11-26T23:54:54.2670985Z`. The push did not publish.
+
+Android built three ABI-specific APKs and a universal AAB in each run. The SDK-manager logs show NDK r28c installation for the requested `28.2.13676358`; this is not a per-compiler invocation provenance record. Gradle `9.3.1` and external-Kotlin future-compatibility warnings remain nonfatal in these successful runs.
+
+### OHOS: module.json is not pack.info
+
+Both OHOS logs report installed SDK `26.0.0.105`, API `26`, tools `26.0.0.821` and Node `v24.14.1`. At `2026-11-26T23:44:21.3285110Z` (push) and `23:52:14.0174412Z` (dispatch), the producer explicitly reports **`Emitted module.json app.targetAPIVersion: 260000026`**. The adjacent emitted-HAP ABI report is exactly `arm64-v8a`. The unchanged native gate then reports `verified-packaging` at `23:44:21.6265388Z` and `23:52:14.3241287Z`, respectively.
+
+`260000026` is the cloud-reported raw `module.json` field, not a readback of `pack.info`. This audit did not retrieve either member or the intermediate build-facts payload. It establishes no `pack.info` field, value or absence and does not decode the integer into an invented API encoding. No device, signature or installation acceptance follows from these metadata/log checks.
+
+### Immutable release and text-index comparison
+
+The Release API reports [release 460010784](https://github.com/azurekiln2333/qflistudio-json/releases/tag/cloud-1e144e2423d6-45912230227-1), `draft=false`, `prerelease=true`, `immutable=true`, published at `2026-11-26T23:56:08Z`. Tag `cloud-1e144e2423d6-45912230227-1` resolves through `GET /repos/azurekiln2333/qflistudio-json/git/ref/tags/cloud-1e144e2423d6-45912230227-1` directly to a `commit` object, `1e144e2423d6bd8b4d68a0b04983f6b97de8f996`. This independently matches `target_commitish`, both run heads and manifest `app_commit`; it is not inferred from the tag spelling.
+
+The in-memory text/hash comparison at `2026-11-27T01:21:59Z` found **zero mismatches**:
+
+- All **71/71** manifest entries match Release API asset names, byte counts and `sha256:` digests. Names are unique. Their twelve target prefixes are exactly the six `installer-*` and six `native-*` sets. No non-index API asset is omitted.
+- All **72/72** top-level `SHA256SUMS` entries match API digests, including `RELEASE_MANIFEST.json`. The checksum index excludes itself. The API has **73** uploaded assets in total: 71 listed payload/metadata assets plus the two text indices.
+- Manifest identities are schema `1`, run `45912230227`, attempt `1`, release `460010784`, the exact app commit above and core `476a30acee21dc486ee2849dd8064a7be665e4d5`.
+- Both retrieved text indices were independently hashed in memory as exact UTF-8 output, with byte counts and hashes matching the API. No binary was independently rehashed.
+
+| Text index | Asset ID | Bytes | SHA256, independently matched to API |
+| --- | --- | ---: | --- |
+| `RELEASE_MANIFEST.json` | `798201898` | 16157 | `5914f41ae1519e84c196c0c83add245037e295bc16a73a730211bfb2fa3fb641` |
+| `SHA256SUMS` | `798201931` | 7815 | `c0ebdbc40777070a9001b2652ac9d95e8db3bb76bf2c6f5d44a1bc4a13b3226e` |
+
+Each of the six release assets `native-<target>--native-inputs.tar.gz` has API/manifest size `6666344` and SHA256 `6bd854073673d1207d84d9ae6fa771d79c6f5106fc3dcfdc3ec896a94d5dbbc1`. These are now durable immutable release assets, not merely expiring Actions transports. Equality here is API/manifest metadata consistency, not an independent archive or native-member inspection.
+
+### Artifact names and signing boundary
+
+Each run's artifact API returns the same exact **25-name set**, all `expired=false` at readback: `diagnostics-verify` plus `installer-<target>`, `native-<target>`, `intermediate-flutter-<target>` and `intermediate-native-<target>` for each target below. The thirteen diagnostic/intermediate entries expire on `2026-11-29` (three-day retention). The twelve installer/native transports expire on `2026-12-10` (fourteen-day retention). These outer-ZIP API digests are distinct from individual release-asset digests. Same names/head do not assert byte-identical outputs across the two runs.
+
+The following twelve published package basenames were checked against the release manifest/API. Each full release asset name is `installer-<target>--<basename>`. Signing classifications below are the executed job's labels, not independent signature verification.
+
+| Target | Published package basenames | Cloud signing classification |
+| --- | --- | --- |
+| `windows-x64` | `qflistudio-json-windows-x64-setup.exe`, `qflistudio-json-windows-x64.zip` | `unsigned` |
+| `linux-x64` | `qflistudio-json-linux-amd64.deb`, `qflistudio-json-linux-x64.tar.gz` | `unsigned` |
+| `macos-universal` | `qflistudio-json-macos-universal.dmg`, `qflistudio-json-macos-universal.tar.gz` | `ad-hoc-or-unsigned-not-notarized` |
+| `ios-arm64` | `qflistudio-json-ios-arm64-unsigned.ipa` | `unsigned-not-installable-without-provisioning` |
+| `android-multiabi` | `qflistudio-json-android-arm64-v8a-debug-signed.apk`, `qflistudio-json-android-armeabi-v7a-debug-signed.apk`, `qflistudio-json-android-x86_64-debug-signed.apk`, `qflistudio-json-android-universal-debug-signed.aab` | `debug-key-not-production` |
+| `ohos-arm64` | `qflistudio-json-ohos-arm64-unsigned.hap` | `unsigned` |
+
+This closes the exact-head cloud packaging/native and immutable-publication evidence gaps. It does not turn unsigned iOS/OHOS outputs into installable releases or establish production signing, store readiness, runtime/FFI or installed-device behavior. Target pull, tracked-tree/byte comparison, clean-worktree confirmation and formal target handoff remain coordinator-owned acceptance, outside this evidence-only edit.
+
+Reproduction endpoints: `GET /repos/azurekiln2333/qflistudio-json/actions/runs/{45912056448,45912230227}`, each run's `/jobs?per_page=100` and `/artifacts?per_page=100`, `/actions/jobs/<job-id>/logs`, `/releases/460010784`, the tag ref above, and `/releases/assets/{798201898,798201931}` with `Accept: application/octet-stream` for the two text indices only.
